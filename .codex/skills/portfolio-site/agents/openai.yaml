@@ -1,0 +1,7 @@
+interface:
+  display_name: "Portfolio Site"
+  short_description: "Tighten site copy and project positioning"
+  default_prompt: "Use $portfolio-site to rewrite this portfolio page into concise, business-readable copy."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Portfolio Verification"
+  short_description: "Verify routes, builds, and portfolio integrity"
+  default_prompt: "Use $portfolio-verification to run lint/build and sanity-check portfolio routes and case-page navigation."

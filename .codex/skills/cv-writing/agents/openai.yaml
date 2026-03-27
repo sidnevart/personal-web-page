@@ -1,0 +1,7 @@
+interface:
+  display_name: "CV Writing"
+  short_description: "Write a stronger ATS-safe resume"
+  default_prompt: "Use $cv-writing to rewrite the resume around the strongest verified experience and impact."
+
+policy:
+  allow_implicit_invocation: true

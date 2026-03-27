@@ -1,0 +1,14 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1000" fill="#EEE6DA"/>
+  <rect x="88" y="88" width="1424" height="824" rx="36" fill="#F8F3EB" stroke="#D9CCB8"/>
+  <circle cx="404" cy="336" r="86" fill="#D7C1A1"/>
+  <circle cx="706" cy="270" r="74" fill="#E3D4C0"/>
+  <circle cx="1022" cy="352" r="94" fill="#D7C1A1"/>
+  <circle cx="1262" cy="258" r="62" fill="#E3D4C0"/>
+  <circle cx="592" cy="566" r="110" fill="#212728"/>
+  <circle cx="966" cy="618" r="132" fill="#9F6C3A"/>
+  <path d="M404 336L706 270L1022 352L1262 258" stroke="#AE8C62" stroke-width="12" stroke-linecap="round"/>
+  <path d="M706 270L592 566L966 618L1022 352" stroke="#AE8C62" stroke-width="12" stroke-linecap="round"/>
+  <rect x="246" y="760" width="1108" height="24" rx="12" fill="#CDBA9F"/>
+  <text x="244" y="200" fill="#8C6946" font-family="Avenir Next, Arial, sans-serif" font-size="30" letter-spacing="8">PROFILES / TEAMS / VACANCIES</text>
+</svg>

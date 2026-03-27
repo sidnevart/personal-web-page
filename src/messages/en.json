@@ -1,0 +1,23 @@
+{
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "resume": "Resume",
+    "about": "About",
+    "contact": "Contact",
+    "mode": "Middle Backend / DevOps engineer for high-load systems and data platforms"
+  },
+  "cta": {
+    "projects": "View case studies",
+    "contact": "Discuss a project",
+    "about": "How I work"
+  },
+  "theme": {
+    "light": "Light theme",
+    "dark": "Dark theme",
+    "system": "System theme"
+  },
+  "footer": {
+    "rights": "Artem Sidnev's personal site: backend, high-load systems, data platforms, and product case studies."
+  }
+}

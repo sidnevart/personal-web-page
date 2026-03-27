@@ -1,0 +1,7 @@
+interface:
+  display_name: "Market Positioning"
+  short_description: "Final pass for sharper public wording"
+  default_prompt: "Use $global-market-positioning to tighten this public-facing text for recruiters, hiring managers, and business readers."
+
+policy:
+  allow_implicit_invocation: true

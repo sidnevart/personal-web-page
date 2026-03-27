@@ -1,0 +1,23 @@
+{
+  "nav": {
+    "home": "Главная",
+    "projects": "Проекты",
+    "resume": "Резюме",
+    "about": "Профиль",
+    "contact": "Контакт",
+    "mode": "Middle Backend / DevOps engineer для high-load систем и data-платформ"
+  },
+  "cta": {
+    "projects": "Смотреть кейсы",
+    "contact": "Обсудить проект",
+    "about": "Как я работаю"
+  },
+  "theme": {
+    "light": "Светлая тема",
+    "dark": "Тёмная тема",
+    "system": "Системная тема"
+  },
+  "footer": {
+    "rights": "Личный сайт Артёма Сиднева: backend, high-load системы, data-платформы и продуктовые кейсы."
+  }
+}
