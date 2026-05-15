@@ -1,36 +1,104 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Artem Sidnev Portfolio
 
-## Getting Started
+Premium personal portfolio website for Artem Sidnev — Backend / Platform / AI Automation Engineer.
 
-First, run the development server:
+## Tech Stack
+
+- Next.js 16 (App Router, static export)
+- TypeScript (strict mode)
+- Tailwind CSS v4
+- shadcn/ui
+- Framer Motion
+
+## Install Dependencies
+
+```bash
+cd portfolio
+npm install
+```
+
+## Run Locally
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
 
-## Learn More
+Output goes to `out/`.
 
-To learn more about Next.js, take a look at the following resources:
+## Add a New Project
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Edit `src/lib/data.ts`
+2. Add a new project object to the `projects` array
+3. Include all required fields (see existing projects for examples)
+4. If the project needs mock UI, set `needsFrontend: true` and `isSyntheticDemo: true`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Add Screenshots Manually
 
-## Deploy on Vercel
+1. Place screenshot files in `public/images/projects/`
+2. Use naming convention: `{project-slug}-{index}.png`
+3. Update the project's screenshots array in `src/lib/data.ts`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Capture Screenshots with Playwright
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+# Install Playwright browsers
+npx playwright install
+
+# Capture all configured screenshots
+npm run capture:screenshots
+
+# Capture a specific project
+npm run capture:project -- --project=cashback-targeting
+```
+
+**Privacy rules:**
+- Never capture production private data
+- Use demo/staging/local apps only
+- Support credentials through environment variables
+- Anonymize all user data
+
+## Deploy to Vercel
+
+```bash
+npx vercel --prod
+```
+
+Or connect the GitHub repository to Vercel for automatic deployments.
+
+## Project Structure
+
+```
+portfolio/
+├── src/
+│   ├── app/
+│   │   ├── sections/       # Page sections (Hero, Projects, etc.)
+│   │   ├── layout.tsx      # Root layout with metadata
+│   │   ├── page.tsx        # Main page composition
+│   │   └── globals.css     # Global styles
+│   ├── components/         # Reusable components
+│   ├── lib/
+│   │   ├── data.ts         # Project and experience data
+│   │   └── utils.ts        # Utility functions
+│   └── types/              # TypeScript types
+├── public/
+│   └── images/projects/    # Project screenshots
+├── docs/
+│   └── portfolio-agent-output/  # Agent documentation
+├── scripts/
+│   └── capture-screenshots.ts # Playwright pipeline
+├── config/
+│   └── screenshot-projects.ts # Screenshot config
+└── next.config.ts
+```
+
+## License
+
+MIT
