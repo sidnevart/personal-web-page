@@ -6,7 +6,7 @@ import Link from "next/link";
 import { Tag } from "./tag";
 import { MetricsGrid } from "./metrics-grid";
 import { DemoUIManager } from "./demo-ui/demo-ui-manager";
-import { ArrowUpRight, ArrowLeft, Monitor, AlertTriangle, Camera, Lightbulb, Target, ListChecks, Trophy, FileText, CheckSquare } from "lucide-react";
+import { ArrowUpRight, ArrowLeft, Monitor, AlertTriangle, Camera, Lightbulb, Target, ListChecks, Trophy, CheckSquare } from "lucide-react";
 
 interface ProjectDetailPageProps {
   project: Project;
@@ -254,57 +254,6 @@ export function ProjectDetailPage({ project }: ProjectDetailPageProps) {
         </div>
       </section>
 
-      {/* Confidentiality & TODOs */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 xl:px-12 border-t border-border">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="rounded-xl border border-border bg-card p-6"
-          >
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-amber-500/10 flex items-center justify-center">
-                <FileText className="w-4 h-4 text-amber-400" />
-              </div>
-              <h3 className="text-lg font-semibold text-foreground">
-                Confidentiality Notes
-              </h3>
-            </div>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              {project.confidentialityNotes}
-            </p>
-          </motion.div>
-
-          {project.todos.length > 0 && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="rounded-xl border border-border bg-card p-6"
-            >
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-8 h-8 rounded-lg bg-purple-500/10 flex items-center justify-center">
-                  <CheckSquare className="w-4 h-4 text-purple-400" />
-                </div>
-                <h3 className="text-lg font-semibold text-foreground">
-                  TODOs
-                </h3>
-              </div>
-              <ul className="space-y-3">
-                {project.todos.map((todo, i) => (
-                  <li key={i} className="flex items-start gap-3 text-sm text-muted-foreground">
-                    <span className="flex-shrink-0 w-5 h-5 rounded border border-muted-foreground/30 flex items-center justify-center mt-0.5"></span>
-                    {todo}
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-          )}
-        </div>
-      </section>
     </div>
   );
 }

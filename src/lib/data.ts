@@ -298,9 +298,9 @@ export const projects: Project[] = [
     risk: "public",
     featured: false,
     needsFrontend: true,
-    hasRealScreenshots: false,
+    hasRealScreenshots: true,
     showcaseType: "case-study",
-    isSyntheticDemo: true,
+    isSyntheticDemo: false,
     summary:
       "Built a competitive coding platform for Central University where participants solve problems simultaneously with real-time sabotage mechanics.",
     problem:
