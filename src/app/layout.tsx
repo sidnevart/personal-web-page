@@ -47,7 +47,7 @@ export const metadata: Metadata = {
       "Backend engineer focused on data-intensive systems, internal platforms, AI automation, and developer productivity.",
     images: [
       {
-        url: "/images/og-image.jpg",
+        url: "images/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Artem Sidnev — Backend / Platform / AI Automation Engineer",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     title: "Artem Sidnev — Backend / Platform / AI Automation Engineer",
     description:
       "Backend engineer focused on data-intensive systems, internal platforms, AI automation, and developer productivity.",
-    images: ["/images/og-image.jpg"],
+    images: ["images/og-image.jpg"],
   },
   robots: {
     index: true,
