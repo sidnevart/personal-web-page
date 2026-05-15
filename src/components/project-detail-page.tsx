@@ -12,6 +12,10 @@ interface ProjectDetailPageProps {
   project: Project;
 }
 
+function imgPath(src: string) {
+  return `/personal-web-page/${src}`;
+}
+
 export function ProjectDetailPage({ project }: ProjectDetailPageProps) {
   return (
     <div className="min-h-screen bg-background">
@@ -177,7 +181,7 @@ export function ProjectDetailPage({ project }: ProjectDetailPageProps) {
                 >
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src={shot.src}
+                    src={imgPath(shot.src)}
                     alt={shot.alt}
                     className="w-full h-auto object-cover"
                     loading="lazy"
