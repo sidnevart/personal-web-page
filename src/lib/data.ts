@@ -509,6 +509,10 @@ export const siteConfig = {
     "Backend engineer focused on data-intensive systems, internal platforms, AI automation, and developer productivity. 3+ years of experience across banking, analytics, Telegram Mini Apps, and open-source.",
   url: "https://sidnevart.github.io/personal-web-page/",
   email: "a.sidnevart@gmail.com",
+  resume: {
+    en: "/resume_en.pdf",
+    ru: "/resume_ru.pdf",
+  },
   social: {
     github: "https://github.com/sidnevart",
     linkedin: "https://www.linkedin.com/in/artem-sidnev-b109ab401/",

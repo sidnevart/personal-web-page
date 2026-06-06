@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowDown, Mail, Send } from "lucide-react";
+import { ArrowDown, Mail, Send, FileDown } from "lucide-react";
 import { GithubIcon, LinkedInIcon, TelegramIcon } from "@/components/icons";
 import { siteConfig } from "@/lib/data";
 
@@ -54,7 +54,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
-          className="flex flex-wrap gap-4 mb-12"
+          className="flex flex-wrap gap-4 mb-6"
         >
           <a
             href="#projects"
@@ -69,6 +69,32 @@ export function HeroSection() {
           >
             Get in Touch
             <Send className="w-4 h-4" aria-hidden="true" />
+          </a>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.35, ease: [0.25, 0.1, 0.25, 1] }}
+          className="flex flex-wrap gap-3 mb-12"
+        >
+          <a
+            href={siteConfig.resume.en}
+            download
+            className="inline-flex items-center gap-2 border border-border bg-card text-foreground px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-secondary transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+            aria-label="Download CV in English"
+          >
+            <FileDown className="w-4 h-4" aria-hidden="true" />
+            CV (EN)
+          </a>
+          <a
+            href={siteConfig.resume.ru}
+            download
+            className="inline-flex items-center gap-2 border border-border bg-card text-foreground px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-secondary transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+            aria-label="Скачать резюме на русском"
+          >
+            <FileDown className="w-4 h-4" aria-hidden="true" />
+            CV (RU)
           </a>
         </motion.div>
 

@@ -30,7 +30,7 @@ export function ContactSection() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.2}>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-4">
             <a
               href={`mailto:${siteConfig.email}`}
               className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-lg font-medium hover:bg-primary/90 transition-colors w-full sm:w-auto justify-center focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
@@ -39,14 +39,29 @@ export function ContactSection() {
               <Mail className="w-5 h-5" aria-hidden="true" />
               {siteConfig.email}
             </a>
+          </div>
+        </ScrollReveal>
+
+        <ScrollReveal delay={0.25}>
+          <p className="text-sm text-muted-foreground mb-4">Download CV:</p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-8">
             <a
-              href="/artem-sidnev-cv.pdf"
+              href={siteConfig.resume.en}
               download
-              className="inline-flex items-center gap-2 border border-border bg-card text-foreground px-8 py-4 rounded-lg font-medium hover:bg-secondary transition-colors w-full sm:w-auto justify-center focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
-              aria-label="Download CV"
+              className="inline-flex items-center gap-2 border border-border bg-card text-foreground px-6 py-3 rounded-lg font-medium hover:bg-secondary transition-colors w-full sm:w-auto justify-center focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+              aria-label="Download CV in English"
             >
               <FileDown className="w-5 h-5" aria-hidden="true" />
-              Download CV
+              CV (English)
+            </a>
+            <a
+              href={siteConfig.resume.ru}
+              download
+              className="inline-flex items-center gap-2 border border-border bg-card text-foreground px-6 py-3 rounded-lg font-medium hover:bg-secondary transition-colors w-full sm:w-auto justify-center focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+              aria-label="Скачать резюме на русском"
+            >
+              <FileDown className="w-5 h-5" aria-hidden="true" />
+              CV (Русский)
             </a>
           </div>
         </ScrollReveal>

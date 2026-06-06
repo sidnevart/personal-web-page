@@ -13,13 +13,13 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://sidnev.dev"),
+  metadataBase: new URL("https://sidnevart.github.io/personal-web-page/"),
   title: {
     default: "Artem Sidnev — Backend / Platform / AI Automation Engineer",
     template: "%s | Artem Sidnev",
   },
   description:
-    "Backend engineer focused on data-intensive systems, internal platforms, AI automation, and developer productivity. Nearly 3 years of experience across banking, analytics, Telegram Mini Apps, and open-source.",
+    "Backend engineer focused on data-intensive systems, internal platforms, AI automation, and developer productivity. 3+ years of experience across banking, analytics, Telegram Mini Apps, and open-source.",
   keywords: [
     "Backend Engineer",
     "Platform Engineer",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://sidnev.dev",
+    url: "https://sidnevart.github.io/personal-web-page/",
     siteName: "Artem Sidnev",
     title: "Artem Sidnev — Backend / Platform / AI Automation Engineer",
     description:
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://sidnev.dev",
+    canonical: "https://sidnevart.github.io/personal-web-page/",
   },
 };
 
