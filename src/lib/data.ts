@@ -491,7 +491,7 @@ export const experiences: Experience[] = [
     id: "freelance",
     company: "Freelance",
     role: "Backend & Automation Engineer",
-    period: "May 2022 – Present",
+    period: "May 2022 – Oct 2025",
     description:
       "Built Telegram Mini Apps, booking systems, loyalty integrations, and automation workflows for various clients.",
     highlights: [
