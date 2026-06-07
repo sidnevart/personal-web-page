@@ -512,6 +512,8 @@ export const siteConfig = {
   resume: {
     en: "/resume_en.pdf",
     ru: "/resume_ru.pdf",
+    aiEn: "/resume_ai_en.pdf",
+    aiRu: "/resume_ai_ru.pdf",
   },
   social: {
     github: "https://github.com/sidnevart",

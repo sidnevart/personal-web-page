@@ -96,6 +96,24 @@ export function HeroSection() {
             <FileDown className="w-4 h-4" aria-hidden="true" />
             CV (RU)
           </a>
+          <a
+            href={siteConfig.resume.aiEn}
+            download
+            className="inline-flex items-center gap-2 border border-border bg-card text-foreground px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-secondary transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+            aria-label="Download AI Engineer CV in English"
+          >
+            <FileDown className="w-4 h-4" aria-hidden="true" />
+            AI CV (EN)
+          </a>
+          <a
+            href={siteConfig.resume.aiRu}
+            download
+            className="inline-flex items-center gap-2 border border-border bg-card text-foreground px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-secondary transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+            aria-label="Скачать резюме AI-инженера на русском"
+          >
+            <FileDown className="w-4 h-4" aria-hidden="true" />
+            AI CV (RU)
+          </a>
         </motion.div>
 
         <motion.nav

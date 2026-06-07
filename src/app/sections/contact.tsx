@@ -63,6 +63,24 @@ export function ContactSection() {
               <FileDown className="w-5 h-5" aria-hidden="true" />
               CV (Русский)
             </a>
+            <a
+              href={siteConfig.resume.aiEn}
+              download
+              className="inline-flex items-center gap-2 border border-border bg-card text-foreground px-6 py-3 rounded-lg font-medium hover:bg-secondary transition-colors w-full sm:w-auto justify-center focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+              aria-label="Download AI Engineer CV in English"
+            >
+              <FileDown className="w-5 h-5" aria-hidden="true" />
+              AI CV (English)
+            </a>
+            <a
+              href={siteConfig.resume.aiRu}
+              download
+              className="inline-flex items-center gap-2 border border-border bg-card text-foreground px-6 py-3 rounded-lg font-medium hover:bg-secondary transition-colors w-full sm:w-auto justify-center focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+              aria-label="Скачать резюме AI-инженера на русском"
+            >
+              <FileDown className="w-5 h-5" aria-hidden="true" />
+              AI CV (Русский)
+            </a>
           </div>
         </ScrollReveal>
 
