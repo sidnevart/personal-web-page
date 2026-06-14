@@ -35,7 +35,7 @@ export default async function ResumePage({
           "@context": "https://schema.org",
           "@type": "ProfilePage",
           name: "Artem Sidnev Resume",
-          url: `https://portfolio.example.com/${safeLocale}/resume`
+          url: `https://sidnevart.github.io/personal-web-page/${safeLocale}/resume`
         }}
       />
 
@@ -56,15 +56,26 @@ export default async function ResumePage({
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <a
-                  href={safeLocale === "ru" ? "/resume/artem-sidnev-resume-ru.pdf" : "/resume/artem-sidnev-resume-en.pdf"}
+                  href="/resume/artem-sidnev-resume-ru.pdf"
                   download
                   className="inline-flex rounded-full border border-[var(--line-strong)] bg-[var(--surface-strong)] px-5 py-3 text-sm font-semibold text-[var(--fg)] transition hover:opacity-90"
                 >
                   {safeLocale === "ru"
-                    ? "Скачать PDF"
+                    ? "Скачать RU PDF"
                     : safeLocale === "en"
-                      ? "Download PDF"
-                      : "Descargar PDF"}
+                      ? "Download RU PDF"
+                      : "Descargar RU PDF"}
+                </a>
+                <a
+                  href="/resume/artem-sidnev-resume-en.pdf"
+                  download
+                  className="inline-flex rounded-full border border-[var(--line-strong)] bg-[var(--surface-strong)] px-5 py-3 text-sm font-semibold text-[var(--fg)] transition hover:opacity-90"
+                >
+                  {safeLocale === "ru"
+                    ? "Скачать EN PDF"
+                    : safeLocale === "en"
+                      ? "Download EN PDF"
+                      : "Descargar EN PDF"}
                 </a>
                 <Link
                   href="/resume/latex"
@@ -103,9 +114,26 @@ export default async function ResumePage({
                 ))}
               </div>
               <div className="mt-6 border-t border-[var(--line)] pt-5 text-sm text-[var(--fg-soft)]">
-                <p>{siteContacts.email}</p>
-                <p className="mt-1">Telegram: @sidnevart</p>
-                <p className="mt-1">GitHub: sidnevart</p>
+                <p>
+                  <a href={`mailto:${siteContacts.email}`} className="hover:text-[var(--fg)]">
+                    {siteContacts.email}
+                  </a>
+                </p>
+                <p className="mt-1">
+                  <a href={siteContacts.telegram} className="hover:text-[var(--fg)]">
+                    Telegram: @sidnevart
+                  </a>
+                </p>
+                <p className="mt-1">
+                  <a href={siteContacts.linkedin} className="hover:text-[var(--fg)]">
+                    linkedin.com/in/artem-sidnev-b109ab401
+                  </a>
+                </p>
+                <p className="mt-1">
+                  <a href={siteContacts.github} className="hover:text-[var(--fg)]">
+                    GitHub: sidnevart
+                  </a>
+                </p>
               </div>
             </div>
           </div>
@@ -125,31 +153,31 @@ export default async function ResumePage({
             <div className="mt-4 grid gap-3 text-base leading-7 text-[var(--fg-muted)]">
               <p>
                 {safeLocale === "ru"
-                  ? "Языки: Java, Kotlin, Go, Rust, TypeScript"
+                  ? "Языки: Java, Kotlin, Python, Go, TypeScript, SQL"
                   : safeLocale === "en"
-                    ? "Languages: Java, Kotlin, Go, Rust, TypeScript"
-                    : "Lenguajes: Java, Kotlin, Go, Rust, TypeScript"}
+                    ? "Languages: Java, Kotlin, Python, Go, TypeScript, SQL"
+                    : "Lenguajes: Java, Kotlin, Python, Go, TypeScript, SQL"}
               </p>
               <p>
                 {safeLocale === "ru"
-                  ? "Данные: PostgreSQL, ClickHouse, Redis, Kafka"
+                  ? "Данные и очереди: PostgreSQL, ClickHouse, Redis, Kafka, очереди задач на PostgreSQL"
                   : safeLocale === "en"
-                    ? "Data: PostgreSQL, ClickHouse, Redis, Kafka"
-                    : "Datos: PostgreSQL, ClickHouse, Redis, Kafka"}
+                    ? "Data and queues: PostgreSQL, ClickHouse, Redis, Kafka, Postgres-backed task queues"
+                    : "Datos y colas: PostgreSQL, ClickHouse, Redis, Kafka"}
               </p>
               <p>
                 {safeLocale === "ru"
-                  ? "Продукты: внутренние платформы, аналитические сервисы, CRM, Telegram-боты"
+                  ? "API и интеграции: REST/gRPC, партнёрские потоки данных, вебхуки, ролевые сценарии"
                   : safeLocale === "en"
-                    ? "Product work: internal platforms, analytical services, CRM, Telegram bots"
-                    : "Trabajo de producto: plataformas internas, servicios analíticos, CRM y bots de Telegram"}
+                    ? "APIs and integrations: REST/gRPC, partner data pipelines, webhooks, role-based flows"
+                    : "APIs e integraciones: REST/gRPC, datos de partners, webhooks, roles"}
               </p>
               <p>
                 {safeLocale === "ru"
-                  ? "Open to roles: Middle Backend / DevOps (product + platform teams)"
+                  ? "Открыт к ролям: бэкенд-разработчик уровня Middle+ / Senior- в продуктовых и платформенных командах"
                   : safeLocale === "en"
-                    ? "Open to roles: Middle Backend / DevOps (product + platform teams)"
-                    : "Open to roles: Middle Backend / DevOps (equipos de producto y plataforma)"}
+                    ? "Open to roles: Backend Engineer (Middle+ / Senior-) in product and platform teams"
+                    : "Open to roles: Backend Engineer (Middle+ / Senior-) en producto y plataforma"}
               </p>
             </div>
           </div>

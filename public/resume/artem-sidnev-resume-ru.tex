@@ -1,57 +1,91 @@
+% Russian resume, 1 page. Compiles with ANY engine -- no Overleaf config needed:
+%  - Overleaf default (pdfLaTeX): uses T2A Cyrillic fonts automatically.
+%  - XeLaTeX / LuaLaTeX / tectonic: uses fontspec + PT Serif (nicer look).
 \documentclass[10pt,a4paper]{article}
-\usepackage[a4paper,margin=1.5cm]{geometry}
+
+\usepackage{iftex}
+\ifpdftex
+  \usepackage[utf8]{inputenc}
+  \usepackage[T2A]{fontenc}
+\else
+  \usepackage{fontspec}
+  % PT Serif ships with TeX Live / Overleaf and covers Cyrillic.
+  \setmainfont{PT Serif}
+\fi
+\usepackage[english,russian]{babel}
+\usepackage[a4paper,margin=1.4cm]{geometry}
 \usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
-\usepackage{fontspec}
-\usepackage{polyglossia}
+\usepackage{titlesec}
+\usepackage[colorlinks=true,urlcolor=blue]{hyperref}
 
-\setdefaultlanguage{russian}
-\setotherlanguage{english}
-
-% Pick a widely available system font on macOS.
-\setmainfont{Arial}
-
-\setlist[itemize]{leftmargin=1.2em,itemsep=0.2em,topsep=0.2em}
+\urlstyle{same}
+\setlist[itemize]{leftmargin=1.2em,itemsep=0.36em,topsep=0.30em,parsep=0em,partopsep=0em}
+\titleformat{\section}{\large\bfseries}{}{0em}{}[\vspace{-0.10em}\titlerule]
+\titlespacing*{\section}{0pt}{0.74em}{0.30em}
 \pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\emergencystretch=2em
+
+\newcommand{\contactsep}{\enspace\textbar\enspace}
 
 \begin{document}
+\fontsize{9.8pt}{11.4pt}\selectfont
 
 \begin{center}
-{\LARGE \textbf{Артём Сиднев}}\\[0.35em]
-Middle Backend / DevOps Engineer\\[0.35em]
-\href{mailto:a.sidnevart@gmail.com}{a.sidnevart@gmail.com} \quad
-\href{https://t.me/sidnevart}{t.me/sidnevart} \quad
-\href{https://github.com/sidnevart}{github.com/sidnevart}
+{\LARGE \textbf{Артём Сиднев}}\\[0.10em]
+{\normalsize \textbf{Software Engineer} \textbullet{} Java\,/\,Kotlin\,/\,Go \textbullet{} \textasciitilde4 года}\\[0.12em]
+{\footnotesize Spring Boot \textbullet{} PostgreSQL \textbullet{} ClickHouse \textbullet{} Kafka \textbullet{} gRPC \textbullet{} Kubernetes}\\[0.20em]
+{\footnotesize Москва \textbullet{} удалёнка\,/\,гибрид \textbullet{} открыт к релокации}\\[0.20em]
+{\footnotesize
+\href{tel:+79109692922}{+7 910 969 29 22}
+\contactsep \href{mailto:a.sidnevart@gmail.com}{a.sidnevart@gmail.com}
+\contactsep \href{https://t.me/sidnevart}{Telegram}
+\contactsep \href{https://www.linkedin.com/in/artem-sidnev-b109ab401/}{LinkedIn}
+\contactsep \href{https://github.com/sidnevart}{GitHub}
+\contactsep \href{https://sidnevart.github.io/personal-web-page/}{Portfolio}
+}
 \end{center}
 
-\vspace{0.6em}
+\vspace{-0.14em}
 
 \section*{Профиль}
-Middle Backend / DevOps инженер в T-Bank. Строю high-load системы, data-платформы и практическую AI/LLM-автоматизацию. Сильнее всего в задачах, где важны надёжность, скорость критичных контуров и измеримый эффект.
+Backend \& Platform Engineer (Java, Kotlin, Go) с 4-летним опытом разработки высоконагруженных систем и Big Data пайплайнов. Технически возглавлял развитие Customer Data Platform (CDP), спроектировав архитектуру сбора данных, что увеличило выручку на \textasciitilde14 млн руб./мес.\ и ускорило процессы в 40 раз. Имею практический опыт внедрения AI-инструментов (LLM, RAG) в инженерные процессы. Специализируюсь на создании отказоустойчивых решений (ClickHouse, Kafka, gRPC) с фокусом на измеримый бизнес-результат.
 
-\section*{Опыт работы}
-\textbf{T-Bank} \hfill 2025 -- н.в.\\
-\textit{Middle Backend / DevOps Engineer}
+\section*{Ключевые навыки}
+\textbf{Языки:} Java, Kotlin, Python, Go, SQL \\
+\textbf{Технологии:} Spring Boot, gRPC, REST, микросервисы, PostgreSQL, ClickHouse, CHaaS (ClickHouse-as-a-Service), Kafka, Redis, S3 \\
+\textbf{Инструменты:} Docker, Kubernetes, GitLab CI/CD, Prometheus, Grafana, OpenTelemetry, nginx
+
+\section*{Опыт}
+
+\textbf{Software Engineer \textbar{} Tinkoff Bank} \hfill \textit{окт 2025 -- н.в.}\\[0.18em]
+{\footnotesize\textit{Customer Data Platform (CDP): управление маркетинговыми аудиториями для кэшбэк-офферов (AdTech внутри банка)~--- отбор клиентов под партнёрские кампании по транзакционным, клиентским и партнёрским данным.}}
 \begin{itemize}
-  \item Развиваю платформу таргетирования кэшбэк-офферов для менеджеров (аудитории на истории 1.5 года и потоке ~30 млн транзакций/день).
-  \item Ускорил критичный production-контур сборки аудитории примерно в 5 раз после миграции и оптимизаций.
-  \item Сократил диагностику типовой проблемы на 20--40 минут за счёт ранних проверок и понятных ошибок.
-  \item Автоматизировал рутинные шаги менеджеров: минус 10--15 минут на запуск и до 40--60 часов ручных операций в месяц.
-  \item Внедрил AI code review в GitLab и AI CI job для рефакторинга/подготовки MR.
-  \item Собрал n8n-автоматизации и RAG-агента для онбординга стажёров: AI-процессы быстрее ~1.5x, расход токенов ниже до 3x.
+  \item Ускорил сбор аудиторий \textbf{в 40--50 раз} (с 6 мин до 1--10 с), принеся \textbf{\textasciitilde14 млн руб./мес.} дополнительной выручки. Единолично спроектировал архитектуру DAG-пайплайнов на Kotlin, обеспечив мгновенную обработку данных любого объёма через CHaaS.
+  \item \textbf{Технический лид интеграции CDP} (2 команды, 9 инженеров): инициировал RFC и спроектировал двухуровневую архитектуру~--- control-plane (\textbf{Kotlin\,/\,Spring Boot}) и data-plane (\textbf{Go}, gRPC, S3). Консолидировал смежную команду и сервис в контур CDP, ускорил доставку данных \textbf{в 32 раза} (с 8 ч до 15 мин) и достиг \textbf{99.9\%} надёжности процессов за счёт идемпотентности и retry\,/\,fallback.
+  \item Архитектурно реализовал высоконагруженную обработку \textbf{\textasciitilde30 млн транзакций/день} через Kafka и ClickHouse с историей 1.5 года; система таргетинга на базе этого пайплайна принесла \textbf{\textasciitilde15 млн руб. годовой прибыли}.
+  \item Сократил время выполнения критических сценариев \textbf{в 5 раз}, построив математическую модель задержек и сквозной мониторинг (observability) пайплайнов; оптимизировал критический путь миграцией вычислений в CHaaS.
+  \item Экономлю менеджерам \textbf{до 60 рабочих часов ежемесячно} за счёт автоматизации проверок данных и настройки регионов; ускорил основные GitLab CI/CD пайплайны тестирования на 20\%.
 \end{itemize}
 
-\section*{Ключевые проекты}
+\vspace{0.55em}
+\textbf{Software Engineer \textbar{} Клиент (NDA)~--- рынок недвижимости} \hfill \textit{авг 2024 -- авг 2025}\\[0.18em]
+{\footnotesize\textit{Аналитическая платформа для рынка жилой недвижимости.}}
 \begin{itemize}
-  \item Cashback Offer Targeting Platform (big-tech internal product).
-  \item AI Automation for Internal Workflows (GitLab AI review, AI CI, n8n, RAG onboarding).
-  \item Commercial Real Estate Analytics (auctions + market comparables + Telegram delivery).
-  \item Personalized Mobile Banking Chat (Rust, transaction-based personalization).
+  \item Создал аналитическую платформу для рынка недвижимости: парсинг торгов и CIAN, геокодинг, каталог объектов с поиском, Telegram-бот и админ-панель, расчёт экономики объекта (Python, FastAPI, PostgreSQL, Redis).
+  \item Сократил первичную оценку объекта \textbf{до \textasciitilde10 мин}, анализ района~--- до 7--10 мин: риэлторы и инвесторы видят цену, доходность, денежный поток и срок окупаемости без ручной сверки нескольких источников.
 \end{itemize}
 
-\section*{Технологии}
-Языки: Java, Kotlin, Go, Rust, TypeScript\\
-Данные и очереди: PostgreSQL, ClickHouse, Redis, Kafka\\
-Фокус: high-load системы, data-платформы, AI-автоматизация, интеграции
+\vspace{0.55em}
+\textbf{Freelance Software Engineer \textbar{} Клиентские проекты} \hfill \textit{май 2022 -- авг 2024}\\[0.18em]
+{\footnotesize\textit{Разработка сервисов бронирования, лояльности и автоматизации для малого и сервисного бизнеса~--- от MVP до продакшена, единоличная ответственность за стек и поставку.}}
+\begin{itemize}
+  \item Разработал за \textbf{\textasciitilde1 месяц} в одиночку MVP, который помог заказчику привлечь инвестиции: Telegram Mini App для бронирования услуг~--- подбор свободных слотов и бронь в 2 действия вместо звонка, кабинеты клиента, партнёра и админа. Стек: Python (FastAPI), Go-сервис фоновой обработки и уведомлений, PostgreSQL, Redis, React; деплой Docker\,/\,nginx, CI/CD.
+  \item Для бильярдного клуба перевёл запись из телефонных звонков в Telegram Mini App (\textbf{+25\% конверсии}): интеграция с YClients, система матчей с рейтингом \textbf{Elo} и идемпотентными бонусами лояльности~--- \textbf{экономия \textasciitilde15 ч/мес} администратора.
+\end{itemize}
+
+\section*{Образование}
+\textbf{РосНОУ} \textbar{} Бакалавриат, Computer Science \textbar{} \textit{ожидаемое окончание: 2028}\\[0.05em]
 
 \end{document}

@@ -25,6 +25,8 @@ export type PersonProfile = {
   contacts?: {
     telegram?: string;
     github?: string;
+    linkedin?: string;
+    portfolio?: string;
     email?: string;
   };
 };
@@ -66,25 +68,29 @@ type ResumeSection = {
 export const siteContacts = {
   email: "a.sidnevart@gmail.com",
   telegram: "https://t.me/sidnevart",
-  github: "https://github.com/sidnevart"
+  github: "https://github.com/sidnevart",
+  linkedin: "https://www.linkedin.com/in/artem-sidnev-b109ab401/",
+  portfolio: "https://sidnevart.github.io/personal-web-page/"
 };
 
 export const artemProfile: PersonProfile = {
   id: "artem",
   name: "Artem Sidnev",
   role: {
-    ru: "Backend engineer. Внутренние платформы, аналитические сервисы, CRM и прикладные продукты",
-    en: "Backend engineer. Internal platforms, analytical services, CRM, and applied products",
+    ru: "Бэкенд-разработчик. Продакшен-сервисы, платформы обработки данных, интеграции и автоматизация",
+    en: "Backend engineer. Production services, data-intensive platforms, integrations, and automation",
     es: "Ingeniero backend. Plataformas internas, servicios analíticos, CRM y productos aplicados"
   },
   summary: {
-    ru: "Строю backend-системы и внутренние продукты, которые помогают бизнесу быстрее запускать сценарии, убирать ручную работу и точнее принимать решения.",
-    en: "I build backend systems and internal products that help businesses launch workflows faster, remove manual work, and make better decisions.",
+    ru: "Строю бэкенд-системы, где важны надёжность, сложная бизнес-логика, данные, интеграции и измеримый эффект.",
+    en: "I build backend systems where reliability, complex business logic, data, integrations, and measurable impact matter.",
     es: "Construyo sistemas backend y productos internos que ayudan a los negocios a lanzar flujos más rápido, eliminar trabajo manual y tomar mejores decisiones."
   },
   contacts: {
     telegram: siteContacts.telegram,
     github: siteContacts.github,
+    linkedin: siteContacts.linkedin,
+    portfolio: siteContacts.portfolio,
     email: siteContacts.email
   }
 };
@@ -97,24 +103,24 @@ export const siteContent = {
       es: "Artem Sidnev"
     },
     headline: {
-      ru: "Middle Software Engineer (Backend / DevOps). Высоконагруженные сервисы, data-платформы и надёжная инфраструктура.",
-      en: "Middle Software Engineer (Backend / DevOps). High-load services, data platforms, and reliable infrastructure.",
+      ru: "Бэкенд-разработчик. Продакшен-сервисы, платформы обработки данных, интеграции и инициативы по производительности.",
+      en: "Backend Engineer. Production services, data-intensive platforms, integrations, and performance initiatives.",
       es: "Middle Software Engineer (Backend / DevOps). Servicios de alta carga, plataformas de datos e infraestructura fiable."
     },
     subheadline: {
-      ru: "Строю и улучшаю системы, которые выдерживают нагрузку и дают бизнесу понятный результат: стабильность, скорость критичных контуров, автоматизация и измеримый эффект.",
-      en: "I build and improve systems that sustain load and deliver clear outcomes: reliability, faster critical flows, automation, and measurable impact.",
+      ru: "Беру задачи от неясных требований до продакшен-внедрения: проектирую бэкенд-контракты, ускоряю критичные пайплайны, автоматизирую ручные процессы и оставляю измеримый результат.",
+      en: "I take work from unclear requirements to production rollout: design backend contracts, speed up critical pipelines, automate manual workflows, and leave measurable results.",
       es: "Construyo y mejoro sistemas que soportan carga y dan resultados claros: fiabilidad, flujos críticos más rápidos, automatización e impacto medible."
     },
     proof: {
       ru: [
         "Фичи с измеримым эффектом: до 7.5 млн руб./год бизнес-импакта.",
-        "Ускорял критичные production-контуры примерно в 5 раз.",
+        "Сокращал задержку отдельных сценариев сборки аудиторий с ~170 минут до 5–10 секунд.",
         "Автоматизацией снимал до 40–60 часов ручной работы в месяц."
       ],
       en: [
         "Metric-backed impact: up to RUB 7.5M/year business effect.",
-        "Accelerated critical production flows by ~5x.",
+        "Reduced selected audience-flow latency from ~170 minutes to 5–10 seconds.",
         "Automation removed up to 40–60 manual hours per month."
       ],
       es: [
@@ -138,7 +144,7 @@ export const siteContent = {
           es: "Sistemas de alta carga"
         },
         body: {
-          ru: "Backend-контуры и сервисы, которые должны выдерживать нагрузку и быть предсказуемыми в продакшне.",
+          ru: "Бэкенд-сервисы, очереди и API, которые должны выдерживать нагрузку и быть предсказуемыми в продакшене.",
           en: "Backend systems that must handle load and remain predictable in production.",
           es: "Sistemas backend que deben soportar carga y ser predecibles en producción."
         }
@@ -183,7 +189,7 @@ export const siteContent = {
     points: {
       ru: [
         "Перевожу расплывчатую задачу в рабочий план, ограничения и последовательность внедрения.",
-        "Собираю backend и данные так, чтобы система давала понятный результат, а не просто технически работала.",
+        "Собираю бэкенд и данные так, чтобы система давала понятный результат, а не просто технически работала.",
         "Оставляю после себя более устойчивый процесс, а не зависимость от ручных разборов."
       ],
       en: [
@@ -212,9 +218,9 @@ export const siteContent = {
     points: {
       ru: [
         "Реализую новые параметры таргетинга (включая финансовые и терминальные сигналы).",
-        "Ускоряю и стабилизирую контуры сборки аудиторий в production.",
-        "Внедряю AI/LLM в процессы: AI code review, AI CI job, RAG-агент для онбординга.",
-        "Делаю валидации и quality-checks, чтобы снижать ошибки до запуска кампаний."
+        "Ускоряю и стабилизирую пайплайны сборки аудиторий в продакшене.",
+        "Внедряю AI/LLM в процессы: ревью кода, CI-задачи и RAG-агент для онбординга.",
+        "Добавляю валидации и проверки качества, чтобы снижать ошибки до запуска кампаний."
       ],
       en: [
         "Implement new targeting parameters (including financial and terminal signals).",
@@ -237,15 +243,15 @@ export const siteContent = {
       es: "Qué hago en freelance y proyectos externos"
     },
     intro: {
-      ru: "Беру задачи, где нужен надёжный backend и масштаб: ETL/data pipelines, API и high‑load сервисы под рост.",
+      ru: "Беру задачи, где нужен надёжный бэкенд и масштаб: ETL/data-пайплайны, API и высоконагруженные сервисы под рост.",
       en: "I take projects that need reliable, scalable backend: ETL/data pipelines, APIs, and high‑load services built to grow.",
       es: "Tomo proyectos que requieren backend fiable y escalable: ETL/pipelines de datos, APIs y servicios de alta carga para crecer."
     },
     points: {
       ru: [
-        "Проектирование и запуск backend-сервисов под высокую нагрузку.",
+        "Проектирование и запуск бэкенд-сервисов под высокую нагрузку.",
         "ETL/data-пайплайны и автоматизация рутинных процессов.",
-        "Оптимизация существующих production-сервисов (скорость, надёжность, стоимость)."
+        "Оптимизация существующих продакшен-сервисов (скорость, надёжность, стоимость)."
       ],
       en: [
         "Design and delivery of high-load backend services.",
@@ -261,12 +267,12 @@ export const siteContent = {
   },
   contact: {
     title: {
-      ru: "Если нужен инженер, который может собрать прикладной продукт или масштабный backend под реальную бизнес-задачу, напишите.",
+      ru: "Если нужен инженер, который может собрать прикладной продукт или масштабный бэкенд под реальную бизнес-задачу, напишите.",
       en: "If you need an engineer who can build an applied product or a scalable backend for a real business task, reach out.",
       es: "Si necesitas un ingeniero que construya un producto aplicado o un backend escalable para un problema real, escríbeme."
     },
     body: {
-      ru: "Это может быть high-load backend, ETL/данные, интеграции, автоматизация, миграции или запуск нового сервиса под рост.",
+      ru: "Это может быть высоконагруженный бэкенд, ETL/данные, интеграции, автоматизация, миграции или запуск нового сервиса под рост.",
       en: "This can include high-load backend, ETL/data work, integrations, automation, migrations, or launching a new service designed to scale.",
       es: "Puede incluir backend de alta carga, ETL/datos, integraciones, automatización, migraciones o lanzar un nuevo servicio para escalar."
     }
@@ -282,46 +288,19 @@ const resumeSections: readonly ResumeSection[] = [
     },
     items: {
       ru: [
-        "T-Bank — Middle Backend / DevOps Engineer (2025 — н.в.): high-load backend, платформа таргетирования кэшбэк-офферов, production-контуры и интеграции.",
-        "AI/LLM в процессах: AI code review в GitLab, AI CI job для рефакторинга/MR, n8n-автоматизации и RAG-агент для онбординга.",
-        "Результаты: до 7.5 млн руб./год эффекта, ~5x ускорение критичного контура, до 40–60 ч/мес экономии ручной работы, ~1.5x ускорение AI-процессов и до 3x экономии токенов."
+        "T-Bank — бэкенд-разработчик, окт 2025 — н.в.: продакшен-бэкенд для платформы управления аудиториями, кэшбэк-офферов, потоков обработки данных и корпоративных интеграций.",
+        "Лидировал архитектурную инициативу между сервисами: вынес тяжёлую материализацию и выгрузку аудиторий из основной платформы во внутренний сервис обработки данных с gRPC API, ClickHouse-исполнением, S3-выгрузкой и отдельными лимитами воркеров.",
+        "Результаты: сборка аудиторий для кэшбэк-кампаний ускорилась с ~170 минут до 5–10 секунд в оптимизированных сценариях — в 1000–2000 раз."
       ],
       en: [
-        "T-Bank — Middle Backend / DevOps Engineer (2025 — present): high-load backend, cashback targeting platform, production flows, and integrations.",
-        "AI/LLM workflows: AI code review in GitLab, AI CI job for refactoring/MR prep, n8n automations, and a RAG onboarding agent.",
-        "Results: up to RUB 7.5M/year impact, ~5x faster critical flow, up to 40–60 h/month manual work saved, ~1.5x faster AI workflows and up to 3x token savings."
+        "T-Bank — Software Engineer (Backend), Oct 2025 — present: production backend for cashback targeting, partner-funded offers, data-intensive audience workflows, and corporate integrations.",
+        "Led a cross-service architecture initiative: moved heavy audience materialization/export work from the core Kotlin/Spring service to an internal Go data-processing service with gRPC API, ClickHouse execution, S3 export, and bounded worker concurrency.",
+        "Results: cashback audience gathering from ~170 minutes to 5–10 seconds in optimized scenarios, up to 1000–2000x speedup."
       ],
       es: [
-        "T-Bank — Middle Backend / DevOps Engineer (2025 — actual): backend de alta carga, plataforma de cashback, flujos productivos e integraciones.",
+        "T-Bank — Middle Backend / DevOps Engineer (oct 2025 — actual): backend de alta carga, plataforma de cashback, flujos productivos e integraciones.",
         "Flujos AI/LLM: AI code review en GitLab, AI CI job, automatizaciones n8n y agente RAG de onboarding.",
         "Resultados: hasta 7,5M RUB/año, flujo crítico ~5x más rápido, 40–60 h/mes ahorradas, AI workflows ~1.5x más rápidos y hasta 3x menos tokens."
-      ]
-    }
-  },
-  {
-    title: {
-      ru: "Ключевые проекты",
-      en: "Key projects",
-      es: "Proyectos clave"
-    },
-    items: {
-      ru: [
-        "Платформа таргетирования кэшбэк-офферов (big-tech): аудитории на 1.5 года истории и ~30 млн транзакций/день.",
-        "AI Automation for Internal Workflows: code review, AI CI, n8n, RAG onboarding agent.",
-        "Commercial Real Estate Analytics: торги + рыночные аналоги + Telegram-выдача, end-to-end аналитический продукт.",
-        "Personalized Mobile Banking Chat (Rust): персональные рекомендации на основе транзакционного контекста."
-      ],
-      en: [
-        "Cashback Offer Targeting Platform (big-tech): audiences over 1.5 years of history and ~30M transactions/day.",
-        "AI Automation for Internal Workflows: code review, AI CI, n8n, RAG onboarding agent.",
-        "Commercial Real Estate Analytics: auctions + market comparables + Telegram delivery, end-to-end analytical product.",
-        "Personalized Mobile Banking Chat (Rust): personalized recommendations based on transaction context."
-      ],
-      es: [
-        "Plataforma de targeting de cashback (big-tech): audiencias sobre 1,5 años y ~30M transacciones/día.",
-        "AI Automation for Internal Workflows: code review, AI CI, n8n, agente RAG.",
-        "Analítica de Real Estate comercial: subastas + comparables + entrega en Telegram.",
-        "Chat personalizado de banca móvil (Rust): recomendaciones basadas en contexto transaccional."
       ]
     }
   }
@@ -334,20 +313,20 @@ export const resumeContent = {
     es: "CV"
   },
   summary: {
-    ru: "Middle Backend / DevOps engineer в T‑Bank. Строю high‑load системы, data‑платформы и практическую AI/LLM‑автоматизацию. Беру задачи, где важны надёжность, скорость критичных контуров и измеримый эффект.",
-    en: "Middle Backend / DevOps engineer at T‑Bank. I build high‑load systems, data platforms, and practical AI/LLM automation. I take tasks where reliability, critical flow speed, and measurable impact matter.",
+    ru: "Бэкенд-разработчик в T‑Bank. Строю продакшен-бэкенд, потоки обработки данных, API, очереди задач, интеграции и автоматизацию. Беру задачи, где важны надёжность, сложная бизнес-логика, скорость критичных пайплайнов и измеримый эффект.",
+    en: "Backend engineer at T‑Bank. I build production backend, data-intensive workflows, APIs, task queues, integrations, and automation. I take work where reliability, complex business logic, critical-flow speed, and measurable impact matter.",
     es: "Middle Backend / DevOps engineer en T‑Bank. Construyo sistemas de alta carga, plataformas de datos y automatización AI/LLM. Trabajo donde importan fiabilidad, velocidad y métricas."
   },
   highlights: {
     ru: [
-      "High‑load backend + data‑платформы + практическая AI/LLM автоматизация",
-      "Метрики: до 7.5 млн руб./год, ~5x ускорение, до 40–60 ч/мес экономии",
-      "AI‑внедрения: code review, AI CI job, n8n и RAG‑агенты"
+      "Java/Kotlin/Python, Spring Boot, REST/gRPC, PostgreSQL, ClickHouse, Kafka",
+      "Метрики: сборка аудиторий с ~170 минут до 5–10 секунд, ускорение в 1000–2000 раз, p95 до оптимизации доходил до 7.8 часа",
+      "Продакшен-подход: поэтапное внедрение, резервный путь, наблюдаемость, валидация и стабильные менеджерские процессы"
     ],
     en: [
-      "High‑load backend + data platforms + practical AI/LLM automation",
-      "Metrics: up to RUB 7.5M/year, ~5x acceleration, up to 40–60 h/month saved",
-      "AI rollouts: code review, AI CI job, n8n automations, RAG agents"
+      "Java/Kotlin/Python, Spring Boot, REST/gRPC, PostgreSQL, ClickHouse, Kafka",
+      "Metrics: cashback audience gathering from ~170 minutes to 5–10 seconds, up to 1000–2000x speedup",
+      "Production mindset: rollout, fallback, observability, validation, and stable manager-facing workflows"
     ],
     es: [
       "Backend de alta carga + plataformas de datos + automatización AI/LLM",
@@ -415,7 +394,7 @@ export const projects: Project[] = [
         ]
       },
       role: {
-        ru: "Backend engineer: требования + реализация фичи, качество (проверки/валидации), тестирование и доведение до продакшна.",
+        ru: "Бэкенд-разработчик: требования, реализация фичи, качество (проверки/валидации), тестирование и доведение до продакшена.",
         en: "Backend engineer: requirements + implementation, quality (validation), testing, and production rollout.",
         es: "Ingeniero backend: requisitos e implementación, calidad (validación), testing y despliegue."
       },
@@ -423,7 +402,7 @@ export const projects: Project[] = [
         ru: [
           "Аудитории под офферы собираются автоматически на истории 1.5 года и на потоке ~30 млн транзакций/день, без ручных проливок.",
           "Менеджеры получили точные параметры включения/исключения клиентов, меньше ручных правок и меньше ошибок в кампаниях.",
-          "По оценке бизнеса ожидаемый эффект — до 7.5 млн руб./год; после миграции критичный контур сборки ускорился примерно в 5 раз."
+          "По оценке бизнеса ожидаемый эффект — до 7.5 млн руб./год; после миграции критичный пайплайн сборки ускорился примерно в 5 раз."
         ],
         en: [
           "Offer audiences are built automatically on 1.5 years of history and ~30M transactions/day, without manual data loads.",
@@ -437,7 +416,7 @@ export const projects: Project[] = [
         ]
       },
       note: {
-        ru: "В кейсе сознательно упрощены внутренние названия платформ и контуров, чтобы смысл был понятен без корпоративного контекста.",
+        ru: "В кейсе сознательно упрощены внутренние названия платформ и сервисов, чтобы смысл был понятен без корпоративного контекста.",
         en: "Internal platform names and contours are intentionally simplified so the case stays readable outside the original company context.",
         es: "Los nombres internos de plataformas y contornos están simplificados a propósito para que el caso siga siendo legible fuera del contexto corporativo."
       }
@@ -499,14 +478,14 @@ export const projects: Project[] = [
         ]
       },
       role: {
-        ru: "Backend engineer: архитектура, интеграции, orchestration и внедрение в production-процессы.",
+        ru: "Бэкенд-разработчик: архитектура, интеграции, оркестрация и внедрение в продакшен-процессы.",
         en: "Backend engineer: architecture, integrations, orchestration, and production rollout.",
         es: "Ingeniero backend: arquitectura, integraciones, orquestación y despliegue."
       },
       result: {
         ru: [
           "Процессы ускорились примерно в 1.5 раза, расход токенов снизился до 3x.",
-          "AI стал частью ежедневных инженерных и менеджерских workflows, а не отдельной демо-фичей."
+          "AI стал частью ежедневных инженерных и менеджерских процессов, а не отдельной демо-фичей."
         ],
         en: [
           "Workflows got ~1.5x faster, token usage dropped up to 3x.",
@@ -581,7 +560,7 @@ export const projects: Project[] = [
         ]
       },
       role: {
-        ru: "End-to-end: доменная модель, сбор/очистка данных, backend, деплой и Telegram-бот.",
+        ru: "Сквозная реализация: доменная модель, сбор и очистка данных, бэкенд, деплой и Telegram-бот.",
         en: "End-to-end: domain model, data ingestion/cleaning, backend, deployment, and Telegram bot.",
         es: "End-to-end: modelo de dominio, ingesta/limpieza, backend, despliegue y bot de Telegram."
       },
@@ -666,14 +645,14 @@ export const projects: Project[] = [
         ]
       },
       role: {
-        ru: "Backend/product engineering: архитектура сервиса, реализация core-сценариев, интеграции и качество продуктового потока.",
+        ru: "Бэкенд и продуктовая инженерия: архитектура сервиса, реализация ключевых сценариев, интеграции и качество продуктового потока.",
         en: "Backend/product engineering: service architecture, core flows, integrations, and product flow quality.",
         es: "Backend/product engineering: arquitectura, flujos core, integraciones y calidad del flujo."
       },
       result: {
         ru: [
           "Получился цельный edtech-продукт с регулярным пользовательским циклом, а не набор разрозненных функций.",
-          "Кейс показывает умение строить продуктовую механику retention, а не только backend API.",
+          "Кейс показывает умение строить продуктовую механику удержания, а не только бэкенд API.",
           "В портфолио этот проект закрывает направление “education + real-time + продуктовый цикл”."
         ],
         en: [
@@ -756,14 +735,14 @@ export const projects: Project[] = [
         ]
       },
       role: {
-        ru: "Full‑stack: проектирование домена, backend API, интерфейс и интеграция в цельный рабочий продукт.",
+        ru: "Full‑stack: проектирование домена, бэкенд API, интерфейс и интеграция в цельный рабочий продукт.",
         en: "Full‑stack: domain design, backend API, UI, and integration into one working product.",
         es: "Full‑stack: diseño de dominio, API, UI e integración en un producto completo."
       },
       result: {
         ru: [
           "Получился понятный продуктовый кейс про business software и ежедневную операционную работу.",
-          "Проект показывает умение связывать backend и UI в систему, где важна целостность сценариев.",
+          "Проект показывает умение связывать бэкенд и UI в систему, где важна целостность сценариев.",
           "Хороший “второй” кейс в портфолио: меньше бигтеха, больше прикладного продукта."
         ],
         en: [
@@ -793,7 +772,7 @@ export const projects: Project[] = [
       es: "Servicio interno de chat que usa transacciones del cliente para recomendaciones personalizadas basadas en compras."
     },
     short: {
-      ru: "Кейс про продуктовый backend в банке: данные транзакций → персональный контекст → ответ в чате.",
+      ru: "Кейс про продуктовый бэкенд в банке: данные транзакций → персональный контекст → ответ в чате.",
       en: "A product-backend case: transactions → personalized context → chat response.",
       es: "Caso de backend de producto: transacciones → contexto personalizado → respuesta en chat."
     },
@@ -836,7 +815,7 @@ export const projects: Project[] = [
         ]
       },
       role: {
-        ru: "Backend engineer: проектирование сервиса, реализация на Rust и интеграция с контуром транзакционных данных.",
+        ru: "Бэкенд-разработчик: проектирование сервиса, реализация на Rust и интеграция с контуром транзакционных данных.",
         en: "Backend engineer: service design, Rust implementation, and integration with transaction data flows.",
         es: "Ingeniero backend: diseño del servicio, implementación en Rust e integración con datos transaccionales."
       },
@@ -1000,7 +979,7 @@ export const projects: Project[] = [
         ]
       },
       role: {
-        ru: "Backend/infra: архитектура, интеграции с биржами, данные и эксплуатационные практики.",
+        ru: "Бэкенд/инфраструктура: архитектура, интеграции с биржами, данные и эксплуатационные практики.",
         en: "Backend/infra: architecture, exchange integrations, data, and operational practices.",
         es: "Backend/infra: arquitectura, integraciones, datos y operación."
       },
@@ -1092,7 +1071,7 @@ export const projects: Project[] = [
         ]
       },
       role: {
-        ru: "Backend/infra: архитектура, интеграции, CI/CD-практики и наблюдаемость.",
+        ru: "Бэкенд/инфраструктура: архитектура, интеграции, CI/CD-практики и наблюдаемость.",
         en: "Backend/infra: architecture, integrations, CI/CD practices, and observability.",
         es: "Backend/infra: arquitectura, integraciones, prácticas CI/CD y observabilidad."
       },
