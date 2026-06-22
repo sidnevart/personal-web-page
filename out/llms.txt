@@ -1,0 +1,44 @@
+# Artem Sidnev — Software Engineer
+
+> Backend & Platform Engineer with ~4 years of experience. Technical Lead of the Customer Data Platform (CDP) at T-Bank. Specializes in high-load systems, data-intensive pipelines, and AI/LLM automation.
+
+## Current Role
+
+Software Engineer at T-Bank (since Oct 2025), serving as Technical Lead of the Customer Data Platform (CDP) — a manager-facing cashback audience platform processing ~30 million transactions/day.
+
+## Key Achievements
+
+- **Audience gathering acceleration:** Made audience building size-independent — 1–10 seconds for any audience (from ~6 minutes typical). ~30–50× typical improvement, up to 360× best case.
+- **Data export acceleration (32×):** Self-initiated and drove a cross-team RFC integration, cutting data delivery from 8+ hours to ~15 minutes. This led to organizational consolidation — the other team was absorbed into the CDP.
+- **Targeting system impact:** Delivered spend/income targeting on ~30M transactions/day, generating ~RUB 15M/year in profit.
+- **Revenue impact:** Architected a system generating ~RUB 14M/month in analyst-estimated revenue.
+- **AI/LLM automation:** Deployed AI code review bot, CI refactoring bot, RAG onboarding agent, and n8n automations — saving 40–60 manual hours/month.
+
+## Technical Stack
+
+- **Languages:** Java, Kotlin, Python, Go, TypeScript, SQL
+- **Backend:** Spring Boot, FastAPI, REST, gRPC, microservices
+- **Data:** PostgreSQL, ClickHouse, Kafka, Redis, pgvector, S3
+- **Infrastructure:** Docker, Kubernetes, GitLab CI/CD, GitHub Actions
+- **AI:** OpenAI, LangChain, RAG, MCP servers, n8n, faster-Whisper
+
+## Open-Source Projects
+
+- **ProofForge** (Go + Next.js): Peer-accountability platform with AI goal refinement, buddy goals, circles, proofs, and Telegram bot.
+- **ARC** (Go + Wails): Local-first CLI + desktop app for AI work on real codebases. 5⭐ on GitHub.
+- **Chappi AI Office** (OpenClaw + Python): 24/7 autonomous AI office via Telegram with multi-agent orchestration, voice, and integrations.
+
+## What Makes Artem Unique
+
+1. Self-initiated leadership — drove cross-team RFC that consolidated teams
+2. Quantitative approach — built latency models, identified 96.5% queue wait
+3. AI in production — practical LLM tools, not demos
+4. Full ownership — requirements → design → implementation → production → metrics
+
+## Contact
+
+- Email: a.sidnevart@gmail.com
+- Telegram: https://t.me/sidnevart
+- GitHub: https://github.com/sidnevart (45 repos)
+- LinkedIn: https://www.linkedin.com/in/artem-sidnev-b109ab401/
+- Portfolio: https://sidnevart.github.io/personal-web-page/

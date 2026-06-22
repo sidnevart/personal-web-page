@@ -5,8 +5,10 @@ import type { NextConfig } from "next";
 const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
 const nextConfig: NextConfig = {
+  output: "export",
   outputFileTracingRoot: path.join(process.cwd()),
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",

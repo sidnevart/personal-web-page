@@ -1,0 +1,61 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1000" rx="36" fill="#F4EEE5"/>
+  <rect x="88" y="116" width="1424" height="796" rx="28" fill="#FCF8F2" stroke="#DDD2C3"/>
+  <!-- Telegram chat interface -->
+  <rect x="136" y="164" width="440" height="700" rx="22" fill="#FFFFFF" stroke="#D8CAB5"/>
+  <!-- Chat header -->
+  <rect x="166" y="194" width="380" height="56" rx="16" fill="#F2E9DC"/>
+  <circle cx="206" cy="222" r="20" fill="#9F6C3A"/>
+  <rect x="240" y="210" width="140" height="14" rx="7" fill="#2D3436"/>
+  <rect x="240" y="232" width="80" height="10" rx="5" fill="#D8CAB5"/>
+  <!-- Messages -->
+  <rect x="166" y="270" width="280" height="48" rx="14" fill="#F2E9DC"/>
+  <rect x="280" y="338" width="260" height="48" rx="14" fill="#9F6C3A"/>
+  <rect x="166" y="406" width="320" height="64" rx="14" fill="#F2E9DC"/>
+  <rect x="240" y="490" width="300" height="48" rx="14" fill="#9F6C3A"/>
+  <rect x="166" y="558" width="240" height="48" rx="14" fill="#F2E9DC"/>
+  <!-- Voice indicator -->
+  <rect x="166" y="630" width="380" height="56" rx="16" fill="#E7D7BF"/>
+  <circle cx="206" cy="658" r="16" fill="#9F6C3A"/>
+  <rect x="240" y="648" width="100" height="12" rx="6" fill="#2D3436"/>
+  <!-- Sound waves -->
+  <rect x="460" y="648" width="6" height="20" rx="3" fill="#9F6C3A"/>
+  <rect x="474" y="640" width="6" height="36" rx="3" fill="#9F6C3A"/>
+  <rect x="488" y="644" width="6" height="28" rx="3" fill="#9F6C3A"/>
+  <rect x="502" y="650" width="6" height="16" rx="3" fill="#9F6C3A"/>
+  <!-- Agent dashboard (right side) -->
+  <rect x="628" y="164" width="380" height="340" rx="22" fill="#FFFFFF" stroke="#D8CAB5"/>
+  <rect x="658" y="194" width="160" height="18" rx="9" fill="#2D3436"/>
+  <!-- Agent cards -->
+  <rect x="658" y="236" width="320" height="56" rx="14" fill="#F2E9DC"/>
+  <rect x="678" y="252" width="80" height="24" rx="12" fill="#9F6C3A"/>
+  <rect x="772" y="252" width="140" height="12" rx="6" fill="#D8CAB5"/>
+  <rect x="658" y="308" width="320" height="56" rx="14" fill="#F2E9DC"/>
+  <rect x="678" y="324" width="80" height="24" rx="12" fill="#53D769"/>
+  <rect x="772" y="324" width="140" height="12" rx="6" fill="#D8CAB5"/>
+  <rect x="658" y="380" width="320" height="56" rx="14" fill="#F2E9DC"/>
+  <rect x="678" y="396" width="80" height="24" rx="12" fill="#E94560"/>
+  <rect x="772" y="396" width="140" height="12" rx="6" fill="#D8CAB5"/>
+  <rect x="658" y="452" width="320" height="56" rx="14" fill="#F2E9DC"/>
+  <rect x="678" y="468" width="80" height="24" rx="12" fill="#F5C518"/>
+  <rect x="772" y="468" width="140" height="12" rx="6" fill="#D8CAB5"/>
+  <!-- Integration icons (right panel) -->
+  <rect x="1060" y="164" width="452" height="340" rx="22" fill="#FFFFFF" stroke="#D8CAB5"/>
+  <rect x="1090" y="194" width="140" height="18" rx="9" fill="#2D3436"/>
+  <rect x="1090" y="236" width="100" height="80" rx="16" fill="#F2E9DC"/>
+  <rect x="1210" y="236" width="100" height="80" rx="16" fill="#E7D7BF"/>
+  <rect x="1330" y="236" width="100" height="80" rx="16" fill="#D2B48C"/>
+  <rect x="1090" y="336" width="100" height="80" rx="16" fill="#D8CAB5"/>
+  <rect x="1210" y="336" width="100" height="80" rx="16" fill="#F2E9DC"/>
+  <rect x="1330" y="336" width="100" height="80" rx="16" fill="#E7D7BF"/>
+  <!-- Grafana dashboard (bottom) -->
+  <rect x="628" y="536" width="884" height="380" rx="22" fill="#FFFFFF" stroke="#D8CAB5"/>
+  <rect x="658" y="566" width="180" height="18" rx="9" fill="#2D3436"/>
+  <!-- Chart area -->
+  <rect x="658" y="608" width="820" height="120" rx="16" fill="#FCF8F2"/>
+  <polyline points="678,700 750,680 820,690 890,660 960,670 1030,640 1100,650 1170,630 1240,640 1310,620 1380,610 1458,620" stroke="#9F6C3A" stroke-width="3" fill="none"/>
+  <!-- Stats row -->
+  <rect x="658" y="748" width="260" height="60" rx="14" fill="#F2E9DC"/>
+  <rect x="940" y="748" width="260" height="60" rx="14" fill="#F2E9DC"/>
+  <rect x="1222" y="748" width="260" height="60" rx="14" fill="#F2E9DC"/>
+</svg>

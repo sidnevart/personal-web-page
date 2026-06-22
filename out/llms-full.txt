@@ -1,0 +1,85 @@
+# Artem Sidnev — Full Professional Profile
+
+## Summary
+
+Artem Sidnev is a Software Engineer at T-Bank with approximately 4 years of professional experience (since May 2022). He serves as the Technical Lead of the Customer Data Platform (CDP), where he architects high-load backend systems, data-intensive pipelines, and AI/LLM automation tools. His work spans backend engineering, platform development, cross-team technical leadership, and practical AI deployment.
+
+## Experience
+
+### T-Bank — Software Engineer & Technical Lead of CDP (Oct 2025 – Present)
+
+The Customer Data Platform (CDP) is a manager-facing cashback audience platform that selects customers for partner-funded offers using transaction, customer, and partner data. The platform processes ~30 million transactions/day across 1.5 years of history.
+
+**Flagship Achievement: Marketing Delivery Acceleration (32×)**
+As CDP lead, Artem self-initiated and championed a cross-team RFC to integrate with another team's Go data-processing service. He designed a dual-layer architecture:
+- Control-plane (Kotlin/Spring Boot): business logic, statuses, correctness
+- Data-plane (Go, gRPC): heavy export/materialization, ClickHouse→S3, bounded worker concurrency
+
+This integration cut marketing data delivery 32× (from 8+ hours to ~15 minutes), enabling same-day campaign launches. The integration drove organizational consolidation — the other team and its service were absorbed into the CDP.
+
+**Audience Gathering Speedup (Solo Engineering)**
+Separately, Artem reworked the DAG/queue/ClickHouse architecture for audience gathering, making it size-independent: 1–10 seconds for any audience (from ~6 minutes typical). This represents ~30–50× typical improvement, up to 360× in the best case. He authored a ~28-page technical proposal with 23 optimization ideas and a phased execution roadmap. Analyst-estimated revenue impact: ~RUB 14M/month.
+
+**Targeting System**
+Delivered spend/income targeting on ~30M transactions/day and 1.5 years of historical data. The targeting system generates ~RUB 15M/year in profit.
+
+**AI/LLM Automation**
+- AI Code Review Bot: GitLab MR analysis — summarizes changes, classifies issues, suggests fixes
+- AI CI Refactoring Bot: detects tech-debt, generates refactoring plans, prepares draft MRs — accelerated pipeline by 5–7 min (15–20%)
+- RAG Onboarding Agent: retrieval pipeline over internal docs with source citation and confidence scoring
+- n8n Automations: campaign workflow automation — saves 40–60 manual hours/month
+
+**Performance & Observability**
+- Built a quantitative latency model identifying ~96.5% queue wait (not execution)
+- Migrated to ClickHouse-as-a-Service → ~5× faster critical scenarios
+- End-to-end observability: wait/exec metrics, p95, worker timings, ClickHouse query tracking
+
+### Freelance & Client Projects (May 2022 – Aug 2024)
+
+**Svobodno (Freeup) — Telegram Mini App for Service Booking**
+Built solo in ~3 months. Map-based slot discovery, 2-tap booking, customer/partner/admin cabinets. Stack: Python (FastAPI), Go (background processing), PostgreSQL, Redis, React. The MVP helped the client attract investment.
+
+**Double Kiss — Telegram Mini App for Billiard Club**
+Replaced phone-based booking. YClients integration, Elo match system, idempotent loyalty bonuses. Stack: Python, FastAPI, Redis.
+
+**CIAN Mole — Commercial Real Estate Analytics**
+Auction/torgi data, CIAN listings, geocoding, searchable property catalog, economics calculations. Property evaluation reduced to ~10 minutes, district analysis to 7–10 minutes.
+
+## Open-Source Projects
+
+### ProofForge
+Peer-accountability / goal-achievement platform. Buddy goals, circles (≤8 people, 7-day seasons), proofs (text/links/files), AI goal refinement via OpenAI, Telegram bot, weekly recaps. Stack: Go 1.24 (chi, pgx v5), Next.js 15, TypeScript, PostgreSQL 16 + pgvector, Redis 7, MinIO, Docker. MIT license, 67 commits.
+
+### ARC (arc-core)
+Local-first project console for AI work on real codebases. CLI runtime + native Wails desktop app. Features: runs, memory, docs-maps, artifacts, agent presets (Study/Work/Hero), live preview runtime. Stack: Go (67%), JavaScript, CSS, TypeScript, Wails. 5⭐ on GitHub, 4 related repos.
+
+### Chappi AI Office
+24/7 VPS personal AI office via Telegram. Multi-agent system (infra/research/KB), voice (faster-Whisper), pgvector + MemPalace memory, Composio integrations (Gmail/Calendar/GitHub/Notion/Jira), Grafana + pixel dashboards. Stack: OpenClaw, Ollama, PostgreSQL + pgvector, Python, Docker Compose. MIT license.
+
+### Proof-Forge v2
+AI-agent learning workspace. Claude as mentor, knowledge capsules, SM-2 spaced-repetition flashcards, per-concept mastery tracking, JetBrains IDE Evidence Bridge. Stack: FastAPI, PostgreSQL, MCP server (13 tools), Python 3.12, Docker. MIT license, 114 commits, 2 releases.
+
+## Skills
+
+**Languages:** Java, Kotlin, Python, Go, TypeScript, SQL
+**Backend:** Spring Boot, FastAPI, REST, gRPC, microservices, API design, domain modeling, complex business logic
+**System Design:** distributed systems, control-plane/data-plane split, contract-first integration, async pipelines, DAG orchestration, idempotency, backpressure, feature flags, staged rollout
+**Data:** PostgreSQL, ClickHouse/CHaaS, Redis, Kafka, pgvector, S3/MinIO
+**Infrastructure:** Docker, Kubernetes, GitLab CI/CD, GitHub Actions, nginx
+**Observability:** Prometheus, OpenTelemetry, Grafana, p95 latency analysis, critical-path modeling
+**AI:** RAG, LangChain, OpenAI API, MCP servers, n8n, Ollama, faster-Whisper, Composio, prompt engineering
+**Frontend:** React, Next.js, Vite, Tailwind CSS, Framer Motion, WebSocket
+**Leadership:** RFC authoring, cross-team initiatives, execution roadmaps, safe-rollout discipline, mentoring
+
+## Education
+
+- Central University — B.Sc. in Computer Science (in progress, studying alongside full-time work)
+- Additional: Harvard CS50, MIT OCW Algorithms, freeCodeCamp Java/Spring
+
+## Contact
+
+- Email: a.sidnevart@gmail.com
+- Telegram: https://t.me/sidnevart
+- GitHub: https://github.com/sidnevart (45 repositories)
+- LinkedIn: https://www.linkedin.com/in/artem-sidnev-b109ab401/
+- Portfolio: https://sidnevart.github.io/personal-web-page/

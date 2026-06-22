@@ -46,9 +46,14 @@ export function ChatWidget() {
       setIsStreaming(true);
 
       try {
-        const response = await fetch("/api/chat", {
+        const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || "https://butgfsafronihkrxdklx.supabase.co";
+        const response = await fetch(`${supabaseUrl}/functions/v1/chat`, {
           method: "POST",
-          headers: { "Content-Type": "application/json" },
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ""}`,
+            "apikey": process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "",
+          },
           body: JSON.stringify({
             messages: [...messages, userMessage],
           }),

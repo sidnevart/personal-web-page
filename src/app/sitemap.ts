@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next";
 import { getProjectSlugs } from "@/data/content";
 
+export const dynamic = "force-static";
+
 const BASE_URL = "https://sidnevart.github.io/personal-web-page";
 const locales = ["ru", "en", "es"];
 
@@ -8,7 +10,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const projectSlugs = getProjectSlugs();
   const entries: MetadataRoute.Sitemap = [];
 
-  // Static pages
   for (const locale of locales) {
     entries.push({
       url: `${BASE_URL}/${locale}`,
@@ -41,7 +42,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.6,
     });
 
-    // Project pages
     for (const slug of projectSlugs) {
       entries.push({
         url: `${BASE_URL}/${locale}/projects/${slug}`,

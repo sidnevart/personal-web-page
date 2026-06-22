@@ -1,0 +1,81 @@
+% English resume, 1 page. Compiles with pdfLaTeX / XeLaTeX / LuaLaTeX / tectonic.
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage[a4paper,margin=1.4cm]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[colorlinks=true,urlcolor=blue]{hyperref}
+
+\urlstyle{same}
+\setlist[itemize]{leftmargin=1.2em,itemsep=0.18em,topsep=0.08em,parsep=0em,partopsep=0em}
+\titleformat{\section}{\large\bfseries}{}{0em}{}[\vspace{-0.10em}\titlerule]
+\titlespacing*{\section}{0pt}{0.46em}{0.16em}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\emergencystretch=2em
+
+\newcommand{\contactsep}{\enspace\textbar\enspace}
+
+\begin{document}
+\fontsize{9.8pt}{11.4pt}\selectfont
+
+\begin{center}
+{\LARGE \textbf{Artem Sidnev}}\\[0.05em]
+{\normalsize \textbf{Software Engineer} \textbullet{} Java\,/\,Kotlin\,/\,Go \textbullet{} \textasciitilde4 years}\\[0.12em]
+{\footnotesize Spring Boot \textbullet{} PostgreSQL \textbullet{} ClickHouse \textbullet{} Kafka \textbullet{} gRPC \textbullet{} Kubernetes}\\[0.13em]
+{\footnotesize Moscow \textbullet{} remote\,/\,hybrid \textbullet{} open to relocation}\\[0.13em]
+{\footnotesize
+\href{tel:+79109692922}{+7 910 969 29 22}
+\contactsep \href{mailto:a.sidnevart@gmail.com}{a.sidnevart@gmail.com}
+\contactsep \href{https://t.me/sidnevart}{Telegram}
+\contactsep \href{https://www.linkedin.com/in/artem-sidnev-b109ab401/}{LinkedIn}
+\contactsep \href{https://github.com/sidnevart}{GitHub}
+\contactsep \href{https://sidnevart.github.io/personal-web-page/}{Portfolio}
+}
+\end{center}
+
+\vspace{-0.14em}
+
+\section*{Summary}
+Backend \& Platform Engineer (Java, Kotlin, Go) with 4+ years of experience in high-load systems and Big Data pipelines. Technical Lead for the Customer Data Platform (CDP), where I architected a processing system that boosted revenue by \textasciitilde\$1.8M\,/\,year and accelerated data gathering 40$\times$. Proven track record in deploying AI solutions (LLM, RAG) and building resilient architectures (ClickHouse, Kafka, gRPC) focused on clear business impact.
+
+\section*{Core Skills}
+\textbf{Languages:} Java, Kotlin, Python, Go, SQL \\
+\textbf{Technologies:} Spring Boot, gRPC, REST, microservices, PostgreSQL, ClickHouse, CHaaS (ClickHouse-as-a-Service), Kafka, Redis, S3 \\
+\textbf{Tools:} Docker, Kubernetes, GitLab CI/CD, Prometheus, Grafana, OpenTelemetry, nginx
+
+\section*{Experience}
+\textbf{Software Engineer \textbar{} Tinkoff Bank} \hfill \textit{Oct 2025 -- Present}\\[0.05em]
+{\footnotesize\textit{Customer Data Platform (CDP): marketing-audience management for cashback offers (in-house AdTech)~--- selecting customers for partner campaigns from transaction, customer, and partner data.}}
+\begin{itemize}
+  \item \textbf{Accelerated audience gathering 40--50$\times$} (from 6 min to 1--10 s), driving \textbf{\textasciitilde\$150K/mo} in additional revenue. Single-handedly architected the DAG pipelines in \textbf{Kotlin}, enabling instant processing of any data volume via \textbf{CHaaS}.
+  \item \textbf{Technical Lead for the CDP integration} (2 teams, 9 engineers): spearheaded the architectural design (\textbf{RFC}) and implemented a dual-layer system~--- control-plane (\textbf{Kotlin\,/\,Spring Boot}) and data-plane (\textbf{Go}, gRPC, S3). Accelerated data delivery \textbf{32$\times$} (from 8 h to 15 min), enabled same-day campaign launches, and consolidated an adjacent team into the CDP while achieving \textbf{99.9\%} process reliability through idempotency and resiliency patterns.
+  \item \textbf{Engineered a high-load pipeline processing \textasciitilde30M transactions/day} via \textbf{Kafka} and \textbf{ClickHouse} over 1.5 years of historical data; a targeting system built on this foundation generated \textbf{\textasciitilde\$165K in annual profit}.
+  \item \textbf{Cut critical-scenario runtime 5$\times$} by building a quantitative latency model and end-to-end pipeline observability; optimized the critical path by migrating compute to \textbf{CHaaS}.
+  \item \textbf{Save managers up to 60 working hours/month} by automating data checks and region setup; sped up the main \textbf{GitLab CI/CD} test pipelines by \textbf{20\%}.
+\end{itemize}
+
+\vspace{0.22em}
+\textbf{Software Engineer (contract) \textbar{} PropTech Client (NDA)} \hfill \textit{Aug 2024 -- Aug 2025}\\[0.05em]
+{\footnotesize\textit{Real estate analytics platform for residential rental and sales.}}
+\begin{itemize}
+  \item Built a real-estate analytics platform: auction \& CIAN parsing, geocoding, a searchable property catalog, a Telegram bot, and an admin panel, with per-property economics (Python, FastAPI, PostgreSQL, Redis).
+  \item \textbf{Reduced first-pass property valuation to \textasciitilde10 min} and district analysis to 7--10 min: realtors and investors see price, yield, cash flow, and payback without manually cross-checking multiple sources.
+\end{itemize}
+
+\vspace{0.22em}
+\textbf{Freelance Software Engineer \textbar{} Client Projects} \hfill \textit{May 2022 -- Aug 2024}\\[0.05em]
+{\footnotesize\textit{Booking, loyalty, and automation services for small and service businesses~--- from MVP to production, sole ownership of stack and delivery.}}
+\begin{itemize}
+  \item \textbf{Built an MVP solo in \textasciitilde3 months that helped the client raise investment}: a Telegram Mini App for service booking~--- slot discovery and \textbf{2-tap booking} instead of a phone call, plus customer, partner, and admin cabinets. Stack: \textbf{Python} (FastAPI), a \textbf{Go} background-processing/notifications service, PostgreSQL, Redis, React; Docker\,/\,nginx deploy, CI/CD.
+  \item For a billiards club, moved booking from phone calls into a Telegram Mini App (\textbf{+25\% conversion}): \textbf{YClients} integration (create\,/\,cancel\,/\,reschedule), contact-based registration, plus an \textbf{Elo} match system with idempotent loyalty bonuses that \textbf{saved the admin \textasciitilde15 h/month}.
+\end{itemize}
+
+\section*{Education}
+\textbf{Russian New University} \textbar{} B.Sc. in Computer Science \textbar{} \textit{Expected 2028}\\[0.05em]
+{\footnotesize Relevant coursework: algorithms \& data structures, databases, distributed systems, software design. \textit{Studying alongside full-time work at Tinkoff Bank.}}
+
+\end{document}
