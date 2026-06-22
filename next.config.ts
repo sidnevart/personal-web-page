@@ -6,6 +6,7 @@ const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
 const nextConfig: NextConfig = {
   output: "export",
+  basePath: "/personal-web-page",
   outputFileTracingRoot: path.join(process.cwd()),
   images: {
     unoptimized: true,
