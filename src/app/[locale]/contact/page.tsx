@@ -3,7 +3,7 @@ import { ContactForm } from "@/components/contact-form";
 import { JsonLd } from "@/components/json-ld";
 import { siteContacts, siteContent, text } from "@/data/content";
 import { buildMetadata } from "@/lib/metadata";
-import { getLocaleFromParams } from "../layout";
+import { getLocaleFromParams } from "@/lib/locale";
 
 export async function generateMetadata({
   params

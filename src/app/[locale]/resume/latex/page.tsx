@@ -2,7 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/metadata";
-import { getLocaleFromParams } from "../../layout";
+import { getLocaleFromParams } from "@/lib/locale";
 
 function readTex(fileName: string) {
   const fullPath = path.join(process.cwd(), "public", "resume", fileName);

@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import { JsonLd } from "@/components/json-ld";
-import { ProjectCard } from "@/components/project-card";
 import { Link } from "@/i18n/navigation";
-import { getFeaturedProjects, siteContacts, siteContent, text, textList } from "@/data/content";
+import { siteContacts, siteContent, text, textList, getFeaturedProjects } from "@/data/content";
 import { buildMetadata } from "@/lib/metadata";
-import { getLocaleFromParams } from "./layout";
+import { getLocaleFromParams } from "@/lib/locale";
 
 export async function generateMetadata({
   params
@@ -13,12 +12,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const safeLocale = getLocaleFromParams(locale);
-
-  return buildMetadata({
-    locale: safeLocale,
-    path: `/${safeLocale}`,
-    title: safeLocale === "ru" ? "Портфолио" : "Portfolio"
-  });
+  return buildMetadata({ locale: safeLocale, path: `/${safeLocale}` });
 }
 
 export default async function HomePage({
@@ -30,6 +24,12 @@ export default async function HomePage({
   const safeLocale = getLocaleFromParams(locale);
   const featured = getFeaturedProjects();
 
+  const labels = {
+    ru: { projects: "Проекты", resume: "Резюме", contact: "Связаться", experience: "Опыт", selected: "Избранные проекты", skills: "Навыки", openCase: "→ Кейс" },
+    en: { projects: "Projects", resume: "Resume", contact: "Contact", experience: "Experience", selected: "Selected Projects", skills: "Skills", openCase: "→ Case study" },
+    es: { projects: "Proyectos", resume: "CV", contact: "Contacto", experience: "Experiencia", selected: "Proyectos seleccionados", skills: "Habilidades", openCase: "→ Caso" }
+  }[safeLocale];
+
   return (
     <>
       <JsonLd
@@ -39,260 +39,139 @@ export default async function HomePage({
           name: "Artem Sidnev",
           jobTitle: "Software Engineer",
           url: `https://sidnevart.github.io/personal-web-page/${safeLocale}`,
-          sameAs: [
-            siteContacts.github,
-            siteContacts.telegram,
-            siteContacts.linkedin
-          ],
+          sameAs: [siteContacts.github, siteContacts.telegram, siteContacts.linkedin],
           email: siteContacts.email,
-          worksFor: {
-            "@type": "Organization",
-            name: "T-Bank"
-          },
-          knowsAbout: [
-            "Backend Engineering",
-            "High-Load Systems",
-            "Data-Intensive Platforms",
-            "AI/LLM Automation",
-            "ClickHouse",
-            "Kafka",
-            "Kotlin",
-            "Java",
-            "Go",
-            "Python",
-            "Customer Data Platforms",
-            "Technical Leadership"
-          ],
-          hasCredential: [
-            {
-              "@type": "EducationalOccupationalCredential",
-              name: "B.Sc. in Computer Science (in progress)",
-              credentialCategory: "degree",
-              recognizedBy: {
-                "@type": "Organization",
-                name: "Central University"
-              }
-            }
-          ],
-          alumniOf: {
-            "@type": "Organization",
-            name: "Central University"
-          },
-          description: "Software Engineer at T-Bank, Technical Lead of CDP. ~4 years of experience in high-load systems, data-intensive pipelines, and AI/LLM automation."
+          worksFor: { "@type": "Organization", name: "T-Bank" },
+          knowsAbout: ["Backend Engineering", "High-Load Systems", "Data Platforms", "AI/LLM Automation", "Kotlin", "Java", "Go"],
+          description: "Software Engineer at T-Bank, Technical Lead of CDP. ~4 years of experience."
         }}
       />
 
-      <section className="pt-8 md:pt-12">
-        <div className="container-shell">
-          <div className="grid gap-10 border-b border-[var(--line)] pb-14 xl:grid-cols-[1.05fr_0.95fr]">
-            <div className="max-w-4xl">
-              <p className="eyebrow">{text(siteContent.hero.eyebrow, safeLocale)}</p>
-              <h1 className="section-title mt-6 max-w-4xl text-balance">
-                {text(siteContent.hero.headline, safeLocale)}
-              </h1>
-              <p className="mt-6 max-w-3xl text-lg leading-8 text-[var(--fg-muted)] md:text-xl">
-                {text(siteContent.hero.subheadline, safeLocale)}
-              </p>
-              <div className="mt-8 flex flex-wrap gap-3">
-                <Link
-                  href="/projects"
-                  className="inline-flex rounded-full border border-[var(--line-strong)] bg-[var(--surface-strong)] px-5 py-3 text-sm font-semibold text-[var(--fg)] transition hover:opacity-90"
-                >
-                  {safeLocale === "ru"
-                    ? "Смотреть проекты"
-                    : safeLocale === "en"
-                      ? "View projects"
-                      : "Ver proyectos"}
-                </Link>
-                <Link
-                  href="/resume"
-                  className="inline-flex rounded-full border border-[var(--line)] px-5 py-3 text-sm font-semibold transition hover:border-[var(--line-strong)] hover:bg-[var(--surface)]"
-                >
-                  {safeLocale === "ru"
-                    ? "Открыть резюме"
-                    : safeLocale === "en"
-                      ? "Open resume"
-                      : "Ver CV"}
-                </Link>
-                <Link
-                  href="/contact"
-                  className="inline-flex rounded-full border border-[var(--line)] px-5 py-3 text-sm font-semibold transition hover:border-[var(--line-strong)] hover:bg-[var(--surface)]"
-                >
-                  {safeLocale === "ru"
-                    ? "Связаться"
-                    : safeLocale === "en"
-                      ? "Get in touch"
-                      : "Contactar"}
-                </Link>
-              </div>
-            </div>
-
-            <div className="grid gap-4">
-              {textList(siteContent.hero.proof, safeLocale).map((point) => (
-                <div
-                  key={point}
-                  className="rounded-[28px] border border-[var(--line)] bg-[var(--surface)] p-6"
-                >
-                  <p className="text-base leading-7 text-[var(--fg-muted)]">{point}</p>
-                </div>
-              ))}
-            </div>
+      <section className="container pt-16 md:pt-24">
+        {/* ─── Hero ─── */}
+        <div>
+          <h1 className="text-display">Artem Sidnev</h1>
+          <p className="mt-3 text-caption">
+            Software Engineer · Java / Kotlin / Go · ~4 years
+          </p>
+          <p className="mt-6 text-body max-w-xl">
+            {text(siteContent.hero.subheadline, safeLocale)}
+          </p>
+          <div className="mt-6 flex gap-6 text-small">
+            <Link href="/projects" className="link">{labels.projects}</Link>
+            <Link href="/resume" className="link">{labels.resume}</Link>
+            <Link href="/contact" className="link">{labels.contact}</Link>
           </div>
         </div>
-      </section>
 
-      <section className="pt-16 md:pt-20" id="featured">
-        <div className="container-shell">
-          <div className="mb-8 flex items-end justify-between gap-6">
+        {/* ─── Key Metrics ─── */}
+        <div className="mt-12 pt-8 border-t border-[var(--line)]">
+          <div className="flex flex-wrap gap-x-1 gap-y-2 text-small">
+            {textList(siteContent.hero.proof, safeLocale).map((point, i) => (
+              <span key={point}>
+                {i > 0 && <span className="mx-2 text-[var(--fg-soft)]">·</span>}
+                {point}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* ─── Experience ─── */}
+        <section className="mt-16">
+          <h2 className="text-h2">{labels.experience}</h2>
+          <hr className="section-rule mt-3" />
+
+          <div className="mt-8 space-y-10">
             <div>
-              <p className="eyebrow">
-                {safeLocale === "ru"
-                  ? "Избранные кейсы"
-                  : safeLocale === "en"
-                    ? "Selected work"
-                    : "Casos seleccionados"}
-              </p>
-              <h2 className="section-title mt-4">
-                {safeLocale === "ru"
-                  ? "Ключевые проекты"
-                  : safeLocale === "en"
-                    ? "Selected projects"
-                    : "Proyectos clave"}
-              </h2>
-            </div>
-            <Link
-              href="/projects"
-              className="hidden rounded-full border border-[var(--line)] px-4 py-2 text-sm font-semibold text-[var(--fg)] transition hover:border-[var(--line-strong)] hover:bg-[var(--surface)] md:inline-flex"
-            >
-              {safeLocale === "ru"
-                ? "Все проекты"
-                : safeLocale === "en"
-                  ? "All projects"
-                  : "Todos los proyectos"}
-            </Link>
-          </div>
-
-          <div className="grid gap-6 xl:grid-cols-2">
-            {featured.map((project) => (
-              <ProjectCard key={project.slug} project={project} locale={safeLocale} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="pt-16 md:pt-20">
-        <div className="container-shell">
-          <div className="mb-8 max-w-3xl">
-            <p className="eyebrow">{text(siteContent.capabilities.title, safeLocale)}</p>
-            <h2 className="section-title mt-4">
-              {safeLocale === "ru"
-                ? "Сферы, где я наиболее полезен"
-                : safeLocale === "en"
-                  ? "Where I am most useful"
-                  : "Dónde aporto más valor"}
-            </h2>
-          </div>
-
-          <div className="grid gap-5 md:grid-cols-3">
-            {siteContent.capabilities.items.map((item) => (
-              <article
-                key={item.title.ru}
-                className="rounded-[28px] border border-[var(--line)] bg-[var(--surface)] p-6"
-              >
-                <h3 className="font-[var(--font-heading)] text-3xl font-semibold tracking-[-0.05em]">
-                  {text(item.title, safeLocale)}
-                </h3>
-                <p className="mt-4 text-base leading-7 text-[var(--fg-muted)]">
-                  {text(item.body, safeLocale)}
-                </p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="pt-16 md:pt-20">
-        <div className="container-shell">
-          <div className="grid gap-6 xl:grid-cols-2">
-            <article className="rounded-[28px] border border-[var(--line)] bg-[var(--surface)] p-6">
-              <p className="eyebrow">{text(siteContent.currentWork.title, safeLocale)}</p>
-              <p className="mt-4 text-base leading-7 text-[var(--fg-muted)]">
-                {text(siteContent.currentWork.intro, safeLocale)}
-              </p>
-              <div className="mt-4 grid gap-2 text-sm leading-7 text-[var(--fg-muted)]">
+              <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
+                <h3 className="text-h3">T-Bank — Software Engineer</h3>
+                <span className="text-small">Oct 2025 – Present</span>
+              </div>
+              <p className="mt-1 text-caption">Technical Lead of CDP · Customer Data Platform</p>
+              <ul className="mt-4 space-y-2 text-body list-disc list-inside marker:text-[var(--fg-soft)]">
                 {textList(siteContent.currentWork.points, safeLocale).map((point) => (
-                  <p key={point}>• {point}</p>
+                  <li key={point}>{point}</li>
                 ))}
-              </div>
-            </article>
-
-            <article className="rounded-[28px] border border-[var(--line)] bg-[var(--surface)] p-6">
-              <p className="eyebrow">{text(siteContent.freelance.title, safeLocale)}</p>
-              <p className="mt-4 text-base leading-7 text-[var(--fg-muted)]">
-                {text(siteContent.freelance.intro, safeLocale)}
-              </p>
-              <div className="mt-4 grid gap-2 text-sm leading-7 text-[var(--fg-muted)]">
-                {textList(siteContent.freelance.points, safeLocale).map((point) => (
-                  <p key={point}>• {point}</p>
-                ))}
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section className="pt-16 md:pt-20">
-        <div className="container-shell">
-          <div className="grid gap-8 border-t border-[var(--line)] pt-10 xl:grid-cols-[0.9fr_1.1fr]">
-            <div>
-              <p className="eyebrow">
-                {safeLocale === "ru" ? "Контакт" : safeLocale === "en" ? "Contact" : "Contacto"}
-              </p>
-              <h2 className="section-title mt-4">{text(siteContent.contact.title, safeLocale)}</h2>
+              </ul>
             </div>
 
-            <div className="grid gap-6">
-              <p className="max-w-3xl text-base leading-8 text-[var(--fg-muted)]">
-                {text(siteContent.contact.body, safeLocale)}
-              </p>
-
-              <div className="flex flex-wrap gap-4 text-sm text-[var(--fg-soft)]">
-                <a href={`mailto:${siteContacts.email}`} className="transition hover:text-[var(--fg)]">
-                  {siteContacts.email}
-                </a>
-                <a
-                  href={siteContacts.telegram}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="transition hover:text-[var(--fg)]"
-                >
-                  Telegram
-                </a>
-                <a
-                  href={siteContacts.github}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="transition hover:text-[var(--fg)]"
-                >
-                  GitHub
-                </a>
+            <div>
+              <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
+                <h3 className="text-h3">Freelance & Client Projects</h3>
+                <span className="text-small">May 2022 – Aug 2024</span>
               </div>
+              <p className="mt-1 text-caption">Booking · Loyalty · Real Estate Analytics</p>
+              <ul className="mt-4 space-y-2 text-body list-disc list-inside marker:text-[var(--fg-soft)]">
+                {textList(siteContent.freelance.points, safeLocale).map((point) => (
+                  <li key={point}>{point}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
 
-              <div>
+        {/* ─── Selected Projects ─── */}
+        <section className="mt-16">
+          <div className="flex items-baseline justify-between">
+            <h2 className="text-h2">{labels.selected}</h2>
+            <Link href="/projects" className="text-small link-muted">{labels.projects} →</Link>
+          </div>
+          <hr className="section-rule mt-3" />
+
+          <div className="mt-6 space-y-8">
+            {featured.map((project) => (
+              <div key={project.slug} className="group">
+                <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
+                  <Link href={`/projects/${project.slug}`}>
+                    <h3 className="text-h3 group-hover:text-[var(--accent)] transition-colors">
+                      {text(project.title, safeLocale)}
+                    </h3>
+                  </Link>
+                  <span className="text-small">{project.year}</span>
+                </div>
+                <p className="mt-2 text-body">{text(project.summary, safeLocale)}</p>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {project.stack.map((tech) => (
+                    <span key={tech} className="tag">{tech}</span>
+                  ))}
+                </div>
                 <Link
-                  href="/contact"
-                  className="inline-flex rounded-full border border-[var(--line-strong)] bg-[var(--surface-strong)] px-5 py-3 text-sm font-semibold text-[var(--fg)] transition hover:opacity-90"
+                  href={`/projects/${project.slug}`}
+                  className="mt-3 inline-block text-small text-[var(--accent)] hover:text-[var(--accent-hover)] transition-colors"
                 >
-                  {safeLocale === "ru"
-                    ? "Открыть контакт"
-                    : safeLocale === "en"
-                      ? "Open contact page"
-                      : "Abrir contacto"}
+                  {labels.openCase}
                 </Link>
               </div>
-            </div>
+            ))}
           </div>
-        </div>
+        </section>
+
+        {/* ─── Skills ─── */}
+        <section className="mt-16">
+          <h2 className="text-h2">{labels.skills}</h2>
+          <hr className="section-rule mt-3" />
+
+          <dl className="mt-6 space-y-4">
+            {siteContent.capabilities.items.map((item) => (
+              <div key={item.title.ru} className="grid grid-cols-[140px_1fr] gap-4">
+                <dt className="text-caption pt-0.5">{text(item.title, safeLocale)}</dt>
+                <dd className="text-body">{text(item.body, safeLocale)}</dd>
+              </div>
+            ))}
+          </dl>
+        </section>
+
+        {/* ─── Contact ─── */}
+        <section className="mt-16 pt-8 border-t border-[var(--line)]">
+          <h2 className="text-h2">{text(siteContent.contact.title, safeLocale)}</h2>
+          <p className="mt-4 text-body">{text(siteContent.contact.body, safeLocale)}</p>
+          <div className="mt-6 flex flex-wrap gap-6 text-small">
+            <a href={`mailto:${siteContacts.email}`} className="link-muted">{siteContacts.email}</a>
+            <a href={siteContacts.telegram} target="_blank" rel="noreferrer" className="link-muted">Telegram</a>
+            <a href={siteContacts.github} target="_blank" rel="noreferrer" className="link-muted">GitHub</a>
+            <a href={siteContacts.linkedin} target="_blank" rel="noreferrer" className="link-muted">LinkedIn</a>
+          </div>
+        </section>
       </section>
     </>
   );

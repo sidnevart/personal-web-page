@@ -10,7 +10,7 @@ import {
   textList
 } from "@/data/content";
 import { buildMetadata } from "@/lib/metadata";
-import { getLocaleFromParams } from "../../layout";
+import { getLocaleFromParams } from "@/lib/locale";
 
 export function generateStaticParams() {
   return getProjectSlugs().map((slug) => ({ slug }));

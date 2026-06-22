@@ -3,7 +3,7 @@ import { JsonLd } from "@/components/json-ld";
 import { ProfileCard } from "@/components/profile-card";
 import { artemProfile, siteContent, text, textList } from "@/data/content";
 import { buildMetadata } from "@/lib/metadata";
-import { getLocaleFromParams } from "../layout";
+import { getLocaleFromParams } from "@/lib/locale";
 
 export async function generateMetadata({
   params

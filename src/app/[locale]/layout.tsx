@@ -36,10 +36,4 @@ export default async function LocaleLayout({
   );
 }
 
-export function getLocaleFromParams(locale: string): AppLocale {
-  if (!hasLocale(routing.locales, locale)) {
-    notFound();
-  }
-
-  return locale;
-}
+// getLocaleFromParams moved to src/lib/locale.ts

@@ -3,7 +3,7 @@ import { JsonLd } from "@/components/json-ld";
 import { Link } from "@/i18n/navigation";
 import { resumeContent, siteContacts, text, textList } from "@/data/content";
 import { buildMetadata } from "@/lib/metadata";
-import { getLocaleFromParams } from "../layout";
+import { getLocaleFromParams } from "@/lib/locale";
 
 export async function generateMetadata({
   params

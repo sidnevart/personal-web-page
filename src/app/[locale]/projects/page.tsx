@@ -3,7 +3,7 @@ import { ProjectCard } from "@/components/project-card";
 import { JsonLd } from "@/components/json-ld";
 import { projects } from "@/data/content";
 import { buildMetadata } from "@/lib/metadata";
-import { getLocaleFromParams } from "../layout";
+import { getLocaleFromParams } from "@/lib/locale";
 
 export async function generateMetadata({
   params
