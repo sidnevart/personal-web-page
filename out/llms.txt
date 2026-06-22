@@ -10,8 +10,8 @@ Software Engineer at T-Bank (since Oct 2025), serving as Technical Lead of the C
 
 - **Audience gathering acceleration:** Made audience building size-independent — 1–10 seconds for any audience (from ~6 minutes typical). ~30–50× typical improvement, up to 360× best case.
 - **Data export acceleration (32×):** Self-initiated and drove a cross-team RFC integration, cutting data delivery from 8+ hours to ~15 minutes. This led to organizational consolidation — the other team was absorbed into the CDP.
-- **Targeting system impact:** Delivered spend/income targeting on ~30M transactions/day, generating ~RUB 15M/year in profit.
-- **Revenue impact:** Architected a system generating ~RUB 14M/month in analyst-estimated revenue.
+- **Targeting system impact:** Delivered spend/income targeting on ~30M transactions/day, generating ~$165K/year in profit.
+- **Revenue impact:** Architected a system generating ~$155K/month in analyst-estimated revenue.
 - **AI/LLM automation:** Deployed AI code review bot, CI refactoring bot, RAG onboarding agent, and n8n automations — saving 40–60 manual hours/month.
 
 ## Technical Stack

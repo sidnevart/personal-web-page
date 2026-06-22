@@ -18,10 +18,10 @@ As CDP lead, Artem self-initiated and championed a cross-team RFC to integrate w
 This integration cut marketing data delivery 32× (from 8+ hours to ~15 minutes), enabling same-day campaign launches. The integration drove organizational consolidation — the other team and its service were absorbed into the CDP.
 
 **Audience Gathering Speedup (Solo Engineering)**
-Separately, Artem reworked the DAG/queue/ClickHouse architecture for audience gathering, making it size-independent: 1–10 seconds for any audience (from ~6 minutes typical). This represents ~30–50× typical improvement, up to 360× in the best case. He authored a ~28-page technical proposal with 23 optimization ideas and a phased execution roadmap. Analyst-estimated revenue impact: ~RUB 14M/month.
+Separately, Artem reworked the DAG/queue/ClickHouse architecture for audience gathering, making it size-independent: 1–10 seconds for any audience (from ~6 minutes typical). This represents ~30–50× typical improvement, up to 360× in the best case. He authored a ~28-page technical proposal with 23 optimization ideas and a phased execution roadmap. Analyst-estimated revenue impact: ~$155K/month.
 
 **Targeting System**
-Delivered spend/income targeting on ~30M transactions/day and 1.5 years of historical data. The targeting system generates ~RUB 15M/year in profit.
+Delivered spend/income targeting on ~30M transactions/day and 1.5 years of historical data. The targeting system generates ~$165K/year in profit.
 
 **AI/LLM Automation**
 - AI Code Review Bot: GitLab MR analysis — summarizes changes, classifies issues, suggests fixes
