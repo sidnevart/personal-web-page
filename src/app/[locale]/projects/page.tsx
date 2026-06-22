@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { ProjectCard } from "@/components/project-card";
 import { JsonLd } from "@/components/json-ld";
-import { projects } from "@/data/content";
+import { Link } from "@/i18n/navigation";
+import { projects, text, categoryLabel } from "@/data/content";
 import { buildMetadata } from "@/lib/metadata";
 import { getLocaleFromParams } from "@/lib/locale";
 
@@ -12,17 +12,10 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const safeLocale = getLocaleFromParams(locale);
-
   return buildMetadata({
     locale: safeLocale,
     path: `/${safeLocale}/projects`,
-    title: safeLocale === "ru" ? "Проекты" : safeLocale === "en" ? "Projects" : "Proyectos",
-    description:
-      safeLocale === "ru"
-        ? "Ключевые проекты Артёма Сиднева: внутренние платформы, аналитические сервисы, CRM и прикладные продукты."
-        : safeLocale === "en"
-          ? "Selected work by Artem Sidnev across internal platforms, analytical services, CRM, and applied products."
-          : "Proyectos clave de Artem Sidnev entre plataformas internas, servicios analíticos, CRM y productos aplicados."
+    title: safeLocale === "ru" ? "Проекты" : safeLocale === "en" ? "Projects" : "Proyectos"
   });
 }
 
@@ -34,52 +27,64 @@ export default async function ProjectsPage({
   const { locale } = await params;
   const safeLocale = getLocaleFromParams(locale);
 
+  const labels = {
+    ru: { open: "→ Кейс" },
+    en: { open: "→ Case study" },
+    es: { open: "→ Caso" }
+  }[safeLocale];
+
   return (
     <>
       <JsonLd
         data={{
           "@context": "https://schema.org",
           "@type": "CollectionPage",
-          name: "Projects",
-          url: `https://portfolio.example.com/${safeLocale}/projects`
+          name: "Projects — Artem Sidnev"
         }}
       />
 
-      <section className="pt-8">
-        <div className="container-shell">
-          <div className="max-w-4xl border-b border-[var(--line)] pb-12">
-            <p className="eyebrow">
-              {safeLocale === "ru"
-                ? "Проекты"
-                : safeLocale === "en"
-                  ? "Projects"
-                  : "Proyectos"}
-            </p>
-            <h1 className="section-title mt-4">
-              {safeLocale === "ru"
-                ? "Ключевые кейсы"
-                : safeLocale === "en"
-                  ? "Selected work"
-                  : "Casos clave"}
-            </h1>
-            <p className="mt-6 max-w-3xl text-lg leading-8 text-[var(--fg-muted)]">
-              {safeLocale === "ru"
-                ? "Здесь оставлены только проекты, которые лучше всего показывают мой уровень, тип задач и прикладную ценность работы."
-                : safeLocale === "en"
-                  ? "This page keeps only the projects that show my level, my type of work, and the practical value of what I build."
-                  : "Esta página conserva solo los proyectos que mejor muestran mi nivel, mi tipo de trabajo y el valor práctico de lo que construyo."}
-            </p>
-          </div>
-        </div>
-      </section>
+      <section className="container pt-16 md:pt-24">
+        <h1 className="text-h1">
+          {safeLocale === "ru" ? "Проекты" : safeLocale === "en" ? "Projects" : "Proyectos"}
+        </h1>
+        <p className="mt-4 text-body max-w-xl">
+          {safeLocale === "ru"
+            ? "Проекты, которые лучше всего показывают мой уровень, тип задач и прикладную ценность работы."
+            : safeLocale === "en"
+              ? "Projects that best show my level, the type of work I do, and the practical value of what I build."
+              : "Proyectos que mejor muestran mi nivel, tipo de trabajo y valor práctico."}
+        </p>
 
-      <section className="pt-12 pb-4">
-        <div className="container-shell">
-          <div className="grid gap-6 xl:grid-cols-2">
-            {projects.map((project) => (
-              <ProjectCard key={project.slug} project={project} locale={safeLocale} />
-            ))}
-          </div>
+        <hr className="section-rule mt-8" />
+
+        <div className="mt-8 space-y-10">
+          {projects.map((project) => (
+            <div key={project.slug} className="group">
+              <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
+                <Link href={`/projects/${project.slug}`}>
+                  <h2 className="text-h3 group-hover:text-[var(--accent)] transition-colors">
+                    {text(project.title, safeLocale)}
+                  </h2>
+                </Link>
+                <span className="text-small">{project.year}</span>
+              </div>
+              <p className="mt-1 text-caption">
+                {text(categoryLabel[project.category], safeLocale)}
+              </p>
+              <p className="mt-2 text-body">{text(project.summary, safeLocale)}</p>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {project.stack.map((tech) => (
+                  <span key={tech} className="tag">{tech}</span>
+                ))}
+              </div>
+              <Link
+                href={`/projects/${project.slug}`}
+                className="mt-3 inline-block text-small text-[var(--accent)] hover:text-[var(--accent-hover)] transition-colors"
+              >
+                {labels.open}
+              </Link>
+            </div>
+          ))}
         </div>
       </section>
     </>
