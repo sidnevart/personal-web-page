@@ -22,7 +22,7 @@ export function ProjectCover({
       )}
     >
       <Image
-        src={project.cover.src}
+        src={`/personal-web-page${project.cover.src}`}
         alt={text(project.cover.alt, locale)}
         fill
         priority={priority}

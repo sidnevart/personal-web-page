@@ -82,9 +82,9 @@ export const artemProfile: PersonProfile = {
     es: "Software Engineer · Java / Kotlin / Go · ~4 años. Líder técnico de CDP, automatización AI"
   },
   summary: {
-    ru: "Backend & Platform Engineer с 4+ годами опыта в high-load системах и Big Data пайплайнах. Технический лид CDP: архитектура, приносящая ~14 млн ₽/мес, ускорение выгрузки 32×, внедрение AI/LLM в продакшен-процессы.",
-    en: "Backend & Platform Engineer with 4+ years in high-load systems and Big Data pipelines. Technical Lead of CDP: architected a system generating ~RUB 14M/month, accelerated data export 32×, deployed AI/LLM in production workflows.",
-    es: "Backend & Platform Engineer con 4+ años en sistemas de alta carga y pipelines de Big Data. Líder técnico de CDP: diseñé un sistema que genera ~14M RUB/mes, aceleré la exportación 32×, implementé AI/LLM en flujos de producción."
+    ru: "Backend & Platform Engineer с 4+ годами опыта в high-load системах и Big Data пайплайнах. Технический лид CDP: архитектура, приносящая ~$155K/мес, ускорение выгрузки 32×, внедрение AI/LLM в продакшен-процессы.",
+    en: "Backend & Platform Engineer with 4+ years in high-load systems and Big Data pipelines. Technical Lead of CDP: architected a system generating ~$155K/month, accelerated data export 32×, deployed AI/LLM in production workflows.",
+    es: "Backend & Platform Engineer con 4+ años en sistemas de alta carga y pipelines de Big Data. Líder técnico de CDP: diseñé un sistema que genera ~$155K/mes, aceleré la exportación 32×, implementé AI/LLM en flujos de producción."
   },
   contacts: {
     telegram: siteContacts.telegram,
@@ -115,17 +115,17 @@ export const siteContent = {
     proof: {
       ru: [
         "Ускорил сборку аудиторий до 1–10 секунд (размер-независимо) и выгрузку данных 32× (8ч → 15мин).",
-        "Спроектировал систему, приносящую ~14 млн ₽/мес аналитически-оценённого дохода.",
+        "Спроектировал систему, приносящую ~$155K/мес аналитически-оценённого дохода.",
         "Автоматизацией снимал до 40–60 часов ручной работы в месяц."
       ],
       en: [
         "Accelerated audience gathering to 1–10 seconds (size-independent) and data export 32× (8h → 15min).",
-        "Architected a system generating ~RUB 14M/month in analyst-estimated revenue.",
+        "Architected a system generating ~$155K/month in analyst-estimated revenue.",
         "Automation removed up to 40–60 manual hours per month."
       ],
       es: [
         "Aceleré la construcción de audiencias a 1–10 segundos (independiente del tamaño) y exportación 32× (8h → 15min).",
-        "Diseñé un sistema que genera ~14M RUB/mes en ingresos estimados por analistas.",
+        "Diseñé un sistema que genera ~$155K/mes en ingresos estimados por analistas.",
         "Automatización eliminó 40–60 horas manuales al mes."
       ]
     }
@@ -289,19 +289,19 @@ const resumeSections: readonly ResumeSection[] = [
     items: {
       ru: [
         "T-Bank — Software Engineer, окт 2025 — н.в.: технический лид CDP (Customer Data Platform), продакшен-бэкенд для кэшбэк-таргетинга, обработки данных и AI/LLM автоматизации.",
-        "Ускорил сборку аудиторий до 1–10 секунд (размер-независимо, ~30–50× типично, до 360× в лучшем случае), driving ~14 млн ₽/мес аналитически-оценённого дохода.",
+        "Ускорил сборку аудиторий до 1–10 секунд (размер-независимо, ~30–50× типично, до 360× в лучшем случае), driving ~$155K/мес аналитически-оценённого дохода.",
         "Флагманское лидерство: инициировал и провёл кросс-командную RFC-интеграцию, ускорившую выгрузку данных 32× (8ч → 15мин) и приведшую к объединению команды в CDP.",
         "Внедрил AI/LLM: AI code review бот, CI рефакторинг бот, RAG-агент для онбординга, n8n автоматизации — сэкономил 40–60 часов ручной работы в месяц."
       ],
       en: [
         "T-Bank — Software Engineer, Oct 2025 — present: Technical Lead of CDP (Customer Data Platform), production backend for cashback targeting, data processing, and AI/LLM automation.",
-        "Accelerated audience gathering to 1–10 seconds (size-independent, ~30–50× typical, up to 360× best case), driving ~RUB 14M/month in analyst-estimated revenue.",
+        "Accelerated audience gathering to 1–10 seconds (size-independent, ~30–50× typical, up to 360× best case), driving ~$155K/month in analyst-estimated revenue.",
         "Flagship leadership: self-initiated and drove a cross-team RFC integration, accelerating data export 32× (8h → 15min) and leading to team consolidation into CDP.",
         "Deployed AI/LLM: AI code review bot, CI refactoring bot, RAG onboarding agent, n8n automations — saved 40–60 manual hours per month."
       ],
       es: [
         "T-Bank — Software Engineer, oct 2025 — actual: Líder técnico de CDP (Customer Data Platform), backend de producción para targeting de cashback, procesamiento de datos y automatización AI/LLM.",
-        "Aceleré la construcción de audiencias a 1–10 segundos (independiente del tamaño, ~30–50× típico, hasta 360× en el mejor caso), generando ~14M RUB/mes en ingresos estimados.",
+        "Aceleré la construcción de audiencias a 1–10 segundos (independiente del tamaño, ~30–50× típico, hasta 360× en el mejor caso), generando ~$155K/mes en ingresos estimados.",
         "Liderazgo insignia: inicié y conduje una integración RFC entre equipos, acelerando la exportación 32× (8h → 15min) y llevando a la consolidación del equipo en CDP.",
         "Implementé AI/LLM: bot de code review, bot de refactorización CI, agente RAG de onboarding, automatizaciones n8n — ahorré 40–60 horas manuales al mes."
       ]
@@ -323,17 +323,17 @@ export const resumeContent = {
   highlights: {
     ru: [
       "Java/Kotlin/Python/Go, Spring Boot, REST/gRPC, PostgreSQL, ClickHouse, Kafka",
-      "Сборка аудиторий 1–10 сек (размер-независимо), выгрузка 32× (8ч→15мин), ~14 млн ₽/мес",
+      "Сборка аудиторий 1–10 сек (размер-независимо), выгрузка 32× (8ч→15мин), ~$155K/мес",
       "Технический лид CDP: RFC, кросс-командная интеграция, объединение команд, AI/LLM в продакшене"
     ],
     en: [
       "Java/Kotlin/Python/Go, Spring Boot, REST/gRPC, PostgreSQL, ClickHouse, Kafka",
-      "Audience gathering 1–10s (size-independent), export 32× (8h→15min), ~RUB 14M/month",
+      "Audience gathering 1–10s (size-independent), export 32× (8h→15min), ~$155K/month",
       "Technical Lead of CDP: RFC, cross-team integration, team consolidation, AI/LLM in production"
     ],
     es: [
       "Java/Kotlin/Python/Go, Spring Boot, REST/gRPC, PostgreSQL, ClickHouse, Kafka",
-      "Audiencias 1–10s (independiente del tamaño), exportación 32× (8h→15min), ~14M RUB/mes",
+      "Audiencias 1–10s (independiente del tamaño), exportación 32× (8h→15min), ~$155K/mes",
       "Líder técnico de CDP: RFC, integración entre equipos, consolidación, AI/LLM en producción"
     ]
   },
@@ -354,9 +354,9 @@ export const projects: Project[] = [
       es: "Plataforma interna para managers que construye audiencias objetivo para ofertas de cashback usando datos de clientes (transacciones, ingresos/gastos, terminales y otros atributos)."
     },
     short: {
-      ru: "Новые параметры таргетинга на 1.5 года истории и ~30 млн транзакций/день; ~15 млн ₽/год прибыли.",
-      en: "New targeting parameters on 1.5 years of history and ~30M transactions/day; ~RUB 15M/year profit.",
-      es: "Nuevos parámetros de targeting sobre 1,5 años y ~30M transacciones/día; ~15M RUB/año de beneficio."
+      ru: "Новые параметры таргетинга на 1.5 года истории и ~30 млн транзакций/день; ~$165K/год прибыли.",
+      en: "New targeting parameters on 1.5 years of history and ~30M transactions/day; ~$165K/year profit.",
+      es: "Nuevos parámetros de targeting sobre 1,5 años y ~30M transacciones/día; ~$165K/año de beneficio."
     },
     year: "2025–2026",
     category: "big-tech",
@@ -405,17 +405,17 @@ export const projects: Project[] = [
         ru: [
           "Аудитории под офферы собираются автоматически на истории 1.5 года и на потоке ~30 млн транзакций/день, без ручных проливок.",
           "Менеджеры получили точные параметры включения/исключения клиентов, меньше ручных правок и меньше ошибок в кампаниях.",
-          "Система таргетинга приносит ~15 млн ₽/год прибыли; сборка аудиторий ускорена до 1–10 секунд (размер-независимо)."
+          "Система таргетинга приносит ~$165K/год прибыли; сборка аудиторий ускорена до 1–10 секунд (размер-независимо)."
         ],
         en: [
           "Offer audiences are built automatically on 1.5 years of history and ~30M transactions/day, without manual data loads.",
           "Managers got precise include/exclude targeting with fewer manual edits and fewer campaign mistakes.",
-          "Targeting system generates ~RUB 15M/year profit; audience gathering accelerated to 1–10 seconds (size-independent)."
+          "Targeting system generates ~$165K/year profit; audience gathering accelerated to 1–10 seconds (size-independent)."
         ],
         es: [
           "Las audiencias se construyen automáticamente sobre 1,5 años de histórico y ~30M transacciones/día sin cargas manuales.",
           "Los managers obtuvieron targeting preciso con menos ajustes manuales y menos errores.",
-          "El sistema de targeting genera ~15M RUB/año de beneficio; audiencias aceleradas a 1–10 segundos (independiente del tamaño)."
+          "El sistema de targeting genera ~$165K/año de beneficio; audiencias aceleradas a 1–10 segundos (independiente del tamaño)."
         ]
       },
       note: {
