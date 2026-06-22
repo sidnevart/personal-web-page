@@ -77,14 +77,14 @@ export const artemProfile: PersonProfile = {
   id: "artem",
   name: "Artem Sidnev",
   role: {
-    ru: "Бэкенд-разработчик. Продакшен-сервисы, платформы обработки данных, интеграции и автоматизация",
-    en: "Backend engineer. Production services, data-intensive platforms, integrations, and automation",
-    es: "Ingeniero backend. Plataformas internas, servicios analíticos, CRM y productos aplicados"
+    ru: "Software Engineer · Java / Kotlin / Go · ~4 года опыта. Технический лид CDP, AI-автоматизация",
+    en: "Software Engineer · Java / Kotlin / Go · ~4 years. Technical Lead of CDP, AI automation",
+    es: "Software Engineer · Java / Kotlin / Go · ~4 años. Líder técnico de CDP, automatización AI"
   },
   summary: {
-    ru: "Строю бэкенд-системы, где важны надёжность, сложная бизнес-логика, данные, интеграции и измеримый эффект.",
-    en: "I build backend systems where reliability, complex business logic, data, integrations, and measurable impact matter.",
-    es: "Construyo sistemas backend y productos internos que ayudan a los negocios a lanzar flujos más rápido, eliminar trabajo manual y tomar mejores decisiones."
+    ru: "Backend & Platform Engineer с 4+ годами опыта в high-load системах и Big Data пайплайнах. Технический лид CDP: архитектура, приносящая ~14 млн ₽/мес, ускорение выгрузки 32×, внедрение AI/LLM в продакшен-процессы.",
+    en: "Backend & Platform Engineer with 4+ years in high-load systems and Big Data pipelines. Technical Lead of CDP: architected a system generating ~RUB 14M/month, accelerated data export 32×, deployed AI/LLM in production workflows.",
+    es: "Backend & Platform Engineer con 4+ años en sistemas de alta carga y pipelines de Big Data. Líder técnico de CDP: diseñé un sistema que genera ~14M RUB/mes, aceleré la exportación 32×, implementé AI/LLM en flujos de producción."
   },
   contacts: {
     telegram: siteContacts.telegram,
@@ -103,29 +103,29 @@ export const siteContent = {
       es: "Artem Sidnev"
     },
     headline: {
-      ru: "Бэкенд-разработчик. Продакшен-сервисы, платформы обработки данных, интеграции и инициативы по производительности.",
-      en: "Backend Engineer. Production services, data-intensive platforms, integrations, and performance initiatives.",
-      es: "Middle Software Engineer (Backend / DevOps). Servicios de alta carga, plataformas de datos e infraestructura fiable."
+      ru: "Software Engineer · Java / Kotlin / Go. Технический лид CDP, AI-автоматизация, high-load пайплайны.",
+      en: "Software Engineer · Java / Kotlin / Go. Technical Lead of CDP, AI automation, high-load pipelines.",
+      es: "Software Engineer · Java / Kotlin / Go. Líder técnico de CDP, automatización AI, pipelines de alta carga."
     },
     subheadline: {
-      ru: "Беру задачи от неясных требований до продакшен-внедрения: проектирую бэкенд-контракты, ускоряю критичные пайплайны, автоматизирую ручные процессы и оставляю измеримый результат.",
-      en: "I take work from unclear requirements to production rollout: design backend contracts, speed up critical pipelines, automate manual workflows, and leave measurable results.",
-      es: "Construyo y mejoro sistemas que soportan carga y dan resultados claros: fiabilidad, flujos críticos más rápidos, automatización e impacto medible."
+      ru: "Беру задачи от неясных требований до продакшен-внедрения: проектирую бэкенд-контракты, ускоряю критичные пайплайны, внедряю AI/LLM в процессы и оставляю измеримый результат.",
+      en: "I take work from unclear requirements to production rollout: design backend contracts, speed up critical pipelines, deploy AI/LLM in workflows, and leave measurable results.",
+      es: "Llevo tareas desde requisitos difusos hasta producción: diseño contratos backend, acelero pipelines críticos, implemento AI/LLM en flujos y dejo resultados medibles."
     },
     proof: {
       ru: [
-        "Фичи с измеримым эффектом: до 7.5 млн руб./год бизнес-импакта.",
-        "Сокращал задержку отдельных сценариев сборки аудиторий с ~170 минут до 5–10 секунд.",
+        "Ускорил сборку аудиторий до 1–10 секунд (размер-независимо) и выгрузку данных 32× (8ч → 15мин).",
+        "Спроектировал систему, приносящую ~14 млн ₽/мес аналитически-оценённого дохода.",
         "Автоматизацией снимал до 40–60 часов ручной работы в месяц."
       ],
       en: [
-        "Metric-backed impact: up to RUB 7.5M/year business effect.",
-        "Reduced selected audience-flow latency from ~170 minutes to 5–10 seconds.",
+        "Accelerated audience gathering to 1–10 seconds (size-independent) and data export 32× (8h → 15min).",
+        "Architected a system generating ~RUB 14M/month in analyst-estimated revenue.",
         "Automation removed up to 40–60 manual hours per month."
       ],
       es: [
-        "Impacto con métricas: hasta 7,5M RUB/año.",
-        "Aceleré flujos críticos de producción ~5x.",
+        "Aceleré la construcción de audiencias a 1–10 segundos (independiente del tamaño) y exportación 32× (8h → 15min).",
+        "Diseñé un sistema que genera ~14M RUB/mes en ingresos estimados por analistas.",
         "Automatización eliminó 40–60 horas manuales al mes."
       ]
     }
@@ -288,19 +288,22 @@ const resumeSections: readonly ResumeSection[] = [
     },
     items: {
       ru: [
-        "T-Bank — бэкенд-разработчик, окт 2025 — н.в.: продакшен-бэкенд для платформы управления аудиториями, кэшбэк-офферов, потоков обработки данных и корпоративных интеграций.",
-        "Лидировал архитектурную инициативу между сервисами: вынес тяжёлую материализацию и выгрузку аудиторий из основной платформы во внутренний сервис обработки данных с gRPC API, ClickHouse-исполнением, S3-выгрузкой и отдельными лимитами воркеров.",
-        "Результаты: сборка аудиторий для кэшбэк-кампаний ускорилась с ~170 минут до 5–10 секунд в оптимизированных сценариях — в 1000–2000 раз."
+        "T-Bank — Software Engineer, окт 2025 — н.в.: технический лид CDP (Customer Data Platform), продакшен-бэкенд для кэшбэк-таргетинга, обработки данных и AI/LLM автоматизации.",
+        "Ускорил сборку аудиторий до 1–10 секунд (размер-независимо, ~30–50× типично, до 360× в лучшем случае), driving ~14 млн ₽/мес аналитически-оценённого дохода.",
+        "Флагманское лидерство: инициировал и провёл кросс-командную RFC-интеграцию, ускорившую выгрузку данных 32× (8ч → 15мин) и приведшую к объединению команды в CDP.",
+        "Внедрил AI/LLM: AI code review бот, CI рефакторинг бот, RAG-агент для онбординга, n8n автоматизации — сэкономил 40–60 часов ручной работы в месяц."
       ],
       en: [
-        "T-Bank — Software Engineer (Backend), Oct 2025 — present: production backend for cashback targeting, partner-funded offers, data-intensive audience workflows, and corporate integrations.",
-        "Led a cross-service architecture initiative: moved heavy audience materialization/export work from the core Kotlin/Spring service to an internal Go data-processing service with gRPC API, ClickHouse execution, S3 export, and bounded worker concurrency.",
-        "Results: cashback audience gathering from ~170 minutes to 5–10 seconds in optimized scenarios, up to 1000–2000x speedup."
+        "T-Bank — Software Engineer, Oct 2025 — present: Technical Lead of CDP (Customer Data Platform), production backend for cashback targeting, data processing, and AI/LLM automation.",
+        "Accelerated audience gathering to 1–10 seconds (size-independent, ~30–50× typical, up to 360× best case), driving ~RUB 14M/month in analyst-estimated revenue.",
+        "Flagship leadership: self-initiated and drove a cross-team RFC integration, accelerating data export 32× (8h → 15min) and leading to team consolidation into CDP.",
+        "Deployed AI/LLM: AI code review bot, CI refactoring bot, RAG onboarding agent, n8n automations — saved 40–60 manual hours per month."
       ],
       es: [
-        "T-Bank — Middle Backend / DevOps Engineer (oct 2025 — actual): backend de alta carga, plataforma de cashback, flujos productivos e integraciones.",
-        "Flujos AI/LLM: AI code review en GitLab, AI CI job, automatizaciones n8n y agente RAG de onboarding.",
-        "Resultados: hasta 7,5M RUB/año, flujo crítico ~5x más rápido, 40–60 h/mes ahorradas, AI workflows ~1.5x más rápidos y hasta 3x menos tokens."
+        "T-Bank — Software Engineer, oct 2025 — actual: Líder técnico de CDP (Customer Data Platform), backend de producción para targeting de cashback, procesamiento de datos y automatización AI/LLM.",
+        "Aceleré la construcción de audiencias a 1–10 segundos (independiente del tamaño, ~30–50× típico, hasta 360× en el mejor caso), generando ~14M RUB/mes en ingresos estimados.",
+        "Liderazgo insignia: inicié y conduje una integración RFC entre equipos, acelerando la exportación 32× (8h → 15min) y llevando a la consolidación del equipo en CDP.",
+        "Implementé AI/LLM: bot de code review, bot de refactorización CI, agente RAG de onboarding, automatizaciones n8n — ahorré 40–60 horas manuales al mes."
       ]
     }
   }
@@ -313,25 +316,25 @@ export const resumeContent = {
     es: "CV"
   },
   summary: {
-    ru: "Бэкенд-разработчик в T‑Bank. Строю продакшен-бэкенд, потоки обработки данных, API, очереди задач, интеграции и автоматизацию. Беру задачи, где важны надёжность, сложная бизнес-логика, скорость критичных пайплайнов и измеримый эффект.",
-    en: "Backend engineer at T‑Bank. I build production backend, data-intensive workflows, APIs, task queues, integrations, and automation. I take work where reliability, complex business logic, critical-flow speed, and measurable impact matter.",
-    es: "Middle Backend / DevOps engineer en T‑Bank. Construyo sistemas de alta carga, plataformas de datos y automatización AI/LLM. Trabajo donde importan fiabilidad, velocidad y métricas."
+    ru: "Software Engineer в T‑Bank, технический лид CDP. Строю продакшен-бэкенд, high-load пайплайны, AI/LLM автоматизацию. Беру задачи, где важны надёжность, сложная бизнес-логика, скорость критичных пайплайнов и измеримый эффект.",
+    en: "Software Engineer at T‑Bank, Technical Lead of CDP. I build production backend, high-load pipelines, and AI/LLM automation. I take work where reliability, complex business logic, critical-flow speed, and measurable impact matter.",
+    es: "Software Engineer en T‑Bank, líder técnico de CDP. Construyo backend de producción, pipelines de alta carga y automatización AI/LLM. Trabajo donde importan fiabilidad, lógica compleja y métricas."
   },
   highlights: {
     ru: [
-      "Java/Kotlin/Python, Spring Boot, REST/gRPC, PostgreSQL, ClickHouse, Kafka",
-      "Метрики: сборка аудиторий с ~170 минут до 5–10 секунд, ускорение в 1000–2000 раз, p95 до оптимизации доходил до 7.8 часа",
-      "Продакшен-подход: поэтапное внедрение, резервный путь, наблюдаемость, валидация и стабильные менеджерские процессы"
+      "Java/Kotlin/Python/Go, Spring Boot, REST/gRPC, PostgreSQL, ClickHouse, Kafka",
+      "Сборка аудиторий 1–10 сек (размер-независимо), выгрузка 32× (8ч→15мин), ~14 млн ₽/мес",
+      "Технический лид CDP: RFC, кросс-командная интеграция, объединение команд, AI/LLM в продакшене"
     ],
     en: [
-      "Java/Kotlin/Python, Spring Boot, REST/gRPC, PostgreSQL, ClickHouse, Kafka",
-      "Metrics: cashback audience gathering from ~170 minutes to 5–10 seconds, up to 1000–2000x speedup",
-      "Production mindset: rollout, fallback, observability, validation, and stable manager-facing workflows"
+      "Java/Kotlin/Python/Go, Spring Boot, REST/gRPC, PostgreSQL, ClickHouse, Kafka",
+      "Audience gathering 1–10s (size-independent), export 32× (8h→15min), ~RUB 14M/month",
+      "Technical Lead of CDP: RFC, cross-team integration, team consolidation, AI/LLM in production"
     ],
     es: [
-      "Backend de alta carga + plataformas de datos + automatización AI/LLM",
-      "Métricas: hasta 7,5M RUB/año, ~5x aceleración, 40–60 h/mes ahorradas",
-      "Implementaciones AI: code review, AI CI job, n8n, agentes RAG"
+      "Java/Kotlin/Python/Go, Spring Boot, REST/gRPC, PostgreSQL, ClickHouse, Kafka",
+      "Audiencias 1–10s (independiente del tamaño), exportación 32× (8h→15min), ~14M RUB/mes",
+      "Líder técnico de CDP: RFC, integración entre equipos, consolidación, AI/LLM en producción"
     ]
   },
   sections: resumeSections
@@ -351,9 +354,9 @@ export const projects: Project[] = [
       es: "Plataforma interna para managers que construye audiencias objetivo para ofertas de cashback usando datos de clientes (transacciones, ingresos/gastos, terminales y otros atributos)."
     },
     short: {
-      ru: "Новые параметры таргетинга на 1.5 года истории и ~30 млн транзакций/день; эффект до 7.5 млн руб./год.",
-      en: "New targeting parameters on 1.5 years of history and ~30M transactions/day; impact up to RUB 7.5M/year.",
-      es: "Nuevos parámetros de targeting sobre 1,5 años y ~30M transacciones/día; impacto hasta 7,5M RUB/año."
+      ru: "Новые параметры таргетинга на 1.5 года истории и ~30 млн транзакций/день; ~15 млн ₽/год прибыли.",
+      en: "New targeting parameters on 1.5 years of history and ~30M transactions/day; ~RUB 15M/year profit.",
+      es: "Nuevos parámetros de targeting sobre 1,5 años y ~30M transacciones/día; ~15M RUB/año de beneficio."
     },
     year: "2025–2026",
     category: "big-tech",
@@ -402,17 +405,17 @@ export const projects: Project[] = [
         ru: [
           "Аудитории под офферы собираются автоматически на истории 1.5 года и на потоке ~30 млн транзакций/день, без ручных проливок.",
           "Менеджеры получили точные параметры включения/исключения клиентов, меньше ручных правок и меньше ошибок в кампаниях.",
-          "По оценке бизнеса ожидаемый эффект — до 7.5 млн руб./год; после миграции критичный пайплайн сборки ускорился примерно в 5 раз."
+          "Система таргетинга приносит ~15 млн ₽/год прибыли; сборка аудиторий ускорена до 1–10 секунд (размер-независимо)."
         ],
         en: [
           "Offer audiences are built automatically on 1.5 years of history and ~30M transactions/day, without manual data loads.",
           "Managers got precise include/exclude targeting with fewer manual edits and fewer campaign mistakes.",
-          "Expected impact: up to RUB 7.5M/year; after migration, a critical flow became ~5x faster."
+          "Targeting system generates ~RUB 15M/year profit; audience gathering accelerated to 1–10 seconds (size-independent)."
         ],
         es: [
           "Las audiencias se construyen automáticamente sobre 1,5 años de histórico y ~30M transacciones/día sin cargas manuales.",
           "Los managers obtuvieron targeting preciso con menos ajustes manuales y menos errores.",
-          "Impacto esperado: hasta 7,5M RUB/año; tras la migración el flujo crítico fue ~5x más rápido."
+          "El sistema de targeting genera ~15M RUB/año de beneficio; audiencias aceleradas a 1–10 segundos (independiente del tamaño)."
         ]
       },
       note: {
@@ -995,6 +998,255 @@ export const projects: Project[] = [
         es: [
           "Aporta señales de pensamiento operacional: reproducibilidad, diagnóstico, observabilidad.",
           "Buena base para extender con capas de plataforma y control de riesgo."
+        ]
+      }
+    }
+  },
+  {
+    slug: "proofforge",
+    title: {
+      ru: "ProofForge: платформа достижения целей",
+      en: "ProofForge: Goal Achievement Platform",
+      es: "ProofForge: plataforma de logro de objetivos"
+    },
+    summary: {
+      ru: "Платформа взаимной ответственности: бадди-цели, круги (до 8 человек, 7-дневные сезоны), доказательства (текст/ссылки/файлы), AI-рефайнмент целей, Telegram-бот, еженедельные отчёты.",
+      en: "Peer-accountability platform: buddy goals, circles (≤8 people, 7-day seasons), proofs (text/links/files), AI goal refinement, Telegram bot, weekly recaps.",
+      es: "Plataforma de responsabilidad entre pares: objetivos con buddy, círculos (≤8 personas, temporadas de 7 días), pruebas, refinamiento AI, bot de Telegram, resúmenes semanales."
+    },
+    short: {
+      ru: "Go + Next.js платформа с AI-рефайнментом целей, pgvector семантическим поиском и Telegram-ботом.",
+      en: "Go + Next.js platform with AI goal refinement, pgvector semantic search, and Telegram bot.",
+      es: "Plataforma Go + Next.js con refinamiento AI de objetivos, búsqueda semántica pgvector y bot de Telegram."
+    },
+    year: "2024–2025",
+    category: "product",
+    status: "shipped",
+    owner: "artem",
+    featured: true,
+    cover: {
+      src: "/covers/proofforge.svg",
+      alt: {
+        ru: "Экран платформы ProofForge",
+        en: "Screen of ProofForge platform",
+        es: "Pantalla de la plataforma ProofForge"
+      }
+    },
+    stack: ["Go", "Next.js", "TypeScript", "PostgreSQL", "pgvector", "Redis", "MinIO"],
+    links: [
+      {
+        href: "https://github.com/sidnevart/proof-forge",
+        label: { ru: "GitHub", en: "GitHub", es: "GitHub" },
+        external: true
+      }
+    ],
+    detail: {
+      challenge: {
+        ru: "Большинство приложений для целей работают в одиночку. Нужна была платформа, где люди поддерживают друг друга через взаимную ответственность и измеримый прогресс.",
+        en: "Most goal apps are solo. The goal was a platform where people support each other through peer accountability and measurable progress.",
+        es: "La mayoría de apps de objetivos son individuales. La meta era una plataforma de apoyo mutuo con progreso medible."
+      },
+      solution: {
+        ru: [
+          "Собрал Go-бэкенд (chi, pgx) и Next.js фронтенд с полным циклом: цель → доказательства → фидбек → рекап.",
+          "Добавил AI-рефайнмент целей через OpenAI и семантический поиск через pgvector.",
+          "Telegram-бот для напоминаний, обновлений и быстрого взаимодействия."
+        ],
+        en: [
+          "Built Go backend (chi, pgx) and Next.js frontend with full loop: goal → proof → feedback → recap.",
+          "Added AI goal refinement via OpenAI and semantic search via pgvector.",
+          "Telegram bot for reminders, updates, and quick interactions."
+        ],
+        es: [
+          "Construí backend Go (chi, pgx) y frontend Next.js con ciclo completo: objetivo → prueba → feedback → recap.",
+          "Añadí refinamiento AI con OpenAI y búsqueda semántica con pgvector.",
+          "Bot de Telegram para recordatorios e interacción rápida."
+        ]
+      },
+      role: {
+        ru: "Full-stack: архитектура, Go-бэкенд, Next.js фронтенд, AI-интеграции, деплой.",
+        en: "Full-stack: architecture, Go backend, Next.js frontend, AI integrations, deployment.",
+        es: "Full-stack: arquitectura, backend Go, frontend Next.js, integraciones AI, despliegue."
+      },
+      result: {
+        ru: [
+          "MIT-лицензированный open-source проект с 67 коммитами и 2 релизами.",
+          "Демонстрирует владение Go, Next.js, pgvector и AI-интеграциями в одном продукте.",
+          "Полноценная платформа с регулярным пользовательским циклом, а не просто API."
+        ],
+        en: [
+          "MIT-licensed open-source project with 67 commits and 2 releases.",
+          "Demonstrates mastery of Go, Next.js, pgvector, and AI integrations in one product.",
+          "Full platform with recurring user loop, not just an API."
+        ],
+        es: [
+          "Proyecto open-source con licencia MIT, 67 commits y 2 releases.",
+          "Demuestra dominio de Go, Next.js, pgvector e integraciones AI en un solo producto.",
+          "Plataforma completa con ciclo de usuario recurrente, no solo una API."
+        ]
+      }
+    }
+  },
+  {
+    slug: "arc-core",
+    title: {
+      ru: "ARC: консоль для AI-работы с кодом",
+      en: "ARC: Console for AI Work on Codebases",
+      es: "ARC: consola para trabajo AI en código"
+    },
+    summary: {
+      ru: "Локальный CLI + десктопное приложение (Wails) для AI-работы с реальными кодовыми базами: раны, память, карты документации, артефакты, пресеты агентов.",
+      en: "Local-first CLI + native desktop app (Wails) for AI work on real codebases: runs, memory, docs-maps, artifacts, agent presets.",
+      es: "CLI + aplicación de escritorio (Wails) para trabajo AI en bases de código reales: ejecuciones, memoria, mapas de docs, artefactos, presets de agentes."
+    },
+    short: {
+      ru: "Go CLI + Wails десктоп: 5⭐ на GitHub, инструмент для AI-разработки на реальных проектах.",
+      en: "Go CLI + Wails desktop: 5⭐ on GitHub, a tool for AI development on real projects.",
+      es: "Go CLI + escritorio Wails: 5⭐ en GitHub, herramienta para desarrollo AI en proyectos reales."
+    },
+    year: "2025",
+    category: "infra",
+    status: "shipped",
+    owner: "artem",
+    featured: false,
+    cover: {
+      src: "/covers/arc.svg",
+      alt: {
+        ru: "Экран ARC консоли",
+        en: "Screen of ARC console",
+        es: "Pantalla de la consola ARC"
+      }
+    },
+    stack: ["Go", "Wails", "JavaScript", "CSS", "TypeScript"],
+    links: [
+      {
+        href: "https://github.com/sidnevart/arc-core",
+        label: { ru: "GitHub", en: "GitHub", es: "GitHub" },
+        external: true
+      }
+    ],
+    detail: {
+      challenge: {
+        ru: "AI-агенты работают с кодом, но не имеют структурированного контекста: нет памяти между сессиями, нет карт документации, нет воспроизводимых пресетов.",
+        en: "AI agents work with code but lack structured context: no memory between sessions, no docs maps, no reproducible presets.",
+        es: "Los agentes AI trabajan con código pero carecen de contexto estructurado: sin memoria entre sesiones, sin mapas de docs, sin presets reproducibles."
+      },
+      solution: {
+        ru: [
+          "Собрал Go CLI с runtime для AI-работы: раны, память, карты документации, артефакты.",
+          "Добавил нативное десктопное приложение через Wails с live preview runtime.",
+          "Пресеты агентов (Study/Work/Hero) для разных сценариев AI-разработки."
+        ],
+        en: [
+          "Built Go CLI with AI work runtime: runs, memory, docs-maps, artifacts.",
+          "Added native desktop app via Wails with live preview runtime.",
+          "Agent presets (Study/Work/Hero) for different AI development scenarios."
+        ],
+        es: [
+          "Construí CLI Go con runtime para trabajo AI: ejecuciones, memoria, mapas de docs, artefactos.",
+          "Añadí app de escritorio nativa con Wails y runtime de preview en vivo.",
+          "Presets de agentes (Study/Work/Hero) para diferentes escenarios de desarrollo AI."
+        ]
+      },
+      role: {
+        ru: "Creator & Lead Developer: архитектура, Go-ядро, Wails-интеграция, релизы.",
+        en: "Creator & Lead Developer: architecture, Go core, Wails integration, releases.",
+        es: "Creator & Lead Developer: arquitectura, núcleo Go, integración Wails, releases."
+      },
+      result: {
+        ru: [
+          "5⭐ на GitHub, 4 связанных репозитория (arc-docs, arc-presets, arc-editorial) — все ⭐5.",
+          "Инструмент, который сам использую для AI-разработки на реальных проектах.",
+          "Демонстрирует глубокое владение Go, десктопными приложениями и AI-tooling."
+        ],
+        en: [
+          "5⭐ on GitHub, 4 related repos (arc-docs, arc-presets, arc-editorial) — all ⭐5.",
+          "A tool I use myself for AI development on real projects.",
+          "Demonstrates deep mastery of Go, desktop apps, and AI tooling."
+        ],
+        es: [
+          "5⭐ en GitHub, 4 repos relacionados (arc-docs, arc-presets, arc-editorial) — todos ⭐5.",
+          "Herramienta que uso para desarrollo AI en proyectos reales.",
+          "Demuestra dominio profundo de Go, apps de escritorio y herramientas AI."
+        ]
+      }
+    }
+  },
+  {
+    slug: "chappi-ai-office",
+    title: {
+      ru: "Chappi AI Office: персональный AI-офис",
+      en: "Chappi AI Office: Personal AI Office",
+      es: "Chappi AI Office: oficina AI personal"
+    },
+    summary: {
+      ru: "24/7 VPS AI-офис через Telegram: мульти-агент (инфра/исследования/база знаний), голос (faster-Whisper), pgvector + MemPalace память, интеграции (Gmail/Calendar/GitHub/Notion/Jira), Grafana мониторинг.",
+      en: "24/7 VPS AI office via Telegram: multi-agent (infra/research/KB), voice (faster-Whisper), pgvector + MemPalace memory, integrations (Gmail/Calendar/GitHub/Notion/Jira), Grafana monitoring.",
+      es: "Oficina AI 24/7 en VPS vía Telegram: multi-agente (infra/investigación/KB), voz (faster-Whisper), pgvector + MemPalace, integraciones (Gmail/Calendar/GitHub/Notion/Jira), Grafana."
+    },
+    short: {
+      ru: "Автономный AI-офис: мульти-агент, голос, память, интеграции с внешними сервисами.",
+      en: "Autonomous AI office: multi-agent, voice, memory, integrations with external services.",
+      es: "Oficina AI autónoma: multi-agente, voz, memoria, integraciones con servicios externos."
+    },
+    year: "2025",
+    category: "product",
+    status: "shipped",
+    owner: "artem",
+    featured: false,
+    cover: {
+      src: "/covers/chappi-office.svg",
+      alt: {
+        ru: "Экран Chappi AI Office",
+        en: "Screen of Chappi AI Office",
+        es: "Pantalla de Chappi AI Office"
+      }
+    },
+    stack: ["OpenClaw", "Ollama", "PostgreSQL", "pgvector", "Python", "Docker"],
+    links: [],
+    detail: {
+      challenge: {
+        ru: "Нужен был персональный AI-ассистент, который работает 24/7, помнит контекст, имеет голос и интеграции с рабочими инструментами.",
+        en: "Needed a personal AI assistant that runs 24/7, remembers context, has voice, and integrates with work tools.",
+        es: "Se necesitaba un asistente AI personal que funcione 24/7, recuerde contexto, tenga voz e integre con herramientas de trabajo."
+      },
+      solution: {
+        ru: [
+          "Собрал мульти-агентную систему на OpenClaw: агенты для инфраструктуры, исследований и базы знаний.",
+          "Добавил голос через faster-Whisper и pgvector + MemPalace для долгосрочной памяти.",
+          "Интеграции через Composio: Gmail, Calendar, GitHub, Notion, Jira. Grafana + pixel дашборды для мониторинга."
+        ],
+        en: [
+          "Built multi-agent system on OpenClaw: agents for infrastructure, research, and knowledge base.",
+          "Added voice via faster-Whisper and pgvector + MemPalace for long-term memory.",
+          "Integrations via Composio: Gmail, Calendar, GitHub, Notion, Jira. Grafana + pixel dashboards for monitoring."
+        ],
+        es: [
+          "Construí sistema multi-agente en OpenClaw: agentes para infraestructura, investigación y base de conocimiento.",
+          "Añadí voz con faster-Whisper y pgvector + MemPalace para memoria a largo plazo.",
+          "Integraciones vía Composio: Gmail, Calendar, GitHub, Notion, Jira. Grafana + dashboards para monitoreo."
+        ]
+      },
+      role: {
+        ru: "Creator & AI Engineer: архитектура мульти-агентов, интеграции, голос, память, деплой на VPS.",
+        en: "Creator & AI Engineer: multi-agent architecture, integrations, voice, memory, VPS deployment.",
+        es: "Creator & AI Engineer: arquitectura multi-agente, integraciones, voz, memoria, despliegue en VPS."
+      },
+      result: {
+        ru: [
+          "Автономный AI-офис, работающий 24/7 на VPS через Telegram.",
+          "Демонстрирует навыки в AI-агентных системах, голосовых интерфейсах и интеграциях.",
+          "MIT-лицензированный open-source проект."
+        ],
+        en: [
+          "Autonomous AI office running 24/7 on VPS via Telegram.",
+          "Demonstrates skills in AI agent systems, voice interfaces, and integrations.",
+          "MIT-licensed open-source project."
+        ],
+        es: [
+          "Oficina AI autónoma funcionando 24/7 en VPS vía Telegram.",
+          "Demuestra habilidades en sistemas de agentes AI, interfaces de voz e integraciones.",
+          "Proyecto open-source con licencia MIT."
         ]
       }
     }

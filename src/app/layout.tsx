@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ChatWidget } from "@/components/chat-widget";
 import "./globals.css";
 
 const themeScript = `
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
     template: "%s | Artem Sidnev"
   },
   description:
-    "Middle Backend / DevOps engineer. Internal platforms, high-load services, automation, and product-focused case studies.",
+    "Software Engineer at T-Bank. Backend, high-load pipelines, AI/LLM automation, and product-focused case studies.",
   applicationName: "Artem Sidnev Portfolio"
 };
 
@@ -34,6 +35,7 @@ export default function RootLayout({
       <body className="bg-[var(--bg)] text-[var(--fg)] antialiased">
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
         {children}
+        <ChatWidget />
       </body>
     </html>
   );

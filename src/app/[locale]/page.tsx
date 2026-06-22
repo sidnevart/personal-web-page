@@ -37,17 +37,48 @@ export default async function HomePage({
           "@context": "https://schema.org",
           "@type": "Person",
           name: "Artem Sidnev",
-          jobTitle: "Middle Software Engineer (Backend / DevOps)",
-          url: `https://portfolio.example.com/${safeLocale}`,
-          sameAs: [siteContacts.github, siteContacts.telegram],
+          jobTitle: "Software Engineer",
+          url: `https://sidnevart.github.io/personal-web-page/${safeLocale}`,
+          sameAs: [
+            siteContacts.github,
+            siteContacts.telegram,
+            siteContacts.linkedin
+          ],
           email: siteContacts.email,
+          worksFor: {
+            "@type": "Organization",
+            name: "T-Bank"
+          },
           knowsAbout: [
             "Backend Engineering",
-            "Internal Platforms",
-            "Analytical Services",
-            "CRM",
-            "Applied Software"
-          ]
+            "High-Load Systems",
+            "Data-Intensive Platforms",
+            "AI/LLM Automation",
+            "ClickHouse",
+            "Kafka",
+            "Kotlin",
+            "Java",
+            "Go",
+            "Python",
+            "Customer Data Platforms",
+            "Technical Leadership"
+          ],
+          hasCredential: [
+            {
+              "@type": "EducationalOccupationalCredential",
+              name: "B.Sc. in Computer Science (in progress)",
+              credentialCategory: "degree",
+              recognizedBy: {
+                "@type": "Organization",
+                name: "Central University"
+              }
+            }
+          ],
+          alumniOf: {
+            "@type": "Organization",
+            name: "Central University"
+          },
+          description: "Software Engineer at T-Bank, Technical Lead of CDP. ~4 years of experience in high-load systems, data-intensive pipelines, and AI/LLM automation."
         }}
       />
 
