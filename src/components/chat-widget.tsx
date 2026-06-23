@@ -46,8 +46,8 @@ export function ChatWidget() {
       setIsStreaming(true);
 
       try {
-        const supabaseUrl = "https://butgfsafronihkrxdklx.supabase.co";
-        const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ1dGdmc2Fmcm9uaWhrcnhka2x4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODIwODQ0NTQsImV4cCI6MjA5NzY2MDQ1NH0.mic4JwQQsFZHjeEjkVfPJeraBlN9y_uq3M6M4p6E2AQ";
+        const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || "";
+        const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "";
         const response = await fetch(`${supabaseUrl}/functions/v1/chat`, {
           method: "POST",
           headers: {

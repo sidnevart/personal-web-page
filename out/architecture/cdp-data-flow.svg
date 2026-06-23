@@ -1,0 +1,71 @@
+<svg width="720" height="300" viewBox="0 0 720 300" fill="none" xmlns="http://www.w3.org/2000/svg" font-family="JetBrains Mono, monospace" font-size="11">
+  <!-- Title -->
+  <text x="360" y="25" text-anchor="middle" fill="#9f6c3a" font-weight="600" font-size="13">DATA FLOW: Audience Building Pipeline</text>
+
+  <!-- Step 1 -->
+  <rect x="30" y="50" width="130" height="60" rx="8" fill="none" stroke="#9f6c3a" stroke-width="1.5"/>
+  <text x="95" y="72" text-anchor="middle" fill="#9f6c3a" font-weight="500" font-size="10">MANAGER</text>
+  <text x="95" y="90" text-anchor="middle" fill="#5c5549" font-size="9">Defines criteria</text>
+
+  <!-- Arrow -->
+  <line x1="160" y1="80" x2="190" y2="80" stroke="#9f6c3a" stroke-width="1" marker-end="url(#arrow5)"/>
+
+  <!-- Step 2 -->
+  <rect x="190" y="50" width="130" height="60" rx="8" fill="none" stroke="#9f6c3a" stroke-width="1.5"/>
+  <text x="255" y="72" text-anchor="middle" fill="#9f6c3a" font-weight="500" font-size="10">CDP API</text>
+  <text x="255" y="90" text-anchor="middle" fill="#5c5549" font-size="9">Kotlin / Spring</text>
+
+  <!-- Arrow -->
+  <line x1="320" y1="80" x2="350" y2="80" stroke="#9f6c3a" stroke-width="1" marker-end="url(#arrow5)"/>
+
+  <!-- Step 3 -->
+  <rect x="350" y="50" width="130" height="60" rx="8" fill="none" stroke="#9f6c3a" stroke-width="1.5"/>
+  <text x="415" y="72" text-anchor="middle" fill="#9f6c3a" font-weight="500" font-size="10">DAG ORCHESTRATOR</text>
+  <text x="415" y="90" text-anchor="middle" fill="#5c5549" font-size="9">PostgreSQL queues</text>
+
+  <!-- Arrow -->
+  <line x1="480" y1="80" x2="510" y2="80" stroke="#9f6c3a" stroke-width="1" marker-end="url(#arrow5)"/>
+
+  <!-- Step 4 -->
+  <rect x="510" y="50" width="170" height="60" rx="8" fill="none" stroke="#9f6c3a" stroke-width="1.5"/>
+  <text x="595" y="72" text-anchor="middle" fill="#9f6c3a" font-weight="500" font-size="10">CLICKHOUSE QUERY</text>
+  <text x="595" y="90" text-anchor="middle" fill="#5c5549" font-size="9">~30M txns / 1.5yr history</text>
+
+  <!-- Arrow down -->
+  <line x1="595" y1="110" x2="595" y2="140" stroke="#9f6c3a" stroke-width="1" marker-end="url(#arrow5)"/>
+
+  <!-- Step 5 -->
+  <rect x="510" y="140" width="170" height="60" rx="8" fill="none" stroke="#9f6c3a" stroke-width="1.5"/>
+  <text x="595" y="162" text-anchor="middle" fill="#9f6c3a" font-weight="500" font-size="10">AUDIENCE RESULT</text>
+  <text x="595" y="180" text-anchor="middle" fill="#5c5549" font-size="9">1–10 seconds</text>
+
+  <!-- Arrow left -->
+  <line x1="510" y1="170" x2="480" y2="170" stroke="#9f6c3a" stroke-width="1" marker-end="url(#arrow5)"/>
+
+  <!-- Step 6 -->
+  <rect x="350" y="140" width="130" height="60" rx="8" fill="none" stroke="#8a8279" stroke-width="1"/>
+  <text x="415" y="162" text-anchor="middle" fill="#5c5549" font-weight="500" font-size="10">EXPORT PIPELINE</text>
+  <text x="415" y="180" text-anchor="middle" fill="#8a8279" font-size="9">Go / gRPC / S3</text>
+
+  <!-- Arrow -->
+  <line x1="350" y1="170" x2="320" y2="170" stroke="#8a8279" stroke-width="1" marker-end="url(#arrow5)"/>
+
+  <!-- Step 7 -->
+  <rect x="190" y="140" width="130" height="60" rx="8" fill="none" stroke="#8a8279" stroke-width="1"/>
+  <text x="255" y="162" text-anchor="middle" fill="#5c5549" font-weight="500" font-size="10">CAMPAIGN</text>
+  <text x="255" y="180" text-anchor="middle" fill="#8a8279" font-size="9">Same-day launch</text>
+
+  <!-- Metrics -->
+  <rect x="30" y="220" width="660" height="60" rx="8" fill="none" stroke="#9f6c3a" stroke-width="1"/>
+  <text x="360" y="245" text-anchor="middle" fill="#9f6c3a" font-weight="600" font-size="11">KEY METRICS</text>
+  <text x="150" y="265" text-anchor="middle" fill="#5c5549" font-size="10">Audience: 1–10s</text>
+  <text x="360" y="265" text-anchor="middle" fill="#5c5549" font-size="10">Export: 32× faster</text>
+  <text x="570" y="265" text-anchor="middle" fill="#5c5549" font-size="10">Revenue: ~$155K/mo</text>
+
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrow5" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="none" stroke="#9f6c3a" stroke-width="1"/>
+    </marker>
+  </defs>
+</svg>

@@ -60,6 +60,7 @@ export default async function ProjectPage({
   if (!project) notFound();
 
   const architectureSvg = getArchitectureSvg(slug);
+  const dataFlowSvg = getArchitectureSvg(`${slug}-data-flow`);
 
   return (
     <>
@@ -121,6 +122,16 @@ export default async function ProjectPage({
             </h2>
             <hr className="section-rule mt-3" />
             <ArchitectureDiagram svg={architectureSvg} />
+          </section>
+        )}
+
+        {/* ─── Data Flow Diagram ─── */}
+        {dataFlowSvg && (
+          <section className="mt-8">
+            <h3 className="text-h3">
+              {safeLocale === "ru" ? "Поток данных" : safeLocale === "en" ? "Data Flow" : "Flujo de datos"}
+            </h3>
+            <ArchitectureDiagram svg={dataFlowSvg} />
           </section>
         )}
 
