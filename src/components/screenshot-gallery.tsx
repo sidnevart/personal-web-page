@@ -7,6 +7,8 @@ type Screenshot = {
   alt: string;
 };
 
+const BASE_PATH = "/personal-web-page";
+
 export function ScreenshotGallery({ screenshots }: { screenshots: Screenshot[] }) {
   const [active, setActive] = useState(0);
 
@@ -17,7 +19,7 @@ export function ScreenshotGallery({ screenshots }: { screenshots: Screenshot[] }
       {/* Main image */}
       <div className="overflow-hidden rounded-lg border border-[var(--line)]">
         <img
-          src={screenshots[active].src}
+          src={`${BASE_PATH}${screenshots[active].src}`}
           alt={screenshots[active].alt}
           className="w-full h-auto"
         />
@@ -36,7 +38,7 @@ export function ScreenshotGallery({ screenshots }: { screenshots: Screenshot[] }
                   : "border-[var(--line)] opacity-60 hover:opacity-100"
               }`}
             >
-              <img src={s.src} alt={s.alt} className="w-20 h-14 object-cover" />
+              <img src={`${BASE_PATH}${s.src}`} alt={s.alt} className="w-20 h-14 object-cover" />
             </button>
           ))}
         </div>
