@@ -6,6 +6,7 @@ import { JsonLd } from "@/components/json-ld";
 import { ArchitectureDiagram } from "@/components/architecture-diagram";
 import { TechStackGrid } from "@/components/tech-stack-grid";
 import { MetricsHighlight } from "@/components/metrics-highlight";
+import { ScreenshotGallery } from "@/components/screenshot-gallery";
 import {
   categoryLabel,
   getProjectBySlug,
@@ -111,6 +112,17 @@ export default async function ProjectPage({
                 value: m.value
               }))}
             />
+          </section>
+        )}
+
+        {/* ─── Screenshots ─── */}
+        {project.screenshots && project.screenshots.length > 0 && (
+          <section className="mt-12">
+            <h2 className="text-h2">
+              {safeLocale === "ru" ? "Скриншоты" : safeLocale === "en" ? "Screenshots" : "Capturas"}
+            </h2>
+            <hr className="section-rule mt-3" />
+            <ScreenshotGallery screenshots={project.screenshots} />
           </section>
         )}
 

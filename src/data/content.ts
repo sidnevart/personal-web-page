@@ -41,6 +41,11 @@ export type Metric = {
   value: string;
 };
 
+export type Screenshot = {
+  src: string;
+  alt: string;
+};
+
 export type Project = {
   slug: string;
   title: LocalizedString;
@@ -63,6 +68,7 @@ export type Project = {
   }[];
   techDetails?: TechDetail[];
   metrics?: Metric[];
+  screenshots?: Screenshot[];
   detail: {
     challenge: LocalizedString;
     solution: LocalizedStringList;
@@ -399,6 +405,11 @@ export const projects: Project[] = [
       { label: { ru: "Транзакций/день", en: "Transactions/day", es: "Transacciones/día" }, value: "~30M" },
       { label: { ru: "Доход/мес", en: "Revenue/month", es: "Ingresos/mes" }, value: "~$155K" }
     ],
+    screenshots: [
+      { src: "/screenshots/financial-targeting-01.jpg", alt: "CDP targeting interface" },
+      { src: "/screenshots/financial-targeting-02.jpg", alt: "CDP audience building" },
+      { src: "/screenshots/financial-targeting-03.jpg", alt: "CDP results view" }
+    ],
     detail: {
       challenge: {
         ru: "Менеджерам нужен был инструмент, который быстро и надёжно собирает аудитории под кэшбэк-офферы. Требовалось добавить новые параметры таргетинга (в т.ч. траты/доходы и терминальные данные) и гарантировать корректность на истории и в потоке.",
@@ -483,6 +494,11 @@ export const projects: Project[] = [
     },
     stack: ["Go", "GitLab", "RAG", "LLM", "n8n"],
     links: [],
+    screenshots: [
+      { src: "/screenshots/ai-auditory-01.jpg", alt: "AI audience gathering bot" },
+      { src: "/screenshots/ai-auditory-02.jpg", alt: "AI automation workflow" },
+      { src: "/screenshots/ai-auditory-03.jpg", alt: "AI automation results" }
+    ],
     detail: {
       challenge: {
         ru: "Нужно было внедрить AI так, чтобы он реально ускорял работу, а не создавал шум: качественные ревью, быстрые MR и понятный онбординг.",
