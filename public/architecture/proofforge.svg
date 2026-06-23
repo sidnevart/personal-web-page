@@ -1,61 +1,71 @@
-<svg width="720" height="420" viewBox="0 0 720 420" fill="none" xmlns="http://www.w3.org/2000/svg" font-family="JetBrains Mono, monospace" font-size="12">
-  <!-- Next.js Frontend -->
-  <rect x="240" y="20" width="240" height="50" rx="8" fill="none" stroke="#9f6c3a" stroke-width="1.5"/>
-  <text x="360" y="42" text-anchor="middle" fill="#9f6c3a" font-weight="600" font-size="11">NEXT.JS 15 FRONTEND</text>
-  <text x="360" y="58" text-anchor="middle" fill="#5c5549" font-size="10">App Router / TypeScript</text>
-
-  <!-- Go API -->
-  <rect x="240" y="110" width="240" height="50" rx="8" fill="none" stroke="#9f6c3a" stroke-width="1.5"/>
-  <text x="360" y="132" text-anchor="middle" fill="#9f6c3a" font-weight="600" font-size="11">GO API</text>
-  <text x="360" y="148" text-anchor="middle" fill="#5c5549" font-size="10">chi / pgx / 27 domain packages</text>
-
-  <!-- Arrow -->
-  <line x1="360" y1="70" x2="360" y2="110" stroke="#9f6c3a" stroke-width="1" marker-end="url(#arrow2)"/>
-
-  <!-- Go Worker -->
-  <rect x="240" y="200" width="240" height="50" rx="8" fill="none" stroke="#9f6c3a" stroke-width="1.5"/>
-  <text x="360" y="222" text-anchor="middle" fill="#9f6c3a" font-weight="600" font-size="11">GO WORKER</text>
-  <text x="360" y="238" text-anchor="middle" fill="#5c5549" font-size="10">Recaps / Notifications / Async</text>
-
-  <!-- Arrow from API to Worker -->
-  <line x1="360" y1="160" x2="360" y2="200" stroke="#9f6c3a" stroke-width="1" marker-end="url(#arrow2)"/>
-
-  <!-- Database layer -->
-  <rect x="40" y="300" width="160" height="50" rx="8" fill="none" stroke="#8a8279" stroke-width="1"/>
-  <text x="120" y="322" text-anchor="middle" fill="#5c5549" font-weight="500" font-size="11">PostgreSQL 16</text>
-  <text x="120" y="338" text-anchor="middle" fill="#8a8279" font-size="10">+ pgvector</text>
-
-  <rect x="240" y="300" width="120" height="50" rx="8" fill="none" stroke="#8a8279" stroke-width="1"/>
-  <text x="300" y="322" text-anchor="middle" fill="#5c5549" font-weight="500" font-size="11">Redis 7</text>
-  <text x="300" y="338" text-anchor="middle" fill="#8a8279" font-size="10">Cache / Queue</text>
-
-  <rect x="400" y="300" width="120" height="50" rx="8" fill="none" stroke="#8a8279" stroke-width="1"/>
-  <text x="460" y="322" text-anchor="middle" fill="#5c5549" font-weight="500" font-size="11">MinIO</text>
-  <text x="460" y="338" text-anchor="middle" fill="#8a8279" font-size="10">File storage</text>
-
-  <!-- Telegram -->
-  <rect x="560" y="300" width="120" height="50" rx="8" fill="none" stroke="#8a8279" stroke-width="1"/>
-  <text x="620" y="322" text-anchor="middle" fill="#5c5549" font-weight="500" font-size="11">Telegram</text>
-  <text x="620" y="338" text-anchor="middle" fill="#8a8279" font-size="10">Bot / Notifications</text>
-
-  <!-- Arrows from Worker to databases -->
-  <line x1="300" y1="250" x2="120" y2="300" stroke="#8a8279" stroke-width="1" marker-end="url(#arrow2)"/>
-  <line x1="360" y1="250" x2="300" y2="300" stroke="#8a8279" stroke-width="1" marker-end="url(#arrow2)"/>
-  <line x1="360" y1="250" x2="460" y2="300" stroke="#8a8279" stroke-width="1" marker-end="url(#arrow2)"/>
-  <line x1="420" y1="250" x2="620" y2="300" stroke="#8a8279" stroke-width="1" stroke-dasharray="4 4" marker-end="url(#arrow2)"/>
-
-  <!-- OpenAI -->
-  <rect x="40" y="110" width="120" height="50" rx="8" fill="none" stroke="#8a8279" stroke-width="1"/>
-  <text x="100" y="132" text-anchor="middle" fill="#5c5549" font-weight="500" font-size="11">OpenAI</text>
-  <text x="100" y="148" text-anchor="middle" fill="#8a8279" font-size="10">Goal refinement</text>
-
-  <!-- Arrow from API to OpenAI -->
-  <line x1="240" y1="135" x2="160" y2="135" stroke="#8a8279" stroke-width="1" stroke-dasharray="4 4" marker-end="url(#arrow2)"/>
-
-  <!-- Arrow marker -->
+<svg width="720" height="400" viewBox="0 0 720 400" fill="none" xmlns="http://www.w3.org/2000/svg" font-family="JetBrains Mono, monospace" font-size="12">
   <defs>
-    <marker id="arrow2" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
-      <path d="M0,0 L8,3 L0,6" fill="none" stroke="#9f6c3a" stroke-width="1"/>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="none" stroke="#9f6c3a" stroke-width="1.5"/>
+    </marker>
+    <marker id="arr-soft" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="none" stroke="#8a8279" stroke-width="1"/>
     </marker>
   </defs>
+
+  <!-- User -->
+  <rect x="20" y="30" width="150" height="60" rx="8" fill="none" stroke="#9f6c3a" stroke-width="1.5"/>
+  <text x="95" y="54" text-anchor="middle" fill="#9f6c3a" font-weight="600" font-size="11">USER</text>
+  <text x="95" y="70" text-anchor="middle" fill="#5c5549" font-size="10">Claude Desktop / Code</text>
+  <text x="95" y="84" text-anchor="middle" fill="#8a8279" font-size="9">types in chat</text>
+
+  <!-- Arrow user → skills -->
+  <line x1="170" y1="60" x2="210" y2="60" stroke="#9f6c3a" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Skills system -->
+  <rect x="210" y="30" width="160" height="60" rx="8" fill="none" stroke="#9f6c3a" stroke-width="1.5"/>
+  <text x="290" y="52" text-anchor="middle" fill="#9f6c3a" font-weight="600" font-size="11">SKILLS / *.md</text>
+  <text x="290" y="68" text-anchor="middle" fill="#5c5549" font-size="10">11 skills, trigger phrases</text>
+  <text x="290" y="83" text-anchor="middle" fill="#8a8279" font-size="9">study · forge · review · cards</text>
+
+  <!-- Arrow skills → mcp -->
+  <line x1="370" y1="60" x2="410" y2="60" stroke="#9f6c3a" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- MCP Server -->
+  <rect x="410" y="14" width="180" height="92" rx="8" fill="none" stroke="#9f6c3a" stroke-width="2"/>
+  <text x="500" y="36" text-anchor="middle" fill="#9f6c3a" font-weight="700" font-size="12">MCP SERVER</text>
+  <text x="500" y="52" text-anchor="middle" fill="#5c5549" font-size="10">proof-forge-mcp (local)</text>
+  <text x="500" y="68" text-anchor="middle" fill="#8a8279" font-size="9">13 tools: store_capsule, get_due_cards</text>
+  <text x="500" y="82" text-anchor="middle" fill="#8a8279" font-size="9">log_card_attempt, identify, forge…</text>
+  <text x="500" y="98" text-anchor="middle" fill="#8a8279" font-size="9">installed via uv tool install</text>
+
+  <!-- Arrow mcp → backend -->
+  <line x1="500" y1="106" x2="500" y2="166" stroke="#9f6c3a" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="516" y="140" fill="#8a8279" font-size="9">HTTPS</text>
+
+  <!-- FastAPI Backend -->
+  <rect x="350" y="166" width="300" height="70" rx="8" fill="none" stroke="#9f6c3a" stroke-width="1.5"/>
+  <text x="500" y="188" text-anchor="middle" fill="#9f6c3a" font-weight="600" font-size="11">FASTAPI BACKEND</text>
+  <text x="500" y="204" text-anchor="middle" fill="#5c5549" font-size="10">api.proof-forge.ru · Python 3.12</text>
+  <text x="500" y="220" text-anchor="middle" fill="#8a8279" font-size="9">15 routers · Alembic migrations · Docker</text>
+
+  <!-- Arrow backend → postgres -->
+  <line x1="500" y1="236" x2="500" y2="290" stroke="#9f6c3a" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- PostgreSQL -->
+  <rect x="350" y="290" width="300" height="70" rx="8" fill="none" stroke="#8a8279" stroke-width="1"/>
+  <text x="500" y="312" text-anchor="middle" fill="#5c5549" font-weight="600" font-size="11">POSTGRESQL</text>
+  <text x="500" y="328" text-anchor="middle" fill="#8a8279" font-size="10">SM-2 spaced repetition engine</text>
+  <text x="500" y="344" text-anchor="middle" fill="#8a8279" font-size="9">users · topics · capsules · cards · intervals</text>
+
+  <!-- IDE Plugins -->
+  <rect x="20" y="166" width="160" height="70" rx="8" fill="none" stroke="#8a8279" stroke-width="1"/>
+  <text x="100" y="188" text-anchor="middle" fill="#5c5549" font-weight="600" font-size="11">IDE PLUGINS</text>
+  <text x="100" y="204" text-anchor="middle" fill="#8a8279" font-size="10">VS Code · JetBrains</text>
+  <text x="100" y="220" text-anchor="middle" fill="#8a8279" font-size="9">learn inside the codebase</text>
+
+  <!-- Arrow IDE → backend -->
+  <line x1="180" y1="201" x2="348" y2="201" stroke="#8a8279" stroke-width="1" stroke-dasharray="5 3" marker-end="url(#arr-soft)"/>
+
+  <!-- Learning loop box -->
+  <rect x="20" y="290" width="310" height="80" rx="8" fill="none" stroke="#c8b89a" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="175" y="314" text-anchor="middle" fill="#8a8279" font-size="9" letter-spacing="0.06em">LEARNING LOOP</text>
+  <text x="175" y="332" text-anchor="middle" fill="#5c5549" font-size="10">"изучи тему" → explain → store_capsule</text>
+  <text x="175" y="348" text-anchor="middle" fill="#5c5549" font-size="10">"закончил" → complete_topic → cards</text>
+  <text x="175" y="364" text-anchor="middle" fill="#5c5549" font-size="10">"карточки" → get_due_cards → SM-2</text>
 </svg>

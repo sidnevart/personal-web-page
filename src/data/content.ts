@@ -1047,21 +1047,21 @@ export const projects: Project[] = [
   {
     slug: "proofforge",
     title: {
-      ru: "ProofForge: платформа достижения целей",
-      en: "ProofForge: Goal Achievement Platform",
-      es: "ProofForge: plataforma de logro de objetivos"
+      ru: "ProofForge (Grasp): AI-воркспейс для обучения",
+      en: "ProofForge (Grasp): Agent-Native Learning Workspace",
+      es: "ProofForge (Grasp): workspace de aprendizaje con agente"
     },
     summary: {
-      ru: "Платформа взаимной ответственности: бадди-цели, круги (до 8 человек, 7-дневные сезоны), доказательства (текст/ссылки/файлы), AI-рефайнмент целей, Telegram-бот, еженедельные отчёты.",
-      en: "Peer-accountability platform: buddy goals, circles (≤8 people, 7-day seasons), proofs (text/links/files), AI goal refinement, Telegram bot, weekly recaps.",
-      es: "Plataforma de responsabilidad entre pares: objetivos con buddy, círculos (≤8 personas, temporadas de 7 días), pruebas, refinamiento AI, bot de Telegram, resúmenes semanales."
+      ru: "Agent-native платформа для обучения: Claude объясняет тему, форжит капсулы знаний, создаёт карточки SM-2. 13 MCP-инструментов, FastAPI-бэкенд, плагины для VS Code и JetBrains.",
+      en: "Agent-native learning platform: Claude explains topics, forges knowledge capsules, creates SM-2 flashcards. 13 MCP tools, FastAPI backend, VS Code and JetBrains plugins.",
+      es: "Plataforma de aprendizaje con agente: Claude explica temas, crea cápsulas de conocimiento, tarjetas SM-2. 13 herramientas MCP, backend FastAPI, plugins VS Code y JetBrains."
     },
     short: {
-      ru: "Go + Next.js платформа с AI-рефайнментом целей, pgvector семантическим поиском и Telegram-ботом.",
-      en: "Go + Next.js platform with AI goal refinement, pgvector semantic search, and Telegram bot.",
-      es: "Plataforma Go + Next.js con refinamiento AI de objetivos, búsqueda semántica pgvector y bot de Telegram."
+      ru: "Claude-native learning: 13 MCP-инструментов, SM-2 повторение, FastAPI + PostgreSQL бэкенд, плагины для IDE.",
+      en: "Claude-native learning: 13 MCP tools, SM-2 spaced repetition, FastAPI + PostgreSQL backend, IDE plugins.",
+      es: "Aprendizaje Claude-native: 13 herramientas MCP, repetición espaciada SM-2, backend FastAPI + PostgreSQL, plugins IDE."
     },
-    year: "2024–2025",
+    year: "2025",
     category: "product",
     status: "shipped",
     owner: "artem",
@@ -1074,70 +1074,75 @@ export const projects: Project[] = [
         es: "Pantalla de la plataforma ProofForge"
       }
     },
-    stack: ["Go", "Next.js", "TypeScript", "PostgreSQL", "pgvector", "Redis", "MinIO"],
+    screenshots: [
+      { src: "/screenshots/proofforge-01.jpg", alt: "ProofForge dashboard — capsules and daily review" },
+      { src: "/screenshots/proofforge-02.jpg", alt: "ProofForge lesson complete — 30 cards reviewed" },
+      { src: "/screenshots/proofforge-03.jpg", alt: "ProofForge capsule generation in progress" }
+    ],
+    stack: ["Python", "FastAPI", "PostgreSQL", "Claude MCP", "Docker", "TypeScript"],
     links: [
       {
-        href: "https://github.com/sidnevart/proof-forge",
+        href: "https://github.com/sidnevart/proof-forge-v2",
         label: { ru: "GitHub", en: "GitHub", es: "GitHub" },
         external: true
       }
     ],
     techDetails: [
-      { name: "Go 1.24", role: { ru: "API + Worker (chi, pgx)", en: "API + Worker (chi, pgx)", es: "API + Worker (chi, pgx)" } },
-      { name: "Next.js 15", role: { ru: "Frontend (App Router)", en: "Frontend (App Router)", es: "Frontend (App Router)" } },
-      { name: "PostgreSQL 16", role: { ru: "Основная БД + pgvector", en: "Primary DB + pgvector", es: "DB principal + pgvector" } },
-      { name: "Redis 7", role: { ru: "Кеш, очередь задач", en: "Cache, job queue", es: "Cache, cola de tareas" } },
-      { name: "MinIO", role: { ru: "Хранение файлов (S3)", en: "File storage (S3)", es: "Almacenamiento (S3)" } },
-      { name: "Docker", role: { ru: "Контейнеризация", en: "Containerization", es: "Contenerización" } }
+      { name: "FastAPI", role: { ru: "Backend API (Python 3.12)", en: "Backend API (Python 3.12)", es: "API Backend (Python 3.12)" } },
+      { name: "Claude MCP", role: { ru: "13 инструментов: капсулы, карточки, мастерство", en: "13 tools: capsules, cards, mastery tracking", es: "13 herramientas: cápsulas, tarjetas, progreso" } },
+      { name: "PostgreSQL", role: { ru: "SM-2 интервальное повторение", en: "SM-2 spaced repetition storage", es: "Almacenamiento SM-2" } },
+      { name: "Skills system", role: { ru: "11 скиллов с триггерными фразами для Claude", en: "11 skills with trigger phrases for Claude", es: "11 skills con frases de activación para Claude" } },
+      { name: "VS Code + JetBrains", role: { ru: "IDE-плагины для обучения прямо в коде", en: "IDE plugins for learning inside the codebase", es: "Plugins IDE para aprender dentro del código" } },
+      { name: "Docker", role: { ru: "Self-hosted деплой", en: "Self-hosted deployment", es: "Despliegue self-hosted" } }
     ],
     metrics: [
-      { label: { ru: "Доменных пакетов", en: "Domain packages", es: "Paquetes de dominio" }, value: "27" },
-      { label: { ru: "Коммитов", en: "Commits", es: "Commits" }, value: "67" },
-      { label: { ru: "Архитектурных доков", en: "Architecture docs", es: "Docs de arquitectura" }, value: "8" }
+      { label: { ru: "MCP инструментов", en: "MCP tools", es: "Herramientas MCP" }, value: "13" },
+      { label: { ru: "Скиллов Claude", en: "Claude skills", es: "Skills de Claude" }, value: "11" },
+      { label: { ru: "Карточек в очереди", en: "Cards in review queue", es: "Tarjetas en cola" }, value: "256" }
     ],
     detail: {
       challenge: {
-        ru: "Большинство приложений для целей работают в одиночку. Нужна была платформа, где люди поддерживают друг друга через взаимную ответственность и измеримый прогресс.",
-        en: "Most goal apps are solo. The goal was a platform where people support each other through peer accountability and measurable progress.",
-        es: "La mayoría de apps de objetivos son individuales. La meta era una plataforma de apoyo mutuo con progreso medible."
+        ru: "Существующие инструменты обучения работают отдельно от рабочего процесса разработчика. Нужно было встроить процесс изучения прямо в Claude — без переключения контекста.",
+        en: "Existing learning tools are separate from the developer workflow. The goal was to embed the learning loop directly inside Claude — no context switching.",
+        es: "Las herramientas de aprendizaje existentes están separadas del flujo de trabajo. El objetivo era integrar el aprendizaje directamente en Claude, sin cambios de contexto."
       },
       solution: {
         ru: [
-          "Собрал Go-бэкенд (chi, pgx) и Next.js фронтенд с полным циклом: цель → доказательства → фидбек → рекап.",
-          "Добавил AI-рефайнмент целей через OpenAI и семантический поиск через pgvector.",
-          "Telegram-бот для напоминаний, обновлений и быстрого взаимодействия."
+          "Разработал 13 MCP-инструментов: от identify и store_capsule до get_due_cards и log_card_attempt с SM-2 интервалами.",
+          "Claude объясняет тему как ментор, записывает конспект в capsule, создаёт карточки — всё в одном чате.",
+          "FastAPI-бэкенд с Alembic-миграциями, плагины для VS Code и JetBrains чтобы учиться прямо в коде."
         ],
         en: [
-          "Built Go backend (chi, pgx) and Next.js frontend with full loop: goal → proof → feedback → recap.",
-          "Added AI goal refinement via OpenAI and semantic search via pgvector.",
-          "Telegram bot for reminders, updates, and quick interactions."
+          "Built 13 MCP tools: from identify and store_capsule to get_due_cards and log_card_attempt with SM-2 intervals.",
+          "Claude acts as a mentor, captures summaries into capsules, and generates flashcards — all in one conversation.",
+          "FastAPI backend with Alembic migrations, VS Code and JetBrains plugins for learning inside the codebase."
         ],
         es: [
-          "Construí backend Go (chi, pgx) y frontend Next.js con ciclo completo: objetivo → prueba → feedback → recap.",
-          "Añadí refinamiento AI con OpenAI y búsqueda semántica con pgvector.",
-          "Bot de Telegram para recordatorios e interacción rápida."
+          "Construí 13 herramientas MCP: desde identify y store_capsule hasta get_due_cards y log_card_attempt con intervalos SM-2.",
+          "Claude actúa como mentor, captura resúmenes en cápsulas y genera tarjetas — todo en una conversación.",
+          "Backend FastAPI con migraciones Alembic, plugins VS Code y JetBrains para aprender dentro del código."
         ]
       },
       role: {
-        ru: "Full-stack: архитектура, Go-бэкенд, Next.js фронтенд, AI-интеграции, деплой.",
-        en: "Full-stack: architecture, Go backend, Next.js frontend, AI integrations, deployment.",
-        es: "Full-stack: arquitectura, backend Go, frontend Next.js, integraciones AI, despliegue."
+        ru: "Full-stack: архитектура MCP-сервера, FastAPI-бэкенд, скиллы для Claude, IDE-плагины, деплой.",
+        en: "Full-stack: MCP server architecture, FastAPI backend, Claude skills, IDE plugins, deployment.",
+        es: "Full-stack: arquitectura del servidor MCP, backend FastAPI, skills de Claude, plugins IDE, despliegue."
       },
       result: {
         ru: [
-          "MIT-лицензированный open-source проект с 67 коммитами и 2 релизами.",
-          "Демонстрирует владение Go, Next.js, pgvector и AI-интеграциями в одном продукте.",
-          "Полноценная платформа с регулярным пользовательским циклом, а не просто API."
+          "Open-source (MIT), self-hosted через Docker, работает с Claude Desktop и Claude Code.",
+          "256 карточек в очереди повторения у активного пользователя — система реально используется.",
+          "Архитектура: агент делает всё мышление, бэкенд — чистое хранилище данных."
         ],
         en: [
-          "MIT-licensed open-source project with 67 commits and 2 releases.",
-          "Demonstrates mastery of Go, Next.js, pgvector, and AI integrations in one product.",
-          "Full platform with recurring user loop, not just an API."
+          "Open-source (MIT), self-hosted via Docker, works with Claude Desktop and Claude Code.",
+          "256 cards in active review queue — the system is being genuinely used.",
+          "Architecture: the agent does all the thinking, the backend is a pure data store."
         ],
         es: [
-          "Proyecto open-source con licencia MIT, 67 commits y 2 releases.",
-          "Demuestra dominio de Go, Next.js, pgvector e integraciones AI en un solo producto.",
-          "Plataforma completa con ciclo de usuario recurrente, no solo una API."
+          "Open-source (MIT), self-hosted vía Docker, funciona con Claude Desktop y Claude Code.",
+          "256 tarjetas en cola de revisión activa — el sistema se usa de verdad.",
+          "Arquitectura: el agente hace todo el razonamiento, el backend es un almacén de datos puro."
         ]
       }
     }
