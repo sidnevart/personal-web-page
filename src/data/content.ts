@@ -629,6 +629,104 @@ export const projects: Project[] = [
     }
   },
   {
+    slug: "urvi",
+    title: {
+      ru: "УРВИ!: маркетплейс горячих слотов",
+      en: "URVI!: Hot Slot Booking Marketplace",
+      es: "URVI!: marketplace de reservas con descuento"
+    },
+    summary: {
+      ru: "Маркетплейс свободных окон у салонов и сервисных центров с горячими скидками. Telegram WebApp + браузер, интеграция с YClients, партнёрский кабинет, карта свободных слотов.",
+      en: "Marketplace for hot discounted slots at salons and service centers. Telegram WebApp + browser client, YClients integration, partner dashboard, map of available slots — book in a couple of taps, no calls needed.",
+      es: "Marketplace de turnos disponibles con descuento en salones y centros de servicio. Telegram WebApp + cliente web, integración YClients, panel de socios, mapa de disponibilidad."
+    },
+    short: {
+      ru: "Telegram WebApp + web-клиент для бронирования горячих слотов со скидками. YClients, партнёрский кабинет, карта Москвы.",
+      en: "Telegram WebApp + web client for booking discounted hot slots. YClients API, partner office, Moscow map.",
+      es: "Telegram WebApp + cliente web para reservas con descuento. API YClients, panel de socios, mapa."
+    },
+    year: "2023–2024",
+    category: "product",
+    status: "shipped",
+    owner: "artem",
+    featured: false,
+    cover: {
+      src: "/covers/urvi.svg",
+      alt: {
+        ru: "УРВИ! маркетплейс горячих слотов",
+        en: "URVI! hot slot booking marketplace",
+        es: "URVI! marketplace de reservas"
+      }
+    },
+    screenshots: [
+      { src: "/screenshots/urvi-04.jpg", alt: "URVI! landing — Hot posts nearby, connect your business" },
+      { src: "/screenshots/urvi-05.jpg", alt: "URVI! login — book via Telegram, no calls needed" },
+      { src: "/screenshots/urvi-01.jpg", alt: "URVI! map — available slots in Moscow (billiards, manicure)" },
+      { src: "/screenshots/urvi-02.jpg", alt: "URVI! list — places sorted by distance with free slots" },
+      { src: "/screenshots/urvi-03.jpg", alt: "URVI! booking detail — Svobodno billiards, available slots" }
+    ],
+    stack: ["Next.js", "TypeScript", "Telegram Bot", "YClients API", "PostgreSQL", "Docker"],
+    links: [],
+    techDetails: [
+      { name: "Telegram WebApp", role: { ru: "Основной клиент: карта, бронь, профиль", en: "Primary client: map, bookings, profile", es: "Cliente principal: mapa, reservas, perfil" } },
+      { name: "YClients API", role: { ru: "Интеграция с расписанием партнёров", en: "Partner schedule and booking integration", es: "Integración con agenda de socios" } },
+      { name: "Next.js", role: { ru: "Web-клиент + партнёрский кабинет", en: "Web client + partner dashboard", es: "Cliente web + panel de socios" } },
+      { name: "PostgreSQL", role: { ru: "Хранение слотов, броней, пользователей", en: "Slots, bookings, user data", es: "Slots, reservas, usuarios" } },
+      { name: "Admin panel", role: { ru: "Управление партнёрами и слотами", en: "Partner and slot management", es: "Gestión de socios y turnos" } }
+    ],
+    metrics: [
+      { label: { ru: "Категорий услуг", en: "Service categories", es: "Categorías de servicio" }, value: "10+" },
+      { label: { ru: "Способ входа", en: "Auth method", es: "Autenticación" }, value: "Telegram" },
+      { label: { ru: "Интеграция", en: "Integration", es: "Integración" }, value: "YClients" }
+    ],
+    detail: {
+      challenge: {
+        ru: "Салоны теряют деньги на пустых окнах, клиенты — на звонках в поисках свободного времени. Нужна была платформа, где владелец одним кликом публикует горячий слот со скидкой, а клиент бронирует в паре тапов.",
+        en: "Salons lose revenue on empty slots, clients waste time calling around. The goal was a platform where owners publish a hot discounted slot in one click, and clients book in a couple of taps.",
+        es: "Los salones pierden dinero con turnos vacíos, los clientes pierden tiempo llamando. La meta era una plataforma donde el dueño publica un turno con descuento en un clic y el cliente reserva en dos toques."
+      },
+      solution: {
+        ru: [
+          "Telegram WebApp как основной клиент: карта Москвы с живыми слотами, фильтры по категориям (бильярд, маникюр), бронирование в пару кликов без звонков.",
+          "Интеграция с YClients: партнёры подключают своё расписание за пару минут, слоты синхронизируются автоматически.",
+          "Партнёрский кабинет и admin panel для управления точками, скидками и броней."
+        ],
+        en: [
+          "Telegram WebApp as the primary client: Moscow map with live available slots, category filters (billiards, manicure, etc.), booking in a couple of taps — no calls needed.",
+          "YClients integration: partners connect their schedule in minutes, slots sync automatically.",
+          "Partner office and admin panel for managing locations, discounts, and reservations."
+        ],
+        es: [
+          "Telegram WebApp como cliente principal: mapa de Moscú con turnos disponibles en vivo, filtros por categoría, reserva en dos toques sin llamadas.",
+          "Integración YClients: los socios conectan su agenda en minutos, los turnos se sincronizan automáticamente.",
+          "Panel de socios y admin para gestionar puntos, descuentos y reservas."
+        ]
+      },
+      role: {
+        ru: "Full-stack: архитектура, Telegram WebApp, Next.js, интеграция YClients, партнёрский кабинет, деплой.",
+        en: "Full-stack: architecture, Telegram WebApp, Next.js, YClients integration, partner dashboard, deployment.",
+        es: "Full-stack: arquitectura, Telegram WebApp, Next.js, integración YClients, panel de socios, despliegue."
+      },
+      result: {
+        ru: [
+          "Запущен живой продукт с картой Москвы, реальными партнёрами и Telegram-авторизацией.",
+          "Партнёры подключились через YClients без кастомной разработки на своей стороне.",
+          "Клиент бронирует слот за 3 шага: карта → слот → подтверждение."
+        ],
+        en: [
+          "Shipped a live product with Moscow map, real partners, and Telegram auth.",
+          "Partners onboarded via YClients with no custom development on their side.",
+          "Client books a slot in 3 steps: map → slot → confirm."
+        ],
+        es: [
+          "Producto en producción con mapa de Moscú, socios reales y auth de Telegram.",
+          "Los socios se incorporaron vía YClients sin desarrollo propio.",
+          "El cliente reserva en 3 pasos: mapa → turno → confirmación."
+        ]
+      }
+    }
+  },
+  {
     slug: "cumock",
     title: {
       ru: "Платформа тренировки технических интервью",
