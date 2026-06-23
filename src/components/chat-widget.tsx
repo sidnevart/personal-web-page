@@ -48,6 +48,10 @@ export function ChatWidget() {
       try {
         const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || "";
         const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "";
+        console.log("[Chat] URL:", supabaseUrl);
+        console.log("[Chat] Key length:", supabaseKey.length);
+        console.log("[Chat] Full URL:", `${supabaseUrl}/functions/v1/chat`);
+
         const response = await fetch(`${supabaseUrl}/functions/v1/chat`, {
           method: "POST",
           headers: {
@@ -60,8 +64,11 @@ export function ChatWidget() {
           }),
         });
 
+        console.log("[Chat] Response status:", response.status);
         if (!response.ok) {
-          throw new Error("Failed to get response");
+          const errorText = await response.text();
+          console.error("[Chat] Error response:", errorText);
+          throw new Error(`Failed to get response: ${response.status}`);
         }
 
         const reader = response.body?.getReader();

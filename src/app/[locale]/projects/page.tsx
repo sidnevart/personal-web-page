@@ -57,43 +57,44 @@ export default async function ProjectsPage({
 
         <hr className="section-rule mt-8" />
 
-        <div className="mt-8 space-y-12">
+        <div className="mt-8 space-y-8">
           {projects.map((project) => (
-            <div key={project.slug} className="group">
-              {/* Cover image */}
-              <Link href={`/projects/${project.slug}`} className="block overflow-hidden rounded-lg border border-[var(--line)] mb-4">
+            <Link
+              key={project.slug}
+              href={`/projects/${project.slug}`}
+              className="group block border border-[var(--line)] rounded-lg overflow-hidden hover:border-[var(--line-strong)] transition"
+            >
+              {/* Cover image as thumbnail */}
+              <div className="overflow-hidden">
                 <img
                   src={`/personal-web-page${project.cover.src}`}
                   alt={text(project.cover.alt, safeLocale)}
-                  className="w-full h-auto"
+                  className="w-full h-48 object-cover"
                 />
-              </Link>
+              </div>
 
               {/* Text content */}
-              <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
-                <Link href={`/projects/${project.slug}`}>
+              <div className="p-5">
+                <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
                   <h2 className="text-h3 group-hover:text-[var(--accent)] transition-colors">
                     {text(project.title, safeLocale)}
                   </h2>
-                </Link>
-                <span className="text-small">{project.year}</span>
+                  <span className="text-small">{project.year}</span>
+                </div>
+                <p className="mt-1 text-caption">
+                  {text(categoryLabel[project.category], safeLocale)}
+                </p>
+                <p className="mt-2 text-body">{text(project.summary, safeLocale)}</p>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {project.stack.map((tech) => (
+                    <span key={tech} className="tag">{tech}</span>
+                  ))}
+                </div>
+                <span className="mt-3 inline-block text-small text-[var(--accent)] group-hover:text-[var(--accent-hover)] transition-colors">
+                  {labels.open}
+                </span>
               </div>
-              <p className="mt-1 text-caption">
-                {text(categoryLabel[project.category], safeLocale)}
-              </p>
-              <p className="mt-2 text-body">{text(project.summary, safeLocale)}</p>
-              <div className="mt-3 flex flex-wrap gap-2">
-                {project.stack.map((tech) => (
-                  <span key={tech} className="tag">{tech}</span>
-                ))}
-              </div>
-              <Link
-                href={`/projects/${project.slug}`}
-                className="mt-3 inline-block text-small text-[var(--accent)] hover:text-[var(--accent-hover)] transition-colors"
-              >
-                {labels.open}
-              </Link>
-            </div>
+            </Link>
           ))}
         </div>
       </section>
