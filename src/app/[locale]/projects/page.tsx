@@ -57,42 +57,49 @@ export default async function ProjectsPage({
 
         <hr className="section-rule mt-8" />
 
-        <div className="mt-8 space-y-8">
+        <div className="mt-8 space-y-0 divide-y divide-[var(--line)]">
           {projects.map((project) => (
             <Link
               key={project.slug}
               href={`/projects/${project.slug}`}
-              className="group block border border-[var(--line)] rounded-lg overflow-hidden hover:border-[var(--line-strong)] transition"
+              className="group block py-8 hover:bg-[var(--surface)] -mx-4 px-4 transition-colors"
             >
-              {/* Cover image as thumbnail */}
-              <div className="overflow-hidden">
-                <img
-                  src={`/personal-web-page${project.cover.src}`}
-                  alt={text(project.cover.alt, safeLocale)}
-                  className="w-full h-48 object-cover"
-                />
-              </div>
+              <div className="flex gap-6 items-start">
+                {/* Text */}
+                <div className="flex-1 min-w-0">
+                  <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
+                    <h2 className="text-h3 group-hover:text-[var(--accent)] transition-colors">
+                      {text(project.title, safeLocale)}
+                    </h2>
+                    <span className="text-small shrink-0">{project.year}</span>
+                  </div>
+                  <p className="mt-1 text-caption">
+                    {text(categoryLabel[project.category], safeLocale)}
+                  </p>
+                  <p className="mt-2 text-body">{text(project.summary, safeLocale)}</p>
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    {project.stack.map((tech) => (
+                      <span key={tech} className="tag">{tech}</span>
+                    ))}
+                  </div>
+                  <span className="mt-3 inline-block text-small text-[var(--accent)] group-hover:text-[var(--accent-hover)] transition-colors">
+                    {labels.open}
+                  </span>
+                </div>
 
-              {/* Text content */}
-              <div className="p-5">
-                <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
-                  <h2 className="text-h3 group-hover:text-[var(--accent)] transition-colors">
-                    {text(project.title, safeLocale)}
-                  </h2>
-                  <span className="text-small">{project.year}</span>
-                </div>
-                <p className="mt-1 text-caption">
-                  {text(categoryLabel[project.category], safeLocale)}
-                </p>
-                <p className="mt-2 text-body">{text(project.summary, safeLocale)}</p>
-                <div className="mt-3 flex flex-wrap gap-2">
-                  {project.stack.map((tech) => (
-                    <span key={tech} className="tag">{tech}</span>
-                  ))}
-                </div>
-                <span className="mt-3 inline-block text-small text-[var(--accent)] group-hover:text-[var(--accent-hover)] transition-colors">
-                  {labels.open}
-                </span>
+                {/* Screenshots — only if real ones exist */}
+                {project.screenshots && project.screenshots.length > 0 && (
+                  <div className="hidden sm:flex gap-2 shrink-0">
+                    {project.screenshots.slice(0, 3).map((shot, i) => (
+                      <img
+                        key={i}
+                        src={`/personal-web-page${shot.src}`}
+                        alt={shot.alt}
+                        className="w-24 h-16 object-cover rounded border border-[var(--line)]"
+                      />
+                    ))}
+                  </div>
+                )}
               </div>
             </Link>
           ))}
