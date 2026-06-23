@@ -665,12 +665,13 @@ export const projects: Project[] = [
       { src: "/screenshots/urvi-02.jpg", alt: "URVI! list — places sorted by distance with free slots" },
       { src: "/screenshots/urvi-03.jpg", alt: "URVI! booking detail — Svobodno billiards, available slots" }
     ],
-    stack: ["Next.js", "TypeScript", "Telegram Bot", "YClients API", "PostgreSQL", "Docker"],
+    stack: ["Go", "Next.js", "React", "Telegram Bot", "YClients API", "PostgreSQL", "Docker"],
     links: [],
     techDetails: [
       { name: "Telegram WebApp", role: { ru: "Основной клиент: карта, бронь, профиль", en: "Primary client: map, bookings, profile", es: "Cliente principal: mapa, reservas, perfil" } },
       { name: "YClients API", role: { ru: "Интеграция с расписанием партнёров", en: "Partner schedule and booking integration", es: "Integración con agenda de socios" } },
-      { name: "Next.js", role: { ru: "Web-клиент + партнёрский кабинет", en: "Web client + partner dashboard", es: "Cliente web + panel de socios" } },
+      { name: "Go", role: { ru: "Backend API (chi, pgx)", en: "Backend API (chi, pgx)", es: "Backend API (chi, pgx)" } },
+      { name: "Next.js / React", role: { ru: "Web-клиент + партнёрский кабинет", en: "Web client + partner dashboard", es: "Cliente web + panel de socios" } },
       { name: "PostgreSQL", role: { ru: "Хранение слотов, броней, пользователей", en: "Slots, bookings, user data", es: "Slots, reservas, usuarios" } },
       { name: "Admin panel", role: { ru: "Управление партнёрами и слотами", en: "Partner and slot management", es: "Gestión de socios y turnos" } }
     ],
