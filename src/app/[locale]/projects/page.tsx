@@ -57,9 +57,19 @@ export default async function ProjectsPage({
 
         <hr className="section-rule mt-8" />
 
-        <div className="mt-8 space-y-10">
+        <div className="mt-8 space-y-12">
           {projects.map((project) => (
             <div key={project.slug} className="group">
+              {/* Cover image */}
+              <Link href={`/projects/${project.slug}`} className="block overflow-hidden rounded-lg border border-[var(--line)] mb-4">
+                <img
+                  src={`/personal-web-page${project.cover.src}`}
+                  alt={text(project.cover.alt, safeLocale)}
+                  className="w-full h-auto"
+                />
+              </Link>
+
+              {/* Text content */}
               <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
                 <Link href={`/projects/${project.slug}`}>
                   <h2 className="text-h3 group-hover:text-[var(--accent)] transition-colors">
