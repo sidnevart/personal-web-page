@@ -6,3 +6,5 @@ node_modules
 .env.local
 .env.production
 secrets.md
+demos_of_projects/
+demos_of_projects/
