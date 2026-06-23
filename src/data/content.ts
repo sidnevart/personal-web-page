@@ -1075,9 +1075,14 @@ export const projects: Project[] = [
       }
     },
     screenshots: [
-      { src: "/screenshots/proofforge-01.jpg", alt: "ProofForge dashboard — capsules and daily review" },
-      { src: "/screenshots/proofforge-02.jpg", alt: "ProofForge lesson complete — 30 cards reviewed" },
-      { src: "/screenshots/proofforge-03.jpg", alt: "ProofForge capsule generation in progress" }
+      { src: "/screenshots/proofforge-01.jpg", alt: "Grasp dashboard — 256 cards in review queue" },
+      { src: "/screenshots/proofforge-02.jpg", alt: "Grasp lesson complete — 30 cards, 87% easy" },
+      { src: "/screenshots/proofforge-03.jpg", alt: "Grasp capsule generation in progress" },
+      { src: "/screenshots/proofforge-04.jpg", alt: "Grasp landing — Learn it so it sticks" },
+      { src: "/screenshots/proofforge-05.jpg", alt: "Grasp demo — agent builds learning path live" },
+      { src: "/screenshots/proofforge-06.jpg", alt: "Grasp — web platform and Claude plugin setup" },
+      { src: "/screenshots/proofforge-07.jpg", alt: "Grasp — knowledge fitness tracker" },
+      { src: "/screenshots/proofforge-08.jpg", alt: "Grasp — install extension in VS Code / JetBrains" }
     ],
     stack: ["Python", "FastAPI", "PostgreSQL", "Claude MCP", "Docker", "TypeScript"],
     links: [
