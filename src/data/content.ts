@@ -1082,10 +1082,16 @@ export const projects: Project[] = [
       { src: "/screenshots/proofforge-05.jpg", alt: "Grasp demo — agent builds learning path live" },
       { src: "/screenshots/proofforge-06.jpg", alt: "Grasp — web platform and Claude plugin setup" },
       { src: "/screenshots/proofforge-07.jpg", alt: "Grasp — knowledge fitness tracker" },
-      { src: "/screenshots/proofforge-08.jpg", alt: "Grasp — install extension in VS Code / JetBrains" }
+      { src: "/screenshots/proofforge-08.jpg", alt: "Grasp — install extension in VS Code / JetBrains" },
+      { src: "/screenshots/proofforge-09.jpg", alt: "Grasp — knowledge capsule: Kotlin Multiplatform deep dive" }
     ],
     stack: ["Python", "FastAPI", "PostgreSQL", "Claude MCP", "Docker", "TypeScript"],
     links: [
+      {
+        href: "https://proof-forge.ru",
+        label: { ru: "Открыть сайт", en: "Live site", es: "Sitio web" },
+        external: true
+      },
       {
         href: "https://github.com/sidnevart/proof-forge-v2",
         label: { ru: "GitHub", en: "GitHub", es: "GitHub" },
