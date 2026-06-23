@@ -1,0 +1,57 @@
+<svg width="720" height="380" viewBox="0 0 720 380" fill="none" xmlns="http://www.w3.org/2000/svg" font-family="JetBrains Mono, monospace" font-size="12">
+  <!-- ARC Core box -->
+  <rect x="100" y="20" width="520" height="280" rx="12" fill="none" stroke="#9f6c3a" stroke-width="1.5"/>
+  <text x="360" y="50" text-anchor="middle" fill="#9f6c3a" font-weight="600" font-size="14">ARC CORE (Go)</text>
+
+  <!-- Subsystems -->
+  <rect x="120" y="70" width="140" height="50" rx="6" fill="none" stroke="#8a8279" stroke-width="1"/>
+  <text x="190" y="90" text-anchor="middle" fill="#5c5549" font-weight="500" font-size="10">CLI LAYER</text>
+  <text x="190" y="108" text-anchor="middle" fill="#8a8279" font-size="9">Commands / Profiles</text>
+
+  <rect x="280" y="70" width="140" height="50" rx="6" fill="none" stroke="#8a8279" stroke-width="1"/>
+  <text x="350" y="90" text-anchor="middle" fill="#5c5549" font-weight="500" font-size="10">ORCHESTRATOR</text>
+  <text x="350" y="108" text-anchor="middle" fill="#8a8279" font-size="9">State Machine</text>
+
+  <rect x="440" y="70" width="140" height="50" rx="6" fill="none" stroke="#8a8279" stroke-width="1"/>
+  <text x="510" y="90" text-anchor="middle" fill="#5c5549" font-weight="500" font-size="10">CONTEXT ENGINE</text>
+  <text x="510" y="108" text-anchor="middle" fill="#8a8279" font-size="9">rg / ast-grep</text>
+
+  <rect x="120" y="140" width="140" height="50" rx="6" fill="none" stroke="#8a8279" stroke-width="1"/>
+  <text x="190" y="160" text-anchor="middle" fill="#5c5549" font-weight="500" font-size="10">MEMORY ENGINE</text>
+  <text x="190" y="178" text-anchor="middle" fill="#8a8279" font-size="9">Layered / Scoped</text>
+
+  <rect x="280" y="140" width="140" height="50" rx="6" fill="none" stroke="#8a8279" stroke-width="1"/>
+  <text x="350" y="160" text-anchor="middle" fill="#5c5549" font-weight="500" font-size="10">SKILLS / AGENTS</text>
+  <text x="350" y="178" text-anchor="middle" fill="#8a8279" font-size="9">Explorer / Worker</text>
+
+  <rect x="440" y="140" width="140" height="50" rx="6" fill="none" stroke="#8a8279" stroke-width="1"/>
+  <text x="510" y="160" text-anchor="middle" fill="#5c5549" font-weight="500" font-size="10">LIVE PREVIEW</text>
+  <text x="510" y="178" text-anchor="middle" fill="#8a8279" font-size="9">Demo Runtime</text>
+
+  <!-- Provider Adapters -->
+  <rect x="120" y="210" width="460" height="70" rx="6" fill="none" stroke="#9f6c3a" stroke-width="1"/>
+  <text x="350" y="232" text-anchor="middle" fill="#9f6c3a" font-weight="500" font-size="10">PROVIDER ADAPTERS</text>
+
+  <rect x="140" y="245" width="100" height="28" rx="4" fill="none" stroke="#8a8279" stroke-width="1"/>
+  <text x="190" y="264" text-anchor="middle" fill="#5c5549" font-size="10">Claude</text>
+
+  <rect x="260" y="245" width="100" height="28" rx="4" fill="none" stroke="#8a8279" stroke-width="1"/>
+  <text x="310" y="264" text-anchor="middle" fill="#5c5549" font-size="10">Codex</text>
+
+  <rect x="380" y="245" width="100" height="28" rx="4" fill="none" stroke="#8a8279" stroke-width="1" stroke-dasharray="4 4"/>
+  <text x="430" y="264" text-anchor="middle" fill="#8a8279" font-size="10">Extensible</text>
+
+  <!-- Desktop -->
+  <rect x="240" y="320" width="240" height="40" rx="8" fill="none" stroke="#8a8279" stroke-width="1"/>
+  <text x="360" y="345" text-anchor="middle" fill="#5c5549" font-weight="500" font-size="11">Wails Desktop App</text>
+
+  <!-- Arrow -->
+  <line x1="360" y1="300" x2="360" y2="320" stroke="#8a8279" stroke-width="1" marker-end="url(#arrow3)"/>
+
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrow3" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="none" stroke="#9f6c3a" stroke-width="1"/>
+    </marker>
+  </defs>
+</svg>

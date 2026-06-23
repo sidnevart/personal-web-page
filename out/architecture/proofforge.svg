@@ -1,0 +1,61 @@
+<svg width="720" height="420" viewBox="0 0 720 420" fill="none" xmlns="http://www.w3.org/2000/svg" font-family="JetBrains Mono, monospace" font-size="12">
+  <!-- Next.js Frontend -->
+  <rect x="240" y="20" width="240" height="50" rx="8" fill="none" stroke="#9f6c3a" stroke-width="1.5"/>
+  <text x="360" y="42" text-anchor="middle" fill="#9f6c3a" font-weight="600" font-size="11">NEXT.JS 15 FRONTEND</text>
+  <text x="360" y="58" text-anchor="middle" fill="#5c5549" font-size="10">App Router / TypeScript</text>
+
+  <!-- Go API -->
+  <rect x="240" y="110" width="240" height="50" rx="8" fill="none" stroke="#9f6c3a" stroke-width="1.5"/>
+  <text x="360" y="132" text-anchor="middle" fill="#9f6c3a" font-weight="600" font-size="11">GO API</text>
+  <text x="360" y="148" text-anchor="middle" fill="#5c5549" font-size="10">chi / pgx / 27 domain packages</text>
+
+  <!-- Arrow -->
+  <line x1="360" y1="70" x2="360" y2="110" stroke="#9f6c3a" stroke-width="1" marker-end="url(#arrow2)"/>
+
+  <!-- Go Worker -->
+  <rect x="240" y="200" width="240" height="50" rx="8" fill="none" stroke="#9f6c3a" stroke-width="1.5"/>
+  <text x="360" y="222" text-anchor="middle" fill="#9f6c3a" font-weight="600" font-size="11">GO WORKER</text>
+  <text x="360" y="238" text-anchor="middle" fill="#5c5549" font-size="10">Recaps / Notifications / Async</text>
+
+  <!-- Arrow from API to Worker -->
+  <line x1="360" y1="160" x2="360" y2="200" stroke="#9f6c3a" stroke-width="1" marker-end="url(#arrow2)"/>
+
+  <!-- Database layer -->
+  <rect x="40" y="300" width="160" height="50" rx="8" fill="none" stroke="#8a8279" stroke-width="1"/>
+  <text x="120" y="322" text-anchor="middle" fill="#5c5549" font-weight="500" font-size="11">PostgreSQL 16</text>
+  <text x="120" y="338" text-anchor="middle" fill="#8a8279" font-size="10">+ pgvector</text>
+
+  <rect x="240" y="300" width="120" height="50" rx="8" fill="none" stroke="#8a8279" stroke-width="1"/>
+  <text x="300" y="322" text-anchor="middle" fill="#5c5549" font-weight="500" font-size="11">Redis 7</text>
+  <text x="300" y="338" text-anchor="middle" fill="#8a8279" font-size="10">Cache / Queue</text>
+
+  <rect x="400" y="300" width="120" height="50" rx="8" fill="none" stroke="#8a8279" stroke-width="1"/>
+  <text x="460" y="322" text-anchor="middle" fill="#5c5549" font-weight="500" font-size="11">MinIO</text>
+  <text x="460" y="338" text-anchor="middle" fill="#8a8279" font-size="10">File storage</text>
+
+  <!-- Telegram -->
+  <rect x="560" y="300" width="120" height="50" rx="8" fill="none" stroke="#8a8279" stroke-width="1"/>
+  <text x="620" y="322" text-anchor="middle" fill="#5c5549" font-weight="500" font-size="11">Telegram</text>
+  <text x="620" y="338" text-anchor="middle" fill="#8a8279" font-size="10">Bot / Notifications</text>
+
+  <!-- Arrows from Worker to databases -->
+  <line x1="300" y1="250" x2="120" y2="300" stroke="#8a8279" stroke-width="1" marker-end="url(#arrow2)"/>
+  <line x1="360" y1="250" x2="300" y2="300" stroke="#8a8279" stroke-width="1" marker-end="url(#arrow2)"/>
+  <line x1="360" y1="250" x2="460" y2="300" stroke="#8a8279" stroke-width="1" marker-end="url(#arrow2)"/>
+  <line x1="420" y1="250" x2="620" y2="300" stroke="#8a8279" stroke-width="1" stroke-dasharray="4 4" marker-end="url(#arrow2)"/>
+
+  <!-- OpenAI -->
+  <rect x="40" y="110" width="120" height="50" rx="8" fill="none" stroke="#8a8279" stroke-width="1"/>
+  <text x="100" y="132" text-anchor="middle" fill="#5c5549" font-weight="500" font-size="11">OpenAI</text>
+  <text x="100" y="148" text-anchor="middle" fill="#8a8279" font-size="10">Goal refinement</text>
+
+  <!-- Arrow from API to OpenAI -->
+  <line x1="240" y1="135" x2="160" y2="135" stroke="#8a8279" stroke-width="1" stroke-dasharray="4 4" marker-end="url(#arrow2)"/>
+
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrow2" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="none" stroke="#9f6c3a" stroke-width="1"/>
+    </marker>
+  </defs>
+</svg>

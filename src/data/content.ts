@@ -31,6 +31,16 @@ export type PersonProfile = {
   };
 };
 
+export type TechDetail = {
+  name: string;
+  role: LocalizedString;
+};
+
+export type Metric = {
+  label: LocalizedString;
+  value: string;
+};
+
 export type Project = {
   slug: string;
   title: LocalizedString;
@@ -51,6 +61,8 @@ export type Project = {
     label: LocalizedString;
     external?: boolean;
   }[];
+  techDetails?: TechDetail[];
+  metrics?: Metric[];
   detail: {
     challenge: LocalizedString;
     solution: LocalizedStringList;
@@ -373,6 +385,20 @@ export const projects: Project[] = [
     },
     stack: ["Kotlin", "Java", "Go", "ClickHouse", "Kafka"],
     links: [],
+    techDetails: [
+      { name: "Kotlin", role: { ru: "Control plane, бизнес-логика", en: "Control plane, business logic", es: "Control plane, lógica de negocio" } },
+      { name: "Spring Boot", role: { ru: "REST API, интеграции", en: "REST API, integrations", es: "REST API, integraciones" } },
+      { name: "Go", role: { ru: "Data plane, gRPC, экспорт", en: "Data plane, gRPC, export", es: "Data plane, gRPC, exportación" } },
+      { name: "ClickHouse", role: { ru: "Аналитика, ~30M txn/день", en: "Analytics, ~30M txn/day", es: "Analítica, ~30M txn/día" } },
+      { name: "Kafka", role: { ru: "Потоковая обработка", en: "Stream processing", es: "Procesamiento de streams" } },
+      { name: "PostgreSQL", role: { ru: "Задачи, DAG, очереди", en: "Tasks, DAG, queues", es: "Tareas, DAG, colas" } }
+    ],
+    metrics: [
+      { label: { ru: "Сборка аудиторий", en: "Audience gathering", es: "Construcción de audiencias" }, value: "1–10s" },
+      { label: { ru: "Ускорение выгрузки", en: "Export acceleration", es: "Aceleración de exportación" }, value: "32×" },
+      { label: { ru: "Транзакций/день", en: "Transactions/day", es: "Transacciones/día" }, value: "~30M" },
+      { label: { ru: "Доход/мес", en: "Revenue/month", es: "Ingresos/mes" }, value: "~$155K" }
+    ],
     detail: {
       challenge: {
         ru: "Менеджерам нужен был инструмент, который быстро и надёжно собирает аудитории под кэшбэк-офферы. Требовалось добавить новые параметры таргетинга (в т.ч. траты/доходы и терминальные данные) и гарантировать корректность на истории и в потоке.",
@@ -1040,6 +1066,19 @@ export const projects: Project[] = [
         external: true
       }
     ],
+    techDetails: [
+      { name: "Go 1.24", role: { ru: "API + Worker (chi, pgx)", en: "API + Worker (chi, pgx)", es: "API + Worker (chi, pgx)" } },
+      { name: "Next.js 15", role: { ru: "Frontend (App Router)", en: "Frontend (App Router)", es: "Frontend (App Router)" } },
+      { name: "PostgreSQL 16", role: { ru: "Основная БД + pgvector", en: "Primary DB + pgvector", es: "DB principal + pgvector" } },
+      { name: "Redis 7", role: { ru: "Кеш, очередь задач", en: "Cache, job queue", es: "Cache, cola de tareas" } },
+      { name: "MinIO", role: { ru: "Хранение файлов (S3)", en: "File storage (S3)", es: "Almacenamiento (S3)" } },
+      { name: "Docker", role: { ru: "Контейнеризация", en: "Containerization", es: "Contenerización" } }
+    ],
+    metrics: [
+      { label: { ru: "Доменных пакетов", en: "Domain packages", es: "Paquetes de dominio" }, value: "27" },
+      { label: { ru: "Коммитов", en: "Commits", es: "Commits" }, value: "67" },
+      { label: { ru: "Архитектурных доков", en: "Architecture docs", es: "Docs de arquitectura" }, value: "8" }
+    ],
     detail: {
       challenge: {
         ru: "Большинство приложений для целей работают в одиночку. Нужна была платформа, где люди поддерживают друг друга через взаимную ответственность и измеримый прогресс.",
@@ -1124,6 +1163,19 @@ export const projects: Project[] = [
         label: { ru: "GitHub", en: "GitHub", es: "GitHub" },
         external: true
       }
+    ],
+    techDetails: [
+      { name: "Go", role: { ru: "CLI + Desktop (67%)", en: "CLI + Desktop (67%)", es: "CLI + Desktop (67%)" } },
+      { name: "Wails", role: { ru: "Нативный десктоп", en: "Native desktop", es: "Escritorio nativo" } },
+      { name: "ripgrep", role: { ru: "Контекст-поиск", en: "Context search", es: "Búsqueda de contexto" } },
+      { name: "ast-grep", role: { ru: "Анализ кода", en: "Code analysis", es: "Análisis de código" } },
+      { name: "SQLite", role: { ru: "Локальная память", en: "Local memory", es: "Memoria local" } },
+      { name: "tree-sitter", role: { ru: "Парсинг AST", en: "AST parsing", es: "Parsing AST" } }
+    ],
+    metrics: [
+      { label: { ru: "Подсистем", en: "Subsystems", es: "Subsistemas" }, value: "7" },
+      { label: { ru: "Режимов работы", en: "Operating modes", es: "Modos de operación" }, value: "3" },
+      { label: { ru: "Звёзд на GitHub", en: "GitHub stars", es: "Estrellas en GitHub" }, value: "5" }
     ],
     detail: {
       challenge: {

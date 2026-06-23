@@ -1,0 +1,56 @@
+<svg width="720" height="400" viewBox="0 0 720 400" fill="none" xmlns="http://www.w3.org/2000/svg" font-family="JetBrains Mono, monospace" font-size="12">
+  <!-- Control Plane -->
+  <rect x="200" y="20" width="320" height="60" rx="8" fill="none" stroke="#9f6c3a" stroke-width="1.5"/>
+  <text x="360" y="45" text-anchor="middle" fill="#9f6c3a" font-weight="600" font-size="11">CONTROL PLANE</text>
+  <text x="360" y="65" text-anchor="middle" fill="#5c5549" font-size="11">Kotlin / Spring Boot</text>
+
+  <!-- Data Plane -->
+  <rect x="200" y="120" width="320" height="60" rx="8" fill="none" stroke="#9f6c3a" stroke-width="1.5"/>
+  <text x="360" y="145" text-anchor="middle" fill="#9f6c3a" font-weight="600" font-size="11">DATA PLANE</text>
+  <text x="360" y="165" text-anchor="middle" fill="#5c5549" font-size="11">Go / gRPC / S3 Export</text>
+
+  <!-- Arrow -->
+  <line x1="360" y1="80" x2="360" y2="120" stroke="#9f6c3a" stroke-width="1" marker-end="url(#arrow)"/>
+  <text x="370" y="105" fill="#8a8279" font-size="10">gRPC</text>
+
+  <!-- ClickHouse -->
+  <rect x="200" y="220" width="320" height="60" rx="8" fill="none" stroke="#9f6c3a" stroke-width="1.5"/>
+  <text x="360" y="245" text-anchor="middle" fill="#9f6c3a" font-weight="600" font-size="11">CLICKHOUSE / CHAAS</text>
+  <text x="360" y="265" text-anchor="middle" fill="#5c5549" font-size="11">~30M transactions/day</text>
+
+  <!-- Arrow -->
+  <line x1="360" y1="180" x2="360" y2="220" stroke="#9f6c3a" stroke-width="1" marker-end="url(#arrow)"/>
+
+  <!-- Kafka -->
+  <rect x="40" y="220" width="120" height="60" rx="8" fill="none" stroke="#8a8279" stroke-width="1"/>
+  <text x="100" y="245" text-anchor="middle" fill="#5c5549" font-weight="500" font-size="11">Kafka</text>
+  <text x="100" y="265" text-anchor="middle" fill="#8a8279" font-size="10">Stream processing</text>
+
+  <!-- Arrow from Kafka to ClickHouse -->
+  <line x1="160" y1="250" x2="200" y2="250" stroke="#8a8279" stroke-width="1" marker-end="url(#arrow)"/>
+
+  <!-- PostgreSQL -->
+  <rect x="560" y="220" width="120" height="60" rx="8" fill="none" stroke="#8a8279" stroke-width="1"/>
+  <text x="620" y="245" text-anchor="middle" fill="#5c5549" font-weight="500" font-size="11">PostgreSQL</text>
+  <text x="620" y="265" text-anchor="middle" fill="#8a8279" font-size="10">DAG / Queues</text>
+
+  <!-- Arrow from ClickHouse to PostgreSQL -->
+  <line x1="520" y1="250" x2="560" y2="250" stroke="#8a8279" stroke-width="1" marker-end="url(#arrow)"/>
+
+  <!-- Managers -->
+  <rect x="40" y="40" width="120" height="40" rx="8" fill="none" stroke="#8a8279" stroke-width="1"/>
+  <text x="100" y="65" text-anchor="middle" fill="#5c5549" font-size="11">Managers</text>
+
+  <!-- Arrow from Managers to Control Plane -->
+  <line x1="160" y1="60" x2="200" y2="50" stroke="#8a8279" stroke-width="1" marker-end="url(#arrow)"/>
+
+  <!-- Arrow from Control Plane to Kafka -->
+  <line x1="200" y1="60" x2="100" y2="220" stroke="#8a8279" stroke-width="1" stroke-dasharray="4 4" marker-end="url(#arrow)"/>
+
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="none" stroke="#9f6c3a" stroke-width="1"/>
+    </marker>
+  </defs>
+</svg>
