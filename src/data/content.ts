@@ -126,9 +126,9 @@ export const siteContent = {
       es: "Software Engineer · Java / Kotlin / Go. Líder técnico de CDP, automatización AI, pipelines de alta carga."
     },
     subheadline: {
-      ru: "Беру задачи от неясных требований до продакшен-внедрения: проектирую бэкенд-контракты, ускоряю критичные пайплайны, внедряю AI/LLM в процессы и оставляю измеримый результат.",
-      en: "I take work from unclear requirements to production rollout: design backend contracts, speed up critical pipelines, deploy AI/LLM in workflows, and leave measurable results.",
-      es: "Llevo tareas desde requisitos difusos hasta producción: diseño contratos backend, acelero pipelines críticos, implemento AI/LLM en flujos y dejo resultados medibles."
+      ru: "В T-Bank веду платформу кэшбэк-таргетинга для ~40M клиентов. До этого — буккинг-маркетплейс на Telegram, аналитика коммерческой недвижимости, торговые CRM. Go, Kotlin, Java в продакшене.",
+      en: "At T-Bank I run the cashback targeting platform for ~40M customers. Before that — a Telegram booking marketplace, commercial real estate analytics, trading CRM. Go, Kotlin, Java in production.",
+      es: "En T-Bank dirijo la plataforma de targeting de cashback para ~40M de clientes. Antes — marketplace de reservas en Telegram, analítica inmobiliaria comercial, CRM de trading. Go, Kotlin, Java en producción."
     },
     proof: {
       ru: [
@@ -162,9 +162,9 @@ export const siteContent = {
           es: "Sistemas de alta carga"
         },
         body: {
-          ru: "Бэкенд-сервисы, очереди и API, которые должны выдерживать нагрузку и быть предсказуемыми в продакшене.",
-          en: "Backend systems that must handle load and remain predictable in production.",
-          es: "Sistemas backend que deben soportar carga y ser predecibles en producción."
+          ru: "ClickHouse + Kafka пайплайны, Go-сервисы, Spring Boot — запускал под нагрузку без костылей и ночных дежурств.",
+          en: "ClickHouse + Kafka pipelines, Go services, Spring Boot — shipped under load without duct tape and on-call incidents.",
+          es: "Pipelines ClickHouse + Kafka, servicios Go, Spring Boot — desplegados bajo carga sin parches ni guardias nocturnas."
         }
       },
       {
@@ -174,9 +174,9 @@ export const siteContent = {
           es: "Plataformas de datos y ETL"
         },
         body: {
-          ru: "Пайплайны, интеграции и витрины, которые превращают данные в рабочее решение для бизнеса.",
-          en: "Pipelines, integrations, and data products that turn data into business decisions.",
-          es: "Pipelines e интеграции que convierten datos en decisiones de negocio."
+          ru: "ETL по финансовым данным (транзакции, терминальные сигналы), CDC-миграции, cross-team RFC и доставка до прода.",
+          en: "ETL on financial data (transactions, terminal signals), CDC migrations, cross-team RFC and delivery to production.",
+          es: "ETL sobre datos financieros (transacciones, señales de terminal), migraciones CDC, RFC cross-team y entrega a producción."
         }
       },
       {
@@ -186,9 +186,9 @@ export const siteContent = {
           es: "Automatización AI/LLM"
         },
         body: {
-          ru: "Практические AI-интеграции в процессы: код-ревью, CI, онбординг, оркестрация и контроль качества.",
-          en: "Practical AI integrations: code review, CI, onboarding, orchestration, and quality control.",
-          es: "Integraciones AI prácticas: code review, CI, onboarding, orquestación y control de calidad."
+          ru: "В продакшене: бот код-ревью, CI-рефакторинг джоб, RAG-агент онбординга. Не прототипы.",
+          en: "In production: AI code review bot, CI refactoring job, RAG onboarding agent. Not prototypes.",
+          es: "En producción: bot de code review, job de refactoring en CI, agente RAG de onboarding. No prototipos."
         }
       }
     ]
@@ -224,9 +224,9 @@ export const siteContent = {
   },
   currentWork: {
     title: {
-      ru: "Над чем работаю сейчас в big-tech",
-      en: "What I build now in big-tech",
-      es: "En qué trabajo ahora en big tech"
+      ru: "Сейчас — T-Bank, CDP",
+      en: "Now — T-Bank, CDP",
+      es: "Ahora — T-Bank, CDP"
     },
     intro: {
       ru: "Развиваю платформу кэшбэк‑таргетинга: менеджеры формируют аудитории под офферы партнёров, а система определяет, кому показать предложение по данным клиентов.",
@@ -256,43 +256,43 @@ export const siteContent = {
   },
   freelance: {
     title: {
-      ru: "Что делаю как freelancer / в сторонних проектах",
-      en: "What I can do for freelance and side projects",
-      es: "Qué hago en freelance y proyectos externos"
+      ru: "Фриланс-проекты",
+      en: "Freelance projects",
+      es: "Proyectos freelance"
     },
     intro: {
-      ru: "Беру задачи, где нужен надёжный бэкенд и масштаб: ETL/data-пайплайны, API и высоконагруженные сервисы под рост.",
-      en: "I take projects that need reliable, scalable backend: ETL/data pipelines, APIs, and high‑load services built to grow.",
-      es: "Tomo proyectos que requieren backend fiable y escalable: ETL/pipelines de datos, APIs y servicios de alta carga para crecer."
+      ru: "УРВИ! (Telegram-маркетплейс бронирований, Go + Next.js), аналитика коммерческой недвижимости (Python + ETL), торговая CRM (Go). Запускал готовые продукты, а не только бэкенд-модули.",
+      en: "URVI! (Telegram booking marketplace, Go + Next.js), commercial real estate analytics (Python + ETL), trading CRM (Go). I shipped full products, not just backend modules.",
+      es: "URVI! (marketplace de reservas en Telegram, Go + Next.js), analítica de inmuebles comerciales (Python + ETL), CRM de trading (Go). Lancé productos completos, no solo módulos de backend."
     },
     points: {
       ru: [
-        "Проектирование и запуск бэкенд-сервисов под высокую нагрузку.",
-        "ETL/data-пайплайны и автоматизация рутинных процессов.",
-        "Оптимизация существующих продакшен-сервисов (скорость, надёжность, стоимость)."
+        "УРВИ!: Telegram WebApp + Go бэкенд + YClients интеграция — буккинг-маркетплейс с картой свободных слотов.",
+        "Коммерческая недвижимость: Python ETL по торгам и ЦИАН, Telegram-бот, Google Sheets выгрузка.",
+        "Торговая CRM: Go сервис под трейдеров с аналитикой позиций и P&L."
       ],
       en: [
-        "Design and delivery of high-load backend services.",
-        "ETL/data pipelines and workflow automation.",
-        "Optimization of existing production systems (speed, reliability, cost)."
+        "URVI!: Telegram WebApp + Go backend + YClients integration — booking marketplace with live slot map.",
+        "Commercial real estate: Python ETL over auctions and CIAN, Telegram bot, Google Sheets export.",
+        "Trading CRM: Go service for traders with position analytics and P&L."
       ],
       es: [
-        "Diseño y entrega de servicios backend de alta carga.",
-        "Pipelines ETL/datos y automatización de flujos.",
-        "Optimización de sistemas en producción (velocidad, fiabilidad, coste)."
+        "URVI!: Telegram WebApp + backend Go + integración YClients — marketplace de reservas con mapa de turnos.",
+        "Inmobiliaria comercial: ETL Python sobre subastas y CIAN, bot Telegram, exportación a Google Sheets.",
+        "CRM de trading: servicio Go para traders con analítica de posiciones y P&L."
       ]
     }
   },
   contact: {
     title: {
-      ru: "Если нужен инженер, который может собрать прикладной продукт или масштабный бэкенд под реальную бизнес-задачу, напишите.",
-      en: "If you need an engineer who can build an applied product or a scalable backend for a real business task, reach out.",
-      es: "Si necesitas un ingeniero que construya un producto aplicado o un backend escalable para un problema real, escríbeme."
+      ru: "Открыт к разговору",
+      en: "Open to a conversation",
+      es: "Abierto a conversar"
     },
     body: {
-      ru: "Это может быть высоконагруженный бэкенд, ETL/данные, интеграции, автоматизация, миграции или запуск нового сервиса под рост.",
-      en: "This can include high-load backend, ETL/data work, integrations, automation, migrations, or launching a new service designed to scale.",
-      es: "Puede incluir backend de alta carga, ETL/datos, integraciones, automatización, migraciones o lanzar un nuevo servicio para escalar."
+      ru: "Если у вас конкретная задача — бэкенд, данные, AI-интеграция или продукт с нуля — пишите напрямую. Смотрю на задачу, а не на должность в оффере.",
+      en: "If you have a specific task — backend, data, AI integration, or a product from scratch — reach out directly. I look at the problem, not the job title in the offer.",
+      es: "Si tienes una tarea concreta — backend, datos, integración AI o un producto desde cero — escríbeme directamente. Me fijo en el problema, no en el título del puesto."
     }
   }
 } as const;
