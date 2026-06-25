@@ -170,6 +170,7 @@ export default async function HomePage({
             <a href={siteContacts.telegram} target="_blank" rel="noreferrer" className="link-muted">Telegram</a>
             <a href={siteContacts.github} target="_blank" rel="noreferrer" className="link-muted">GitHub</a>
             <a href={siteContacts.linkedin} target="_blank" rel="noreferrer" className="link-muted">LinkedIn</a>
+            <a href={siteContacts.medium} target="_blank" rel="noreferrer" className="link-muted">Medium</a>
           </div>
         </section>
       </section>

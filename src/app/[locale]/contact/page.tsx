@@ -56,6 +56,7 @@ export default async function ContactPage({
             <p><a href={siteContacts.telegram} target="_blank" rel="noreferrer" className="link">Telegram: @sidnevart</a></p>
             <p><a href={siteContacts.github} target="_blank" rel="noreferrer" className="link">GitHub: sidnevart</a></p>
             <p><a href={siteContacts.linkedin} target="_blank" rel="noreferrer" className="link">LinkedIn</a></p>
+            <p><a href={siteContacts.medium} target="_blank" rel="noreferrer" className="link">Medium: @a.sidnevart</a></p>
           </div>
         </section>
 

@@ -56,6 +56,9 @@ export default async function AboutPage({
             {artemProfile.contacts.linkedin && (
               <a href={artemProfile.contacts.linkedin} target="_blank" rel="noreferrer" className="link-muted">LinkedIn</a>
             )}
+            {artemProfile.contacts.medium && (
+              <a href={artemProfile.contacts.medium} target="_blank" rel="noreferrer" className="link-muted">Medium</a>
+            )}
           </div>
         )}
 
@@ -66,6 +69,18 @@ export default async function AboutPage({
           <p className="mt-6 text-body">{text(siteContent.currentWork.intro, safeLocale)}</p>
           <ul className="mt-4 space-y-2 text-body list-disc list-inside marker:text-[var(--fg-soft)]">
             {textList(siteContent.currentWork.points, safeLocale).map((point) => (
+              <li key={point}>{point}</li>
+            ))}
+          </ul>
+        </section>
+
+        {/* ─── Leadership & Mentorship ─── */}
+        <section className="mt-16">
+          <h2 className="text-h2">{text(siteContent.leadership.title, safeLocale)}</h2>
+          <hr className="section-rule mt-3" />
+          <p className="mt-6 text-body">{text(siteContent.leadership.intro, safeLocale)}</p>
+          <ul className="mt-4 space-y-2 text-body list-disc list-inside marker:text-[var(--fg-soft)]">
+            {textList(siteContent.leadership.points, safeLocale).map((point) => (
               <li key={point}>{point}</li>
             ))}
           </ul>

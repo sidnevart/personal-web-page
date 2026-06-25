@@ -26,6 +26,7 @@ export type PersonProfile = {
     telegram?: string;
     github?: string;
     linkedin?: string;
+    medium?: string;
     portfolio?: string;
     email?: string;
   };
@@ -88,6 +89,7 @@ export const siteContacts = {
   telegram: "https://t.me/sidnevart",
   github: "https://github.com/sidnevart",
   linkedin: "https://www.linkedin.com/in/artem-sidnev-b109ab401/",
+  medium: "https://medium.com/@a.sidnevart",
   portfolio: "https://sidnevart.github.io/personal-web-page/"
 };
 
@@ -100,14 +102,15 @@ export const artemProfile: PersonProfile = {
     es: "Software Engineer · Java / Kotlin / Go · ~4 años. Líder técnico de CDP, automatización AI"
   },
   summary: {
-    ru: "Backend & Platform Engineer с 4+ годами опыта в high-load системах и Big Data пайплайнах. Технический лид CDP: архитектура, приносящая ~$155K/мес, ускорение выгрузки 32×, внедрение AI/LLM в продакшен-процессы.",
-    en: "Backend & Platform Engineer with 4+ years in high-load systems and Big Data pipelines. Technical Lead of CDP: architected a system generating ~$155K/month, accelerated data export 32×, deployed AI/LLM in production workflows.",
-    es: "Backend & Platform Engineer con 4+ años en sistemas de alta carga y pipelines de Big Data. Líder técnico de CDP: diseñé un sistema que genera ~$155K/mes, aceleré la exportación 32×, implementé AI/LLM en flujos de producción."
+    ru: "Backend & Platform Engineer с ~4 годами опыта в high-load системах и Big Data пайплайнах. Руководитель CDP (2 команды / 9 инженеров): кросс-командная интеграция с выгрузкой 32× и 99.9% надёжностью, ускорение сборки аудиторий до 1–10с, AI/LLM в продакшене. Ментор стажёров, преподавал в ВШЭ.",
+    en: "Backend & Platform Engineer with ~4 years in high-load systems and Big Data pipelines. CDP lead (2 teams / 9 engineers): cross-team integration with 32× export at 99.9% reliability, audience gathering accelerated to 1–10s, AI/LLM in production. Mentor of interns, taught at HSE.",
+    es: "Backend & Platform Engineer con ~4 años en sistemas de alta carga y pipelines de Big Data. Líder de CDP (2 equipos / 9 ingenieros): integración entre equipos con exportación 32× y 99.9% de fiabilidad, audiencias aceleradas a 1–10s, AI/LLM en producción. Mentor de interns, docente en HSE."
   },
   contacts: {
     telegram: siteContacts.telegram,
     github: siteContacts.github,
     linkedin: siteContacts.linkedin,
+    medium: siteContacts.medium,
     portfolio: siteContacts.portfolio,
     email: siteContacts.email
   }
@@ -134,17 +137,20 @@ export const siteContent = {
       ru: [
         "Ускорил сборку аудиторий до 1–10 секунд (размер-независимо) и выгрузку данных 32× (8ч → 15мин).",
         "Спроектировал систему, приносящую ~$155K/мес аналитически-оценённого дохода.",
-        "Автоматизацией снимал до 40–60 часов ручной работы в месяц."
+        "Автоматизацией снимал до 40–60 часов ручной работы в месяц.",
+        "Как руководитель CDP (2 команды / 9 инженеров) провёл кросс-командную интеграцию с 99.9% надёжностью и объединил команду-партнёра в CDP."
       ],
       en: [
         "Accelerated audience gathering to 1–10 seconds (size-independent) and data export 32× (8h → 15min).",
         "Architected a system generating ~$155K/month in analyst-estimated revenue.",
-        "Automation removed up to 40–60 manual hours per month."
+        "Automation removed up to 40–60 manual hours per month.",
+        "As CDP lead (2 teams / 9 engineers) drove a cross-team integration at 99.9% reliability and absorbed the partner team into the CDP."
       ],
       es: [
         "Aceleré la construcción de audiencias a 1–10 segundos (independiente del tamaño) y exportación 32× (8h → 15min).",
         "Diseñé un sistema que genera ~$155K/mes en ingresos estimados por analistas.",
-        "Automatización eliminó 40–60 horas manuales al mes."
+        "Automatización eliminó 40–60 horas manuales al mes.",
+        "Como líder de CDP (2 equipos / 9 ingenieros) conduje una integración entre equipos con 99.9% de fiabilidad e integré al equipo partner en el CDP."
       ]
     }
   },
@@ -162,9 +168,9 @@ export const siteContent = {
           es: "Sistemas de alta carga"
         },
         body: {
-          ru: "ClickHouse + Kafka пайплайны, Go-сервисы, Spring Boot — запускал под нагрузку без костылей и ночных дежурств.",
-          en: "ClickHouse + Kafka pipelines, Go services, Spring Boot — shipped under load without duct tape and on-call incidents.",
-          es: "Pipelines ClickHouse + Kafka, servicios Go, Spring Boot — desplegados bajo carga sin parches ni guardias nocturnas."
+          ru: "ClickHouse + Kafka пайплайны на ~30 млн транзакций/день, интеграция с Go data-plane, Spring Boot control-plane. p95-наблюдаемость и safe-rollout: shadow mode, feature flags, fallback, reconciliation.",
+          en: "ClickHouse + Kafka pipelines on ~30M transactions/day, integration with a Go data-plane, Spring Boot control-plane. p95 observability and safe-rollout: shadow mode, feature flags, fallback, reconciliation.",
+          es: "Pipelines ClickHouse + Kafka sobre ~30M transacciones/día, integración con Go data-plane, Spring Boot control-plane. Observabilidad p95 y safe-rollout: shadow mode, feature flags, fallback, reconciliation."
         }
       },
       {
@@ -174,9 +180,9 @@ export const siteContent = {
           es: "Plataformas de datos y ETL"
         },
         body: {
-          ru: "ETL по финансовым данным (транзакции, терминальные сигналы), CDC-миграции, cross-team RFC и доставка до прода.",
-          en: "ETL on financial data (transactions, terminal signals), CDC migrations, cross-team RFC and delivery to production.",
-          es: "ETL sobre datos financieros (transacciones, señales de terminal), migraciones CDC, RFC cross-team y entrega a producción."
+          ru: "ETL по финансовым данным (транзакции, терминальные сигналы) на истории 1.5 года, CDC-миграции, кросс-командные RFC и доставка до прода с idempotency и retry/fallback.",
+          en: "ETL on financial data (transactions, terminal signals) over 1.5 years of history, CDC migrations, cross-team RFCs and delivery to production with idempotency and retry/fallback.",
+          es: "ETL sobre datos financieros (transacciones, señales de terminal) con 1,5 años de histórico, migraciones CDC, RFC entre equipos y entrega a producción con idempotencia y retry/fallback."
         }
       },
       {
@@ -186,9 +192,9 @@ export const siteContent = {
           es: "Automatización AI/LLM"
         },
         body: {
-          ru: "В продакшене: бот код-ревью, CI-рефакторинг джоб, RAG-агент онбординга. Не прототипы.",
-          en: "In production: AI code review bot, CI refactoring job, RAG onboarding agent. Not prototypes.",
-          es: "En producción: bot de code review, job de refactoring en CI, agente RAG de onboarding. No prototipos."
+          ru: "4 инструмента в продакшене: AI code review, CI-рефакторинг бот (−15–20% времени пайплайна), RAG-агент онбординга, n8n. 40–60 часов ручной работы в месяц снято.",
+          en: "4 tools in production: AI code review, CI refactoring bot (−15–20% pipeline time), RAG onboarding agent, n8n. 40–60 manual hours per month removed.",
+          es: "4 herramientas en producción: AI code review, bot de refactorización CI (−15–20% del pipeline), agente RAG de onboarding, n8n. 40–60 horas manuales al mes eliminadas."
         }
       }
     ]
@@ -200,25 +206,25 @@ export const siteContent = {
       es: "Cómo trabajo"
     },
     intro: {
-      ru: "Обычно начинаю не со стека, а с узких мест в процессе: где всё ломается, где дорого, где медленно, где слишком много ручной работы. Дальше собираю решение так, чтобы оно было понятно тем, кто будет пользоваться и поддерживать его каждый день.",
-      en: "I usually start not with the stack, but with bottlenecks: where things break, where it’s costly, where it’s slow, where manual work accumulates. Then I build the solution so it stays clear for the people who will use and support it daily.",
-      es: "Suelo empezar no por el stack, sino por los cuellos de botella: dónde falla, dónde es caro, dónde es lento y dónde se acumula trabajo manual. Luego construyo la solución para que sea clara para quien la usa y la mantiene a diario."
+      ru: "Начинаю не со стека, а с узких мест: где медленно, где дорого, где копится ручная работа. На сборке аудиторий это дало конкретный результат — количественная модель показала, что ~96.5% времени уходило на ожидание в очереди, а не на исполнение, и фокус сместился с «быстрых запросов» на планирование и fairness.",
+      en: "I start not with the stack but with bottlenecks: where it’s slow, costly, or manual. On audience gathering this paid off concretely — a quantitative model showed ~96.5% of time was queue wait, not execution, so the focus shifted from “faster queries” to scheduling and fairness.",
+      es: "Empiezo no por el stack sino por los cuellos de botella: dónde es lento, caro o manual. En la construcción de audiencias dio un resultado concreto — un modelo cuantitativo mostró que ~96.5% del tiempo era espera en cola, no ejecución, y el foco pasó de «queries más rápidas» a scheduling y fairness."
     },
     points: {
       ru: [
-        "Перевожу расплывчатую задачу в рабочий план, ограничения и последовательность внедрения.",
-        "Собираю бэкенд и данные так, чтобы система давала понятный результат, а не просто технически работала.",
-        "Оставляю после себя более устойчивый процесс, а не зависимость от ручных разборов."
+        "Перевожу расплывчатую задачу в рабочий план, ограничения и последовательность безопасного внедрения (shadow → feature flag → прод).",
+        "Собираю бэкенд и данные так, чтобы система давала измеримый результат — 1–10с сборка, 32× выгрузка, −15–20% CI, а не «технически работало».",
+        "Оставляю после себя наблюдаемость (p95, wait/exec метрики) и устойчивый процесс, а не зависимость от ручных разборов."
       ],
       en: [
-        "I turn a vague request into a working plan, clear constraints, and a practical rollout sequence.",
-        "I build backend logic and data flows so the system produces a clear result, not just a technically valid one.",
-        "I try to leave behind a more reliable process rather than another manual support burden."
+        "I turn a vague request into a working plan, clear constraints, and a safe rollout sequence (shadow → feature flag → prod).",
+        "I build backend and data flows for measurable results — 1–10s gathering, 32× export, −15–20% CI — not just “technically works”.",
+        "I leave behind observability (p95, wait/exec metrics) and a reliable process, not a manual support burden."
       ],
       es: [
-        "Convierto una petición difusa en un plan de trabajo, restricciones claras y una secuencia práctica de entrega.",
-        "Construyo backend y flujos de datos para que el sistema produzca un resultado claro, no solo algo técnicamente válido.",
-        "Intento dejar un proceso más fiable y no otra carga manual para soporte."
+        "Convierto una petición difusa en un plan, restricciones claras y una secuencia segura (shadow → feature flag → prod).",
+        "Construyo backend y flujos de datos para resultados medibles — 1–10s audiencias, 32× exportación, −15–20% CI — no solo «funciona».",
+        "Dejo observabilidad (p95, métricas wait/exec) y un proceso fiable, no una carga manual de soporte."
       ]
     }
   },
@@ -236,21 +242,62 @@ export const siteContent = {
     points: {
       ru: [
         "Реализую новые параметры таргетинга (включая финансовые и терминальные сигналы).",
-        "Ускоряю и стабилизирую пайплайны сборки аудиторий в продакшене.",
-        "Внедряю AI/LLM в процессы: ревью кода, CI-задачи и RAG-агент для онбординга.",
-        "Добавляю валидации и проверки качества, чтобы снижать ошибки до запуска кампаний."
+        "Ускоряю и стабилизирую пайплайны сборки аудиторий в продакшене: 1–10с размер-независимо (~30–50× типично).",
+        "Внедряю AI/LLM в процессы: AI code review, CI-рефакторинг бот, RAG-агент для онбординга — экономия 40–60 часов ручной работы в месяц.",
+        "Добавляю валидации и проверки качества, чтобы снижать ошибки до запуска кампаний.",
+        "Руковожу CDP (2 команды / 9 инженеров): квартальное планирование, architecture reviews, стратегические сессии; инициировал кросс-командную RFC-интеграцию (32× выгрузка, 99.9% надёжности) с объединением команды-партнёра в CDP.",
+        "Менторю стажёров-разработчиков до успешного перехода в штат (онбординг + техническое сопровождение)."
       ],
       en: [
         "Implement new targeting parameters (including financial and terminal signals).",
-        "Speed up and harden audience-building production flows.",
-        "Bring AI/LLM into workflows: AI code review, AI CI job, RAG onboarding agent.",
-        "Add validation and quality checks to reduce campaign-time errors."
+        "Speed up and harden audience-building production flows: 1–10s size-independent (~30–50× typical).",
+        "Bring AI/LLM into workflows: AI code review, CI refactoring bot, RAG onboarding agent — saving 40–60 manual hours per month.",
+        "Add validation and quality checks to reduce campaign-time errors.",
+        "Lead the CDP (2 teams / 9 engineers): quarterly planning, architecture reviews, strategic sessions; self-initiated a cross-team RFC integration (32× export, 99.9% reliability) that absorbed the partner team into the CDP.",
+        "Mentor intern software engineers to successful full-time conversion (onboarding + technical guidance)."
       ],
       es: [
         "Implemento nuevos parámetros de targeting (incluyendo señales financieras y de terminal).",
-        "Acelero y estabilizo flujos de producción para construir audiencias.",
-        "Incorporo AI/LLM: AI code review, AI CI job, agente RAG de onboarding.",
-        "Añado validaciones y controles de calidad para reducir errores de campaña."
+        "Acelero y estabilizo flujos de producción para construir audiencias: 1–10s independiente del tamaño (~30–50× típico).",
+        "Incorporo AI/LLM: AI code review, bot de refactorización CI, agente RAG de onboarding — ahorro de 40–60 horas manuales al mes.",
+        "Añado validaciones y controles de calidad para reducir errores de campaña.",
+        "Lidero el CDP (2 equipos / 9 ingenieros): planificación trimestral, architecture reviews, sesiones estratégicas; inicié una integración RFC entre equipos (32× exportación, 99.9% fiabilidad) que integró al equipo partner en el CDP.",
+        "Mentorizo a interns hasta su conversión a full-time (onboarding + guía técnica)."
+      ]
+    }
+  },
+  leadership: {
+    title: {
+      ru: "Лидерство и менторство",
+      en: "Leadership & Mentorship",
+      es: "Liderazgo y mentoría"
+    },
+    intro: {
+      ru: "Руковожу CDP в T-Bank и развиваю людей рядом с собой — от стажёров до архитектурных решений команды.",
+      en: "I lead the CDP at T-Bank and grow the people around me — from interns to team-wide architecture decisions.",
+      es: "Lidero el CDP en T-Bank y hago crecer a la gente a mi alrededor — de interns a decisiones de arquitectura del equipo."
+    },
+    points: {
+      ru: [
+        "Руководитель CDP: 2 команды / 9 инженеров, квартальное OKR и планирование, architecture reviews, стратегические сессии, 1:1 менторство.",
+        "Флагман leadership: инициировал и провёл кросс-командную RFC-интеграцию с чужим Go-сервисом — выгрузка 32× (8ч → 15мин) при 99.9% надёжности; интеграция привела к объединению команды-партнёра в CDP.",
+        "Ментор стажёров-разработчиков в T-Bank до успешного перехода в штат: проектировал онбординг и вёл техническое сопровождение.",
+        "Преподавал в ВШЭ (Higher School of Economics) — топ-университет России (QS 322): доносил сложные технические темы до студентов.",
+        "Автор ~28-страничного технического предложения по ускорению сборки аудиторий: 23 идеи оптимизации, количественная модель задержек и поэтапный roadmap запуска."
+      ],
+      en: [
+        "CDP lead: 2 teams / 9 engineers, quarterly OKR and planning, architecture reviews, strategic sessions, 1:1 mentorship.",
+        "Flagship leadership: self-initiated and drove a cross-team RFC integration with another team's Go service — 32× export (8h → 15min) at 99.9% reliability; the integration drove the partner team's consolidation into the CDP.",
+        "Mentor of intern software engineers at T-Bank through to successful full-time conversion: designed onboarding and provided technical guidance.",
+        "Taught at HSE (Higher School of Economics) — Russia's top university (QS 322): communicated complex technical topics to students.",
+        "Author of a ~28-page technical proposal on audience-gathering acceleration: 23 optimization ideas, a quantitative latency model, and a phased rollout roadmap."
+      ],
+      es: [
+        "Líder de CDP: 2 equipos / 9 ingenieros, OKR trimestral y planificación, architecture reviews, sesiones estratégicas, mentoría 1:1.",
+        "Liderazgo insignia: inicié y conduje una integración RFC entre equipos con un servicio Go ajeno — exportación 32× (8h → 15min) con 99.9% de fiabilidad; la integración llevó a la consolidación del equipo partner en el CDP.",
+        "Mentor de interns en T-Bank hasta su conversión a full-time: diseñé el onboarding y brindé guía técnica.",
+        "Docente en HSE (Higher School of Economics) — la mejor universidad de Rusia (QS 322): comuniqué temas técnicos complejos a estudiantes.",
+        "Autor de una propuesta técnica de ~28 páginas sobre aceleración de audiencias: 23 ideas de optimización, un modelo cuantitativo de latencia y un roadmap de despliegue por fases."
       ]
     }
   },
@@ -306,22 +353,25 @@ const resumeSections: readonly ResumeSection[] = [
     },
     items: {
       ru: [
-        "T-Bank — Software Engineer, окт 2025 — н.в.: технический лид CDP (Customer Data Platform), продакшен-бэкенд для кэшбэк-таргетинга, обработки данных и AI/LLM автоматизации.",
-        "Ускорил сборку аудиторий до 1–10 секунд (размер-независимо, ~30–50× типично, до 360× в лучшем случае), driving ~$155K/мес аналитически-оценённого дохода.",
-        "Флагманское лидерство: инициировал и провёл кросс-командную RFC-интеграцию, ускорившую выгрузку данных 32× (8ч → 15мин) и приведшую к объединению команды в CDP.",
-        "Внедрил AI/LLM: AI code review бот, CI рефакторинг бот, RAG-агент для онбординга, n8n автоматизации — сэкономил 40–60 часов ручной работы в месяц."
+        "T-Bank — Software Engineer, окт 2025 — н.в.: руководитель CDP (Customer Data Platform, 2 команды / 9 инженеров), продакшен-бэкенд для кэшбэк-таргетинга, обработки данных и AI/LLM автоматизации.",
+        "Ускорил сборку аудиторий до 1–10 секунд (размер-независимо, ~30–50× типично, до 360× в лучшем случае) — аналитически-оценённый вклад ~$155K/мес (~14M ₽/мес).",
+        "Флагманское лидерство: инициировал и провёл кросс-командную RFC-интеграцию с чужим Go-сервисом — выгрузка 32× (8ч → 15мин) при 99.9% надёжности, с объединением команды-партнёра в CDP.",
+        "Внедрил AI/LLM: AI code review бот, CI рефакторинг бот (−15–20% времени пайплайна), RAG-агент для онбординга, n8n автоматизации — сэкономил 40–60 часов ручной работы в месяц.",
+        "Ментор стажёров-разработчиков до перехода в штат; преподавал в ВШЭ (QS 322). Автор ~28-страничного тех. предложения: 23 идеи оптимизации, модель задержек, roadmap."
       ],
       en: [
-        "T-Bank — Software Engineer, Oct 2025 — present: Technical Lead of CDP (Customer Data Platform), production backend for cashback targeting, data processing, and AI/LLM automation.",
-        "Accelerated audience gathering to 1–10 seconds (size-independent, ~30–50× typical, up to 360× best case), driving ~$155K/month in analyst-estimated revenue.",
-        "Flagship leadership: self-initiated and drove a cross-team RFC integration, accelerating data export 32× (8h → 15min) and leading to team consolidation into CDP.",
-        "Deployed AI/LLM: AI code review bot, CI refactoring bot, RAG onboarding agent, n8n automations — saved 40–60 manual hours per month."
+        "T-Bank — Software Engineer, Oct 2025 — present: CDP lead (Customer Data Platform, 2 teams / 9 engineers), production backend for cashback targeting, data processing, and AI/LLM automation.",
+        "Accelerated audience gathering to 1–10 seconds (size-independent, ~30–50× typical, up to 360× best case) — analyst-estimated contribution ~$155K/month (~14M ₽/mo).",
+        "Flagship leadership: self-initiated and drove a cross-team RFC integration with another team's Go service — 32× export (8h → 15min) at 99.9% reliability, absorbing the partner team into the CDP.",
+        "Deployed AI/LLM: AI code review bot, CI refactoring bot (−15–20% pipeline time), RAG onboarding agent, n8n automations — saved 40–60 manual hours per month.",
+        "Mentor of intern engineers through to full-time conversion; taught at HSE (QS 322). Author of a ~28-page technical proposal: 23 optimization ideas, latency model, roadmap."
       ],
       es: [
-        "T-Bank — Software Engineer, oct 2025 — actual: Líder técnico de CDP (Customer Data Platform), backend de producción para targeting de cashback, procesamiento de datos y automatización AI/LLM.",
-        "Aceleré la construcción de audiencias a 1–10 segundos (independiente del tamaño, ~30–50× típico, hasta 360× en el mejor caso), generando ~$155K/mes en ingresos estimados.",
-        "Liderazgo insignia: inicié y conduje una integración RFC entre equipos, acelerando la exportación 32× (8h → 15min) y llevando a la consolidación del equipo en CDP.",
-        "Implementé AI/LLM: bot de code review, bot de refactorización CI, agente RAG de onboarding, automatizaciones n8n — ahorré 40–60 horas manuales al mes."
+        "T-Bank — Software Engineer, oct 2025 — actual: líder de CDP (Customer Data Platform, 2 equipos / 9 ingenieros), backend de producción para targeting de cashback, procesamiento de datos y automatización AI/LLM.",
+        "Aceleré la construcción de audiencias a 1–10 segundos (independiente del tamaño, ~30–50× típico, hasta 360× en el mejor caso) — contribución estimada por analistas ~$155K/mes (~14M ₽/mes).",
+        "Liderazgo insignia: inicié y conduje una integración RFC entre equipos con un servicio Go ajeno — exportación 32× (8h → 15min) con 99.9% de fiabilidad, integrando al equipo partner en el CDP.",
+        "Implementé AI/LLM: bot de code review, bot de refactorización CI (−15–20% del tiempo del pipeline), agente RAG de onboarding, automatizaciones n8n — ahorré 40–60 horas manuales al mes.",
+        "Mentor de interns hasta su conversión a full-time; docente en HSE (QS 322). Autor de una propuesta técnica de ~28 páginas: 23 ideas de optimización, modelo de latencia, roadmap."
       ]
     }
   }
@@ -341,18 +391,21 @@ export const resumeContent = {
   highlights: {
     ru: [
       "Java/Kotlin/Python/Go, Spring Boot, REST/gRPC, PostgreSQL, ClickHouse, Kafka",
-      "Сборка аудиторий 1–10 сек (размер-независимо), выгрузка 32× (8ч→15мин), ~$155K/мес",
-      "Технический лид CDP: RFC, кросс-командная интеграция, объединение команд, AI/LLM в продакшене"
+      "Сборка аудиторий 1–10 сек (размер-независимо, ~30–50× типично), выгрузка 32× (8ч→15мин), ~$155K/мес",
+      "Руководитель CDP (2 команды / 9 инженеров): кросс-командная RFC, 99.9% надёжности, объединение команды, AI/LLM в продакшене",
+      "Ментор стажёров до full-time, преподавание в ВШЭ (QS 322)"
     ],
     en: [
       "Java/Kotlin/Python/Go, Spring Boot, REST/gRPC, PostgreSQL, ClickHouse, Kafka",
-      "Audience gathering 1–10s (size-independent), export 32× (8h→15min), ~$155K/month",
-      "Technical Lead of CDP: RFC, cross-team integration, team consolidation, AI/LLM in production"
+      "Audience gathering 1–10s (size-independent, ~30–50× typical), export 32× (8h→15min), ~$155K/month",
+      "CDP lead (2 teams / 9 engineers): cross-team RFC, 99.9% reliability, team consolidation, AI/LLM in production",
+      "Mentor of interns to full-time, taught at HSE (QS 322)"
     ],
     es: [
       "Java/Kotlin/Python/Go, Spring Boot, REST/gRPC, PostgreSQL, ClickHouse, Kafka",
-      "Audiencias 1–10s (independiente del tamaño), exportación 32× (8h→15min), ~$155K/mes",
-      "Líder técnico de CDP: RFC, integración entre equipos, consolidación, AI/LLM en producción"
+      "Audiencias 1–10s (independiente del tamaño, ~30–50× típico), exportación 32× (8h→15min), ~$155K/mes",
+      "Líder de CDP (2 equipos / 9 ingenieros): RFC entre equipos, 99.9% fiabilidad, consolidación, AI/LLM en producción",
+      "Mentor de interns a full-time, docente en HSE (QS 322)"
     ]
   },
   sections: resumeSections
@@ -372,9 +425,9 @@ export const projects: Project[] = [
       es: "Plataforma interna para managers que construye audiencias objetivo para ofertas de cashback usando datos de clientes (transacciones, ingresos/gastos, terminales y otros atributos)."
     },
     short: {
-      ru: "Новые параметры таргетинга на 1.5 года истории и ~30 млн транзакций/день; ~$165K/год прибыли.",
-      en: "New targeting parameters on 1.5 years of history and ~30M transactions/day; ~$165K/year profit.",
-      es: "Nuevos parámetros de targeting sobre 1,5 años y ~30M transacciones/día; ~$165K/año de beneficio."
+      ru: "Таргетинг на 1.5 года истории и ~30 млн транзакций/день; сборка аудиторий 1–10с, выгрузка 32× как руководитель CDP (2 команды), ~$165K/год прибыли.",
+      en: "Targeting on 1.5 years of history and ~30M transactions/day; audience gathering 1–10s, 32× export as CDP lead (2 teams), ~$165K/year profit.",
+      es: "Targeting sobre 1,5 años y ~30M transacciones/día; audiencias 1–10s, exportación 32× como líder de CDP (2 equipos), ~$165K/año de beneficio."
     },
     year: "2025–2026",
     category: "big-tech",
@@ -390,11 +443,17 @@ export const projects: Project[] = [
       }
     },
     stack: ["Kotlin", "Java", "Go", "ClickHouse", "Kafka"],
-    links: [],
+    links: [
+      {
+        href: "https://medium.com/@a.sidnevart/speeding-up-audience-gathering-45x-from-6-minutes-to-seconds-d134240a937e",
+        label: { ru: "Статья: ускорение сборки аудиторий 45×", en: "Article: Speeding Up Audience Gathering 45×", es: "Artículo: aceleración de audiencias 45×" },
+        external: true
+      }
+    ],
     techDetails: [
       { name: "Kotlin", role: { ru: "Control plane, бизнес-логика", en: "Control plane, business logic", es: "Control plane, lógica de negocio" } },
       { name: "Spring Boot", role: { ru: "REST API, интеграции", en: "REST API, integrations", es: "REST API, integraciones" } },
-      { name: "Go", role: { ru: "Data plane, gRPC, экспорт", en: "Data plane, gRPC, export", es: "Data plane, gRPC, exportación" } },
+      { name: "Go", role: { ru: "Интеграция с Go data-plane сервисом (gRPC), ClickHouse→S3", en: "Integration with a Go data-plane service (gRPC), ClickHouse→S3", es: "Integración con servicio Go data-plane (gRPC), ClickHouse→S3" } },
       { name: "ClickHouse", role: { ru: "Аналитика, ~30M txn/день", en: "Analytics, ~30M txn/day", es: "Analítica, ~30M txn/día" } },
       { name: "Kafka", role: { ru: "Потоковая обработка", en: "Stream processing", es: "Procesamiento de streams" } },
       { name: "PostgreSQL", role: { ru: "Задачи, DAG, очереди", en: "Tasks, DAG, queues", es: "Tareas, DAG, colas" } }
@@ -403,7 +462,7 @@ export const projects: Project[] = [
       { label: { ru: "Сборка аудиторий", en: "Audience gathering", es: "Construcción de audiencias" }, value: "1–10s" },
       { label: { ru: "Ускорение выгрузки", en: "Export acceleration", es: "Aceleración de exportación" }, value: "32×" },
       { label: { ru: "Транзакций/день", en: "Transactions/day", es: "Transacciones/día" }, value: "~30M" },
-      { label: { ru: "Доход/мес", en: "Revenue/month", es: "Ingresos/mes" }, value: "~$155K" }
+      { label: { ru: "Доход/мес (оценка)", en: "Revenue/month (est.)", es: "Ingresos/mes (est.)" }, value: "~$155K" }
     ],
     screenshots: [
       { src: "/screenshots/financial-targeting-01.jpg", alt: "CDP targeting interface" },
@@ -419,40 +478,43 @@ export const projects: Project[] = [
       solution: {
         ru: [
           "Сформулировал требования вместе со стейкхолдерами: какие офферы бывают, какие данные партнёры приносят, какие ограничения по качеству и срокам.",
-          "Разложил задачу на данные (история + поток), контракты и фильтры; добавил таргетинг по тратам/доходам и терминальным параметрам.",
-          "Добавил ранние проверки/валидации и понятные ошибки, чтобы менеджеры и аналитики быстро понимали, почему аудитория не собрана."
+          "Запустил таргетинг по тратам/доходам и терминальным параметрам на истории 1.5 года и потоке ~30 млн транзакций/день; добавил ранние валидации и понятные ошибки.",
+          "Соло переработал DAG/очередь/ClickHouse: построил количественную модель задержек, обнаружил, что ~96.5% времени — ожидание в очереди, а не исполнение, и сместил фокус на планирование/fairness/isolation. Сборка стала размер-независимой — 1–10с для любой аудитории (~30–50× типично, до 360× в лучшем случае).",
+          "Как руководитель CDP инициировал и провёл кросс-командную RFC-интеграцию с чужим Go data-plane сервисом (control-plane Kotlin/Spring ↔ data-plane Go через gRPC, ClickHouse→S3): idempotency, retry/fallback, shadow mode, safe-rollout через feature flags."
         ],
         en: [
-          "Aligned requirements and split the work into data delivery, contracts, and filter logic.",
-          "Launched spend/income targeting on 1.5 years of history and the live transaction stream.",
-          "Added early validation and clearer errors for critical audience-building flows."
+          "Aligned requirements with stakeholders: offer types, partner data, quality and timing constraints.",
+          "Launched spend/income and terminal-based targeting on 1.5 years of history and a ~30M transactions/day live stream, with early validation and clear errors.",
+          "Solo-reworked the DAG/queue/ClickHouse path: built a quantitative latency model, found ~96.5% of time was queue wait (not execution), and refocused on scheduling/fairness/isolation. Audience gathering became size-independent — 1–10s for any audience (~30–50× typical, up to 360× best case).",
+          "As CDP lead, self-initiated and drove a cross-team RFC integration with another team's Go data-plane service (control-plane Kotlin/Spring ↔ data-plane Go via gRPC, ClickHouse→S3): idempotency, retry/fallback, shadow mode, feature-flag safe-rollout."
         ],
         es: [
-          "Alineé requisitos y dividí el trabajo entre datos, contratos y lógica de filtros.",
-          "Lancé targeting por gastos/ingresos sobre 1,5 años de histórico y flujo en vivo.",
-          "Añadí validaciones tempranas y errores más claros en flujos críticos."
+          "Alineé requisitos con stakeholders: tipos de oferta, datos de socios, restricciones de calidad y plazos.",
+          "Lancé targeting por gastos/ingresos y terminales sobre 1,5 años de histórico y ~30M transacciones/día en vivo, con validaciones tempranas y errores claros.",
+          "Solo rehíce el camino DAG/cola/ClickHouse: construí un modelo cuantitativo de latencia, hallé que ~96.5% del tiempo era espera en cola (no ejecución) y reenfoqué en scheduling/fairness/isolation. La construcción de audiencias quedó independiente del tamaño — 1–10s para cualquier audiencia (~30–50× típico, hasta 360× en el mejor caso).",
+          "Como líder de CDP, inicié y conduje una integración RFC entre equipos con un servicio Go data-plane ajeno (control-plane Kotlin/Spring ↔ data-plane Go vía gRPC, ClickHouse→S3): idempotencia, retry/fallback, shadow mode, rollout seguro con feature flags."
         ]
       },
       role: {
-        ru: "Бэкенд-разработчик: требования, реализация фичи, качество (проверки/валидации), тестирование и доведение до продакшена.",
-        en: "Backend engineer: requirements + implementation, quality (validation), testing, and production rollout.",
-        es: "Ingeniero backend: requisitos e implementación, calidad (validación), testing y despliegue."
+        ru: "Руководитель CDP (2 команды / 9 инженеров) и бэкенд-разработчик: требования, реализация targeting-фичи, кросс-командная RFC-интеграция, качество (валидации), тестирование и доведение до продакшена.",
+        en: "CDP lead (2 teams / 9 engineers) and backend engineer: requirements, targeting feature implementation, cross-team RFC integration, quality (validation), testing, and production rollout.",
+        es: "Líder de CDP (2 equipos / 9 ingenieros) e ingeniero backend: requisitos, implementación de targeting, integración RFC entre equipos, calidad (validación), testing y despliegue."
       },
       result: {
         ru: [
-          "Аудитории под офферы собираются автоматически на истории 1.5 года и на потоке ~30 млн транзакций/день, без ручных проливок.",
-          "Менеджеры получили точные параметры включения/исключения клиентов, меньше ручных правок и меньше ошибок в кампаниях.",
-          "Система таргетинга приносит ~$165K/год прибыли; сборка аудиторий ускорена до 1–10 секунд (размер-независимо)."
+          "Аудитории под офферы собираются автоматически на истории 1.5 года и потоке ~30 млн транзакций/день; сборка ускорена до 1–10 секунд (размер-независимо, ~30–50× типично) — аналитически-оценённый вклад ~$155K/мес (~14M ₽/мес).",
+          "Кросс-командная интеграция как руководитель CDP ускорила выгрузку данных 32× (8ч → 15мин) с 99.9% надёжностью и привела к организационному объединению: команда-партнёр и её сервис вошли в CDP.",
+          "Система таргетинга приносит ~$165K/год прибыли; менеджеры получили точные параметры включения/исключения и меньше ошибок в кампаниях."
         ],
         en: [
-          "Offer audiences are built automatically on 1.5 years of history and ~30M transactions/day, without manual data loads.",
-          "Managers got precise include/exclude targeting with fewer manual edits and fewer campaign mistakes.",
-          "Targeting system generates ~$165K/year profit; audience gathering accelerated to 1–10 seconds (size-independent)."
+          "Offer audiences are built automatically on 1.5 years of history and a ~30M transactions/day stream; gathering accelerated to 1–10 seconds (size-independent, ~30–50× typical) — analyst-estimated contribution ~$155K/month (~14M ₽/mo).",
+          "The cross-team integration I led as CDP lead accelerated data export 32× (8h → 15min) at 99.9% reliability and drove organizational consolidation: the partner team and its service were absorbed into the CDP.",
+          "The targeting system generates ~$165K/year profit; managers got precise include/exclude targeting with fewer campaign errors."
         ],
         es: [
-          "Las audiencias se construyen automáticamente sobre 1,5 años de histórico y ~30M transacciones/día sin cargas manuales.",
-          "Los managers obtuvieron targeting preciso con menos ajustes manuales y menos errores.",
-          "El sistema de targeting genera ~$165K/año de beneficio; audiencias aceleradas a 1–10 segundos (independiente del tamaño)."
+          "Las audiencias se construyen automáticamente sobre 1,5 años y ~30M transacciones/día; la construcción se aceleró a 1–10 segundos (independiente del tamaño, ~30–50× típico) — contribución estimada por analistas ~$155K/mes (~14M ₽/mes).",
+          "La integración entre equipos que lideré como responsable de CDP aceleró la exportación 32× (8h → 15min) con 99.9% de fiabilidad y llevó a la consolidación: el equipo partner y su servicio se integraron en el CDP.",
+          "El sistema de targeting genera ~$165K/año de beneficio; los managers obtuvieron targeting preciso con menos errores de campaña."
         ]
       },
       note: {
@@ -475,9 +537,9 @@ export const projects: Project[] = [
       es: "Despliegue práctico de LLM: AI code review en GitLab, AI CI job, n8n y agente RAG de onboarding."
     },
     short: {
-      ru: "Практическая AI-автоматизация: процессы быстрее ~1.5x, расход токенов ниже до 3x.",
-      en: "Practical AI automation: workflows ~1.5x faster, token usage down up to 3x.",
-      es: "Automatización práctica: flujos ~1.5x más rápido y hasta 3x menos tokens."
+      ru: "4 AI-инструмента в продакшене: CI быстрее на 15–20%, 40–60 часов ручной работы в месяц снято.",
+      en: "4 AI tools in production: CI 15–20% faster, 40–60 manual hours per month removed.",
+      es: "4 herramientas AI en producción: CI 15–20% más rápido, 40–60 horas manuales al mes eliminadas."
     },
     year: "2025–2026",
     category: "product",
@@ -494,6 +556,11 @@ export const projects: Project[] = [
     },
     stack: ["Go", "GitLab", "RAG", "LLM", "n8n"],
     links: [],
+    metrics: [
+      { label: { ru: "CI быстрее", en: "CI speedup", es: "CI más rápido" }, value: "−15–20%" },
+      { label: { ru: "Часов в месяц снято", en: "Manual hours saved/mo", es: "Horas ahorradas/mes" }, value: "40–60" },
+      { label: { ru: "AI-инструментов в проде", en: "AI tools in prod", es: "Herramientas AI en prod" }, value: "4" }
+    ],
     screenshots: [
       { src: "/screenshots/ai-auditory-01.jpg", alt: "AI audience gathering bot" },
       { src: "/screenshots/ai-auditory-02.jpg", alt: "AI automation workflow" },
@@ -507,19 +574,22 @@ export const projects: Project[] = [
       },
       solution: {
         ru: [
-          "Запустил AI code review в GitLab и CI job для рефакторинга/подготовки MR.",
-          "Собрал n8n-автоматизации для менеджеров и RAG-агента для онбординга стажёров.",
-          "Встроил контроль качества и ограничение расходов токенов."
+          "AI code review бот в GitLab: summarizes changes, классифицирует замечания, предлагает правки (OpenAI, GitLab API, FastAPI).",
+          "AI CI бот: находит tech-debt-паттерны, генерирует план рефакторинга и готовит драфт MR — ускорил основной пайплайн на 5–7 мин (15–20%).",
+          "RAG-агент онбординга: retrieval по внутренним докам, контекстный чат с цитированием источников и confidence-скорингом (LangChain, PostgreSQL, Redis).",
+          "n8n-автоматизации менеджеров: создание кампаний, мониторинг партнёров, отчётность по результатам — снимают 40–60 часов ручной работы в месяц."
         ],
         en: [
-          "Launched AI code review in GitLab and an AI CI job for refactoring and MR prep.",
-          "Built n8n automations for managers and a RAG agent for intern onboarding.",
-          "Added quality checks and token-cost controls."
+          "AI code review bot in GitLab: summarizes changes, classifies issues, suggests fixes (OpenAI, GitLab API, FastAPI).",
+          "AI CI bot: detects tech-debt patterns, generates refactoring plans, prepares draft MRs — sped up the main pipeline by 5–7 min (15–20%).",
+          "RAG onboarding agent: retrieval over internal docs, context-aware chat with source citation and confidence scoring (LangChain, PostgreSQL, Redis).",
+          "n8n manager automations: campaign creation, partner monitoring, result reporting — remove 40–60 manual hours per month."
         ],
         es: [
-          "Lancé AI code review en GitLab y un AI CI job para refactor y MR.",
-          "Construí automatizaciones n8n y un agente RAG para onboarding.",
-          "Añadí control de calidad y costes de tokens."
+          "Bot de AI code review en GitLab: resume cambios, clasifica problemas, sugiere arreglos (OpenAI, GitLab API, FastAPI).",
+          "Bot AI CI: detecta tech-debt, genera planes de refactor, prepara MRs — aceleró el pipeline 5–7 min (15–20%).",
+          "Agente RAG de onboarding: retrieval sobre docs internos, chat contextual con citación y confidence (LangChain, PostgreSQL, Redis).",
+          "Automatizaciones n8n para managers: creación de campañas, monitoreo de socios, reportes — eliminan 40–60 horas manuales al mes."
         ]
       },
       role: {
@@ -529,16 +599,16 @@ export const projects: Project[] = [
       },
       result: {
         ru: [
-          "Процессы ускорились примерно в 1.5 раза, расход токенов снизился до 3x.",
-          "AI стал частью ежедневных инженерных и менеджерских процессов, а не отдельной демо-фичей."
+          "4 AI-инструмента работают в продакшене ежедневно, а не как демо: CI быстрее на 15–20%, 40–60 часов ручной работы в месяц снято.",
+          "AI встроен в реальные инженерные и менеджерские процессы: ревью, рефакторинг, онбординг и кампании."
         ],
         en: [
-          "Workflows got ~1.5x faster, token usage dropped up to 3x.",
-          "AI became part of daily engineering and manager workflows, not a demo feature."
+          "4 AI tools run in production daily, not as demos: CI 15–20% faster, 40–60 manual hours per month removed.",
+          "AI is embedded in real engineering and manager workflows: review, refactoring, onboarding, and campaigns."
         ],
         es: [
-          "Los flujos fueron ~1.5x más rápidos y el consumo de tokens bajó hasta 3x.",
-          "La IA pasó a ser parte del día a día, no una demo."
+          "4 herramientas AI funcionan en producción a diario, no como demos: CI 15–20% más rápido, 40–60 horas manuales al mes eliminadas.",
+          "AI integrada en flujos reales de ingeniería y managers: revisión, refactor, onboarding y campañas."
         ]
       }
     }
@@ -649,7 +719,7 @@ export const projects: Project[] = [
     category: "product",
     status: "shipped",
     owner: "artem",
-    featured: false,
+    featured: true,
     cover: {
       src: "/covers/urvi.svg",
       alt: {
@@ -740,9 +810,9 @@ export const projects: Project[] = [
       es: "Producto para preparación constante de entrevistas técnicas: sesiones de práctica, rondas de código, seguimiento de progreso y recordatorios por Telegram."
     },
     short: {
-      ru: "Собрал сервис с real-time сценариями и регулярным пользовательским циклом, а не очередной статичный список задач.",
-      en: "Built a service with real-time workflows and a recurring user loop rather than another static task list.",
-      es: "Construí un servicio con flujos en tiempo real y un ciclo de uso recurrente, no otra lista estática de tareas."
+      ru: "Java/Spring Boot + WebSocket: цикл тренировка → coding-раунд → фидбек, progress tracking и Telegram-напоминания.",
+      en: "Java/Spring Boot + WebSocket: a practice → coding round → feedback loop, with progress tracking and Telegram reminders.",
+      es: "Java/Spring Boot + WebSocket: ciclo práctica → ronda de código → feedback, con progress tracking y recordatorios de Telegram."
     },
     year: "2025",
     category: "education",
@@ -795,19 +865,19 @@ export const projects: Project[] = [
       },
       result: {
         ru: [
-          "Получился цельный edtech-продукт с регулярным пользовательским циклом, а не набор разрозненных функций.",
-          "Кейс показывает умение строить продуктовую механику удержания, а не только бэкенд API.",
-          "В портфолио этот проект закрывает направление “education + real-time + продуктовый цикл”."
+          "Бэкенд на Java/Spring Boot с real-time механикой через WebSocket: тренировка → coding-раунд → фидбек → следующий шаг одним циклом.",
+          "Progress tracking и Telegram-напоминания возвращают пользователя в практику; Redis — для hot-данных, PostgreSQL — основное хранилище.",
+          "Публичный репозиторий: сценарий реального времени применён там, где он усиливает опыт, а не ради витрины."
         ],
         en: [
-          "Shipped a coherent edtech product with a recurring usage loop, not a set of isolated features.",
-          "Shows ability to build retention mechanics, not just backend APIs.",
-          "In the portfolio, it covers education + real-time + product-loop experience."
+          "Java/Spring Boot backend with WebSocket real-time: practice → coding round → feedback → next step in one loop.",
+          "Progress tracking and Telegram reminders pull users back into practice; Redis for hot data, PostgreSQL for the store.",
+          "Public repository: real-time used where it improves the experience, not for show."
         ],
         es: [
-          "Entregué un producto edtech coherente con ciclo de uso recurrente.",
-          "Demuestra capacidad de construir retención, no solo APIs.",
-          "Cubre educación + real-time + ciclo de producto en el portfolio."
+          "Backend Java/Spring Boot con real-time vía WebSocket: práctica → ronda de código → feedback → siguiente paso en un ciclo.",
+          "Progress tracking y recordatorios de Telegram retraen al usuario; Redis para hot data, PostgreSQL como store.",
+          "Repositorio público: real-time donde aporta, no para lucir."
         ]
       }
     }
@@ -833,7 +903,7 @@ export const projects: Project[] = [
     category: "product",
     status: "shipped",
     owner: "artem",
-    featured: true,
+    featured: false,
     cover: {
       src: "/covers/trading-crm.svg",
       alt: {
@@ -885,19 +955,19 @@ export const projects: Project[] = [
       },
       result: {
         ru: [
-          "Получился понятный продуктовый кейс про business software и ежедневную операционную работу.",
-          "Проект показывает умение связывать бэкенд и UI в систему, где важна целостность сценариев.",
-          "Хороший “второй” кейс в портфолио: меньше бигтеха, больше прикладного продукта."
+          "Рабочий CRM-контур на React + Go + PostgreSQL: клиент → сделка → коммуникация → действие в одном интерфейсе и API.",
+          "Связка web app + API (оба публичны) покрывает ежедневные операционные сценарии команды без ручных костылей.",
+          "Сущности и API спроектированы вокруг операционного процесса, а не набора экранов."
         ],
         en: [
-          "A clear business-software case centered on daily operational work.",
-          "Shows the ability to connect backend and UI into a cohesive system.",
-          "A solid secondary case: less big-tech, more applied product."
+          "A working CRM loop on React + Go + PostgreSQL: client → deal → communication → action in one UI and API.",
+          "The web app + API pair (both public) covers the team's daily operational scenarios without manual hacks.",
+          "Entities and APIs are designed around the operational process, not a pile of screens."
         ],
         es: [
-          "Caso claro de business software para trabajo diario.",
-          "Demuestra capacidad de conectar backend y UI en un sistema cohesivo.",
-          "Buen caso secundario: menos big tech, más producto aplicado."
+          "Un ciclo CRM funcional en React + Go + PostgreSQL: cliente → operación → comunicación → acción en una UI y API.",
+          "El par web app + API (ambos públicos) cubre los escenarios operativos diarios sin parches manuales.",
+          "Entidades y APIs diseñadas alrededor del proceso operativo, no de pantallas sueltas."
         ]
       }
     }
@@ -965,16 +1035,19 @@ export const projects: Project[] = [
       },
       result: {
         ru: [
-          "Получился продуктовый чат с персональным контекстом, который опирается на реальные транзакции пользователя.",
-          "Кейс показывает умение связывать данные, бизнес-логику и интерфейс в один понятный сценарий."
+          "Сервис на Rust с Kafka-потоком транзакций: нормализация и выборка транзакционного контекста под запрос пользователя.",
+          "Персональные рекомендации в чате опираются на реальные покупки; контракты и интеграция с мобильным приложением: запрос → контекст → ответ.",
+          "Базовые защитные механизмы: валидация входных данных, понятные ошибки, наблюдаемость. Внутренний продукт — публичного репозитория нет."
         ],
         en: [
-          "Delivered a product chat with personalized context grounded in real transaction data.",
-          "Shows the ability to connect data, business logic, and UI into one coherent flow."
+          "A Rust service over a Kafka transaction stream: normalization and retrieval of transaction context per user query.",
+          "Personalized chat recommendations grounded in real purchases; contracts and mobile integration: request → context → response.",
+          "Baseline guardrails: input validation, clear errors, observability. Internal product — no public repository."
         ],
         es: [
-          "Entregué un chat con contexto personalizado basado en transacciones reales.",
-          "Demuestra capacidad de conectar datos, lógica de negocio y UI en un flujo coherente."
+          "Servicio en Rust sobre un stream Kafka de transacciones: normalización y recuperación de contexto transaccional por consulta.",
+          "Recomendaciones de chat personalizadas basadas en compras reales; contratos e integración móvil: solicitud → contexto → respuesta.",
+          "Controles básicos: validación, errores claros, observabilidad. Producto interno — sin repositorio público."
         ]
       },
       note: {
@@ -997,9 +1070,9 @@ export const projects: Project[] = [
       es: "Servicio aplicado que combina ruta y clima para planificar mejor."
     },
     short: {
-      ru: "Показывает продуктовую приземлённость: полезная фича, понятный UX и аккуратная реализация.",
-      en: "Shows product sense: useful feature, clear UX, clean implementation.",
-      es: "Muestra sentido de producto: funcionalidad útil, UX claro, implementación limpia."
+      ru: "TypeScript/Next.js: маршрут и прогноз погоды в одном сценарии, чтобы решать «ехать сейчас / позже / другим маршрутом».",
+      en: "TypeScript/Next.js: route and weather forecast in one flow to decide “go now / later / different route”.",
+      es: "TypeScript/Next.js: ruta y pronóstico en un flujo para decidir “ahora / más tarde / otra ruta”."
     },
     year: "2024",
     category: "product",
@@ -1050,16 +1123,19 @@ export const projects: Project[] = [
       },
       result: {
         ru: [
-          "Получился законченный мини‑продукт с понятной ценностью и чистой реализацией.",
-          "Хороший демонстрационный кейс: быстро собрать полезную фичу end‑to‑end."
+          "Готовый мини-продукт на TypeScript/Next.js: маршрут и прогноз погоды в одном сценарии с быстрым ответом.",
+          "Минимальный UI — только то, что нужно для решения «ехать сейчас / позже / другим маршрутом».",
+          "Публичный репозиторий: end-to-end интеграция API + UI, аккуратная реализация."
         ],
         en: [
-          "Shipped a small but complete product with clear value and clean implementation.",
-          "A good demo case for building useful features end to end quickly."
+          "A complete mini-product on TypeScript/Next.js: route and weather forecast in one flow with fast response.",
+          "Minimal UI — only what's needed to decide “go now / later / different route”.",
+          "Public repository: end-to-end API + UI integration, clean implementation."
         ],
         es: [
-          "Entregué un mini‑producto completo con valor claro e implementación limpia.",
-          "Buen caso demo para construir features útiles end-to-end rápidamente."
+          "Un mini-producto completo en TypeScript/Next.js: ruta y pronóstico en un flujo con respuesta rápida.",
+          "UI mínima — solo lo necesario para decidir “ahora / más tarde / otra ruta”.",
+          "Repositorio público: integración API + UI end-to-end, implementación limpia."
         ]
       }
     }
@@ -1129,16 +1205,19 @@ export const projects: Project[] = [
       },
       result: {
         ru: [
-          "Кейс добавляет сигнал про эксплуатационное мышление: воспроизводимость, диагностика, наблюдаемость.",
-          "Можно развивать дальше в сторону платформенного контура и risk‑контролей."
+          "Go-пайплайн: данные → сигналы → исполнение → телеметрия (логи/метрики); интеграции с биржами через их API, PostgreSQL — хранилище.",
+          "Контрольные точки и понятные статусы помогают ловить сбои и расхождения раньше; публичный репозиторий.",
+          "Контур рассчитан на воспроизводимость и диагностику: запуск, мониторинг и разбор инцидентов без «чёрного ящика»."
         ],
         en: [
-          "Adds operational-thinking signals: reproducibility, debugging, observability.",
-          "A good base to extend with platform and risk-control layers."
+          "A Go pipeline: data → signals → execution → telemetry (logs/metrics); exchange integrations via their APIs, PostgreSQL for storage.",
+          "Control points and clear statuses catch failures and drift earlier; public repository.",
+          "The loop is built for reproducibility and diagnostics: runs, monitoring, and incident review without a black box."
         ],
         es: [
-          "Aporta señales de pensamiento operacional: reproducibilidad, diagnóstico, observabilidad.",
-          "Buena base para extender con capas de plataforma y control de riesgo."
+          "Pipeline en Go: datos → señales → ejecución → telemetría (logs/métricas); integraciones con exchanges vía APIs, PostgreSQL como almacén.",
+          "Puntos de control y estados claros detectan fallos y desviaciones antes; repositorio público.",
+          "El ciclo está pensado para reproducibilidad y diagnóstico: ejecuciones, monitoreo y análisis sin caja negra."
         ]
       }
     }
@@ -1387,6 +1466,11 @@ export const projects: Project[] = [
     },
     stack: ["OpenClaw", "Ollama", "PostgreSQL", "pgvector", "Python", "Docker"],
     links: [],
+    metrics: [
+      { label: { ru: "Стоимость токенов", en: "Token cost", es: "Coste de tokens" }, value: "−~60%" },
+      { label: { ru: "Интеграций", en: "Integrations", es: "Integraciones" }, value: "5+" },
+      { label: { ru: "Работа", en: "Uptime", es: "Disponibilidad" }, value: "24/7" }
+    ],
     detail: {
       challenge: {
         ru: "Нужен был персональный AI-ассистент, который работает 24/7, помнит контекст, имеет голос и интеграции с рабочими инструментами.",
@@ -1447,15 +1531,15 @@ export const projects: Project[] = [
       es: "Stack compuesto para arbitraje: bots, contratos, infraestructura y monitoreo."
     },
     short: {
-      ru: "Кейс про системность: несколько компонентов, интеграции и эксплуатация как единый контур.",
-      en: "A systems-thinking case: multiple components, integrations, and operations as one flow.",
-      es: "Caso de pensamiento sistémico: múltiples componentes, integraciones y operación."
+      ru: "3 публичных репозитория (Go + Solidity): бот, смарт-контракты, trader_bot — связаны интерфейсами, с CI/CD и мониторингом.",
+      en: "3 public repos (Go + Solidity): bot, smart contracts, trader_bot — wired via interfaces, with CI/CD and monitoring.",
+      es: "3 repos públicos (Go + Solidity): bot, contratos, trader_bot — conectados por interfaces, con CI/CD y monitoreo."
     },
     year: "2023–2024",
     category: "infra",
     status: "experimental",
     owner: "artem",
-    featured: true,
+    featured: false,
     cover: {
       src: "/covers/arbitrage-stack.svg",
       alt: {
@@ -1512,16 +1596,19 @@ export const projects: Project[] = [
       },
       result: {
         ru: [
-          "Кейс усиливает портфолио эксплуатационным мышлением и системностью.",
-          "Хорошо показывает, что умею делать не только один сервис, но и связанный набор компонентов."
+          "Composite-стек из 3 публичных репозиториев: arbitrage-bot (Go), arbitrage-contracts (Solidity), trader_bot (Go) — связаны интерфейсами.",
+          "Слои разделены по ответственности: исполнение, интеграции, наблюдаемость; CI/CD и воспроизводимые деплои.",
+          "Эксплуатационный контур: логирование, алерты, метрики и сценарии диагностики внутри одного поддерживаемого набора."
         ],
         en: [
-          "Adds operational thinking and systems design signals to the portfolio.",
-          "Shows ability to build not just one service but a connected set of components."
+          "A composite stack of 3 public repositories: arbitrage-bot (Go), arbitrage-contracts (Solidity), trader_bot (Go) — wired via interfaces.",
+          "Layers split by responsibility: execution, integrations, observability; CI/CD and reproducible deploys.",
+          "An operational loop: logging, alerting, metrics, and debugging playbooks inside one maintainable set."
         ],
         es: [
-          "Aporta señales de operación y diseño de sistemas.",
-          "Demuestra capacidad de construir un conjunto de componentes conectados."
+          "Stack compuesto de 3 repositorios públicos: arbitrage-bot (Go), arbitrage-contracts (Solidity), trader_bot (Go) — conectados por interfaces.",
+          "Capas separadas por responsabilidad: ejecución, integraciones, observabilidad; CI/CD y deploys reproducibles.",
+          "Un ciclo operativo: logs, alertas, métricas y playbooks de diagnóstico en un conjunto mantenible."
         ]
       }
     }
